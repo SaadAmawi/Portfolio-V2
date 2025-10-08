@@ -1,31 +1,36 @@
 .headerButton{
-    background-color: rgb(26,26,26);
+    background-color: rgb(14, 14, 14);
     width: fit-content;
     padding: 0px 10px;
     cursor: pointer;
     color: white;
     text-decoration: none;
     border: solid transparent 2px;
-    
+    /* font-family: 'lexend',sans-serif; */
+    font-family: 'playfair display', serif;
     position:relative;
     justify-content: center;
     display: flex;
+    transition:  ease-in 0.5s;
     &::after{
         content:"";
         position: absolute;
         bottom:0;left:10%;
         height: 2px;
-        background-color: white;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
         width: 0%;
-        
         transition:  ease-in 0.5s;
         
     }
       
     &:hover{
+        transform: scale(1.05);
+        color: rgb(255, 255, 255);
         &::after{
-        width:80%
-        
+        width:80%;
+        border-radius: 50px;
+        box-shadow: 0 0 16px 1px rgb(255, 252, 232);
         }
     }
 }
