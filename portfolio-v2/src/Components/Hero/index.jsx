@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import image from '../Assets/Images/me1.png'
+import bg from '../Assets/Images/homeBg.jpg'
 import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
@@ -20,6 +21,12 @@ function Hero() {
 
   return (
     <div className='hero'>
+      <div class="hero-bg">
+        <img src={bg} alt="Background" />
+        <img src={bg} alt="Background" className='reverse'/>
+      </div>
+  
+
         <div className='text'>
           <div className="Intro">
         <h1>
@@ -37,7 +44,7 @@ function Hero() {
         </div>
         </div>
         <div className='image-containter'>
-        <img src={image}  className='image' alt="me"/>
+        {/* <img src={image}  className='image' alt="me"/> */}
     </div>
     </div>
   )

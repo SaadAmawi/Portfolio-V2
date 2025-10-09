@@ -3,6 +3,7 @@ import './index.css'
 function Header(){
 
     return(
+        <div className="Head">
     <nav className="Header">
         <div className="Logo">
         <h1 className="big">S</h1>
@@ -13,7 +14,8 @@ function Header(){
         <HeaderButton toLink="/projects" buttonText="Projects"/>
         <HeaderButton toLink="/mygpt" buttonText="MyGPT"/>
         </div>
-    </nav>)
+    </nav>
+    </div>)
 }
 
 export default Header;

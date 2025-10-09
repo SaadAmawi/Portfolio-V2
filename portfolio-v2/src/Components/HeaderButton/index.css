@@ -1,12 +1,11 @@
 .headerButton{
-    background-color: rgb(14, 14, 14);
+    background-color: none;
     width: fit-content;
     padding: 0px 10px;
     cursor: pointer;
     color: white;
     text-decoration: none;
     border: solid transparent 2px;
-    /* font-family: 'lexend',sans-serif; */
     font-family: 'playfair display', serif;
     position:relative;
     justify-content: center;
