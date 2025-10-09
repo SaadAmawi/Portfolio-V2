@@ -1,5 +1,5 @@
 .hero{
-    background-color: rgb(14, 14, 14);
+    background-color: black;
     height: 70vh;
     width: 100%;
     display: flex;
@@ -7,30 +7,54 @@
     justify-content: center;
 }
 .text{
-    width: 40%;
+    width: 50%;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     
 }
 h1{
     font-family: 'playfair display',serif;
     font-weight: 500;
+    font-size: 40px;
+    position: relative;
 }
 .image-containter{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
+}
+h2{
+    font-size: 18px;
+    font-family: 'lexend';
+    font-weight: 500;
+    animation: fadeIn 3s;
+    animation-delay: 5s;
+    animation-fill-mode: backwards;
 }
 
 .image{
-    width: 60%;
-    /* border-radius: 50%; */
+    width: 80%;
+    border-radius: 50%;
     animation:fadeIn 2s;
+    animation-delay: 4s;
+    animation-fill-mode: backwards;
     transition: ease-in-out 0.5s;
     &:hover{
         transform: scale(1.1);
     }
+}
+.intro{
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap:30px
 }

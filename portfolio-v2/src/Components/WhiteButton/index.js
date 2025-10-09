@@ -1,9 +1,9 @@
 import React from 'react'
 import './index.css'
-
-function WhiteButton({toLink,buttonText}) {
+import {NavLink} from 'react-router-dom'
+function WhiteButton({toLink,buttonText,cName}) {
   return(
-        <NavLink to={toLink} className="headerButton">{buttonText}</NavLink>
+        <NavLink to={toLink} className={cName}>{buttonText}</NavLink>
     )
 }
 
