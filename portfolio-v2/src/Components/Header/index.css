@@ -5,24 +5,20 @@
     top: 20px; 
     z-index: 1;
     animation: fadeInDown 1.3s;
-    /* margin-top: 20px;  */
 }
 
 
 .Header{
     background-color: rgba(255, 255, 255, 0.1);
-    /* backdrop-filter: blur(); */
     border:1px solid rgba(255, 255, 255, 0.10);
     box-shadow:0 4px 6px -4px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     backdrop-filter:blur(6px);    
     position: sticky;
     border-radius: 9999px;
-    width: 100%;
+    width: 80%;
     height:60px;
     color: white;
     align-items: center;
-    margin-right: 150px;
-    margin-left: 150px;
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
@@ -35,13 +31,31 @@
     flex-direction: row;
     align-items: center;
 }
-.big{
+.logo-image{
+    height: 120px;
+    width: 120px;
+    margin-left: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: zoomInDown 1.3s;
+}
+.middle-btns{
+    width:fit-content;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    /* animation: zoomInDown 1.3s; */
+    margin-right: 80px;
+}
+
+
+/* .big{
     font-family: "Mea Culpa", cursive;
     font-weight: 400;
     font-size: 40px;
     margin-left: 80px;
     height: fit-content;
-    /* animation:zoomInDown 1.3s; */
+    animation:zoomInDown 1.3s;
     margin:0 0 0px 20px;
     &:first-child{
         margin: 0 0 0px 80px;
@@ -62,20 +76,4 @@
         font-size: 30px;
         height: fit-content;
     }
-}
-.logo-image{
-    height: 120px;
-    width: 120px;
-    margin-left: 20px;
-    border-radius: 50%;
-    object-fit: cover;
-    animation: zoomInDown 1.3s;
-}
-.right-btns{
-    width:fit-content;
-    padding: 0px 10px;
-    display: flex;
-    flex-direction: row;
-    /* animation: zoomInDown 1.3s; */
-    margin-right: 80px;
-}
+} */

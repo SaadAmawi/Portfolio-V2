@@ -6,12 +6,11 @@
     color: white;
     text-decoration: none;
     border: solid transparent 2px;
-    /* font-family: 'playfair display', serif; */
     font-family: 'lexend', serif;
     position:relative;
     justify-content: center;
     display: flex;
-    transition: all ease-in-out 1s;
+    /* transition: all ease-in-out 1s; */
     /* &::after{ */
         /* content:"";
         position: absolute;
@@ -30,7 +29,7 @@
         background: linear-gradient(to right, #c084fc, #f472b6);
         background-clip: text;
         color: transparent;
-        transition: all ease-in-out 1s;
+        /* transition: all ease-in-out 1s; */
         /* &::after{ */
         /* width:80%;
         border-radius: 50px;
