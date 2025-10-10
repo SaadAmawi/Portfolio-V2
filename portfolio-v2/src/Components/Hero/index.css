@@ -5,25 +5,36 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    overflow: hidden;
+    overflow:visible;
     position: relative;
     margin-top: -70px;
 }
+h1 .color{
+margin-bottom: -50px;
+}
+h1.color span{
+    background: linear-gradient(to right, #c084fc, #f472b6);;
+    background-clip: text;
+    color: transparent;
+}
 .text{
-    width: 50%;
+    width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
 }
 .hero-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
+    overflow: visible;
 }
 .hero-bg img {
+    overflow: visible;
   width: 100%;
   height: 100%;
   object-fit: cover; 
@@ -45,39 +56,25 @@
 
 
 h1{
-    font-family: 'playfair display',serif;
+    font-family: 'lexend',serif;
+    width: 100%;
     font-weight: 500;
     font-size: 40px;
     position: relative;
 }
 
-.image-containter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-}
 h2{
-    font-size: 18px;
-    font-family: 'lexend';
+    font-size: 14px;
+    font-family: 'playfair display',serif;
     font-weight: 500;
     animation: fadeIn 3s;
     animation-delay: 5s;
     animation-fill-mode: backwards;
+    letter-spacing: 1.5px;
 }
 
-.image{
-    width: 80%;
-    border-radius: 50%;
-    animation:fadeIn 2s;
-    animation-delay: 4s;
-    animation-fill-mode: backwards;
-    transition: ease-in-out 0.5s;
-    z-index: 0;
-    &:hover{
-        transform: scale(1.1);
-    }
-}
+
+
 .intro{
     display: flex;
     flex-direction:column;
@@ -85,10 +82,31 @@ h2{
 }
 .buttons{
     display: flex;
+    width: 100%;
     flex-direction: row;
-    gap:30px
+    justify-content: center;
+    gap:30px;
+    margin-left: 10px;
 }
-
+.fade-arrow{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    /* display: none; */
+    width: 40px;
+    bottom: 20px;
+    animation: fadeIn backwards 4.5s 3s infinite;
+    filter: drop-shadow(0 0 4px white);
+}
+.down-arrow{
+    width: 40px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    animation: bounce 2s infinite;
+    filter: drop-shadow(0 0 4px white);
+}
 @keyframes ribbon {
     0%, 100% {
      transform: scale(1.1) translateY(5px);

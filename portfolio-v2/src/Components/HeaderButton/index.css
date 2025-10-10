@@ -6,7 +6,8 @@
     color: white;
     text-decoration: none;
     border: solid transparent 2px;
-    font-family: 'playfair display', serif;
+    /* font-family: 'playfair display', serif; */
+    font-family: 'lexend', serif;
     position:relative;
     justify-content: center;
     display: flex;
