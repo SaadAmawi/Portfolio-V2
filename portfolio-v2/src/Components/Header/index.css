@@ -34,7 +34,7 @@
 .logo-image{
     height: 120px;
     width: 120px;
-    margin-left: 20px;
+    margin-left: 0px;
     border-radius: 50%;
     object-fit: cover;
     animation: zoomInDown 1.3s;

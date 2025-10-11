@@ -41,8 +41,8 @@
     font-size: 14px;
     text-decoration: none;
     border-radius: 50px;
-    animation: fadeInUp 1.2s;
-    animation-delay: 6s;
+    animation: zoomInDown 1.3s;
+    /* animation-delay: 6s; */
     animation-fill-mode: backwards;
     transition:ease-in-out 0.9s;
     &:hover{

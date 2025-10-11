@@ -1,11 +1,10 @@
 .hero{
     background-color: black;
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    overflow:visible;
     position: relative;
     margin-top: -70px;
 }
@@ -30,28 +29,29 @@ h1.color span{
 .hero-bg {
     position: absolute;
     inset: 0;
+    width: 100%;
     z-index: 0;
-    overflow: visible;
 }
 .hero-bg img {
     overflow: visible;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  backdrop-filter: blur(10px);
-  filter: brightness(80%);
-  animation: ribbon 8s ease-in-out infinite;
-  opacity: 50%;
-  position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* backdrop-filter: blur(10px); */
+    filter: brightness(80%);
+    animation: ribbon 8s ease-in-out infinite;
+    opacity: 50%;
+    position: absolute;
 }
 .hero-bg .reverse {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  backdrop-filter: blur(10px);
-  filter: brightness(80%);
-  animation: ribbon-reverse 8s ease-in-out infinite;
-  opacity: 50%;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* backdrop-filter: blur(10px); */
+    filter: brightness(80%);
+    animation: ribbon-reverse 8s ease-in-out infinite;
+    opacity: 50%;
 }
 
 
@@ -109,35 +109,35 @@ h2{
 }
 @keyframes ribbon {
     0%, 100% {
-     transform: scale(1.1) translateY(5px);
-     filter: brightness(40%) blur(0px);
+     transform: scaleY(1.1) translateY(5px);
+     opacity:0.2;
      z-index: 0;
     }
     25% {
-     transform: scale(1.08) translateY(-5px);
-     filter: brightness(40%) blur(1px);
-     z-index: 0;
+        transform: scaleY(1.08) translateY(-5px);
+        opacity:0.2;
+        z-index: 0;
     }
     50% {
-     transform: scale(1.12) translateY(-10px);
-     filter: brightness(45%) blur(2px);
-     z-index: 0;
+        transform: scaleY(1.12) translateY(-10px);
+        opacity:0.25;
+        z-index: 0;
     }
 }
 @keyframes ribbon-reverse {
-   0%, 100% {
-    transform: scale(1.1) translateY(5px);
-    filter: brightness(40%) blur(0px);
-    z-index: 0;
-  }
-  25% {
-    transform: scale(1.05) translateY(0px);
-    filter: brightness(40%) blur(1px);
-    z-index: 0;
-  }
-  50% {
-    transform: scale(1.15) translateY(0px);
-    filter: brightness(45%) blur(2px);
+    0%, 100% {
+        transform: scaleY(1.1) translateY(5px);
+        opacity:0.2;
+        z-index: 0;
+    }
+    25% {
+        transform: scaleY(1.05) translateY(0px);
+        opacity:0.2;
+        z-index: 0;
+    }
+    50% {
+        transform: scaleY(1.15) translateY(0px);
+        opacity:0.25;
     z-index: 0;
   }
 }
