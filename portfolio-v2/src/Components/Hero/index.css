@@ -136,8 +136,8 @@ h2{
         z-index: 0;
     }
     50% {
-        transform: scaleY(1.15) translateY(0px);
+        transform: scaleY(1.18) translateY(0px);
         opacity:0.25;
-    z-index: 0;
+        z-index: 0;
   }
 }
