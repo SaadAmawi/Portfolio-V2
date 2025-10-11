@@ -8,11 +8,11 @@
     position: relative;
     margin-top: -70px;
 }
-h1 .color{
-margin-bottom: -50px;
+.color{
+    margin-bottom: -50px;
 }
-h1.color span{
-    background: linear-gradient(to right, #c084fc, #f472b6);;
+p.color span{
+    background: linear-gradient(to right,rgb(106, 109, 255), #c084fc, #f472b6);;
     background-clip: text;
     color: transparent;
 }
@@ -37,7 +37,6 @@ h1.color span{
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    /* backdrop-filter: blur(10px); */
     filter: brightness(80%);
     animation: ribbon 8s ease-in-out infinite;
     opacity: 50%;
@@ -48,7 +47,6 @@ h1.color span{
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    /* backdrop-filter: blur(10px); */
     filter: brightness(80%);
     animation: ribbon-reverse 8s ease-in-out infinite;
     opacity: 50%;
@@ -63,8 +61,8 @@ h1{
     position: relative;
 }
 
-h2{
-    font-size: 14px;
+.underwords{
+    font-size: 15px;
     font-family: 'playfair display',serif;
     font-weight: 500;
     animation: fadeIn 3s;

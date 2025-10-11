@@ -38,14 +38,14 @@ function Hero() {
         <div className='text'>
           <div className="Intro">
         <h1>
-          <h1 className='color'>
+        <p className='color'>
         <AnimatedLetters letterClass={letterClass} strArray={introArr} idx={11} />
         &nbsp;
         <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={22} />
-        </h1>
+        </p>
         <br/>
         <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={25} />
-         <h2>Java | Python | ReactJS | Node | Django | AWS | N8N</h2>
+         <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>
         <div className='buttons'>
         <WhiteButton toLink={"/Contact"} buttonText={"Contact Me"} cName={"filled"}/>

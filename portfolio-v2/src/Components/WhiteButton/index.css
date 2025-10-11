@@ -27,8 +27,8 @@
     margin-right: 20px;
     padding: 10px 20px;
     height: fit-content;
-    background: linear-gradient(to right, #a54efd, #fb2996);
-    background-clip: border-box;
+    background: linear-gradient(to right,rgba(106, 109, 255, 0.178), #c084fc27, #f472b52f);
+    /* background-clip: border-box; */
     color:white;
     font-family: "lexend",serif;
     font-weight: 500;
@@ -40,9 +40,7 @@
     animation-fill-mode: backwards;
     transition:ease-in-out 0.9s;
     &:hover{
-        background-color: transparent;
-        background: none;
-        border: solid 1px rgba(255, 255, 255, 0.633);        
+        
     }
 }
 

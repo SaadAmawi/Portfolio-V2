@@ -4,9 +4,9 @@ import LogoCarousel from './index';
 function LogoCarouselBundle() {
   return (
     <div style={{width:"100%", overflow:"hidden", marginTop:"50px"}}>
-      <LogoCarousel className={"logo_items"}/>
-      <LogoCarousel className={"logo_items_reverse"}/>
-      <LogoCarousel className={"logo_items"}/>ß
+      <LogoCarousel index={"start"} className={"logo_items"}/>
+      <LogoCarousel index={"middle"} className={"logo_items_reverse"}/>
+      <LogoCarousel index={"end"} className={"logo_items"}/>
     </div>
   )
 }

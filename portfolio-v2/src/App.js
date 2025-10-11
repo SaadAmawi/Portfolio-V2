@@ -2,7 +2,6 @@
 import './App.css';
 import Header from './Components/Header';
 import Hero from './Components/Hero';
-import LogoCarousel from './Components/LogoCarousel';
 import LogoCarouselBundle from './Components/LogoCarousel/LogoCarouselBundle';
 import Projects from './Components/Projects';
 import './index.css'

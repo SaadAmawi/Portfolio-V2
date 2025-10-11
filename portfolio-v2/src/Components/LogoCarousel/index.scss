@@ -25,15 +25,18 @@
 
 .logo_items {
   display: inline-flex;
-  animation: slide 100s linear infinite;
+  animation: slide 45s linear infinite;
 }
 .logo_items_reverse {
   display: inline-flex;
-  animation: slide 100s linear infinite;
+  animation: slide 45s linear infinite;
  animation-direction: reverse;
 }
 
 .logos:hover .logo_items {
+  animation-play-state: paused;
+}
+.logos:hover .logo_items_reverse {
   animation-play-state: paused;
 }
 
@@ -51,6 +54,10 @@
 }
 
 .logo_items i:hover {
+  transform: scale(1.3);
+  color: white;
+}
+.logo_items_reverse i:hover {
   transform: scale(1.3);
   color: white;
 }
