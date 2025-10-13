@@ -12,8 +12,8 @@ function App() {
       <Header/>
       <Hero/>
       <AboutMe/>
-      {/* <Projects/> */}
       <LogoCarouselBundle/>
+      <Projects/>
     </div>
   );
 }

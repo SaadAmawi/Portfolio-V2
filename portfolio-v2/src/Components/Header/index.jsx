@@ -4,6 +4,17 @@ import image from '../Assets/Images/logo2.png'
 import WhiteButton from "../WhiteButton";
 function Header(){
 
+ const handleClick = (anchor) => () => { 
+   const id = `${anchor}`; 
+   const element = document.getElementById(id); 
+   if (element) { 
+     element.scrollIntoView({ 
+       behavior: "smooth", 
+       block: "start", 
+     }); 
+   } 
+ }; 
+
     return(
         <div className="Head">
     <nav className="Header">
@@ -13,9 +24,9 @@ function Header(){
         <img src={image} alt="logo" className="logo-image"/>
         </div>
         <div className="middle-btns">
-        <HeaderButton toLink="/about" buttonText="About Me"/>
-        <HeaderButton toLink="/projects" buttonText="Projects"/>
-        <HeaderButton toLink="/mygpt" buttonText="MyGPT"/>
+        <HeaderButton  buttonText="About Me" handleClick={handleClick("about-me")}/>
+        <HeaderButton  buttonText="Projects" handleClick={handleClick("myProjects")}/>
+        <HeaderButton  buttonText="MyGPT"/>
         </div>
         <WhiteButton toLink="/mygpt" buttonText="Contact" cName="filled-header"/>
     </nav>

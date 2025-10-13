@@ -1,9 +1,9 @@
 import React from 'react'
 import './index.scss'
-import image from '../Assets/Images/me1.png'
+// import image from '../Assets/Images/me1.png'
 function AboutMe() {
   return (
-    <div className='about-me'>
+    <div className='about-me' id='about-me'>
         <div className='left-text'>
             <h1>About Me</h1>
             <p>I’m Saad Amawi, a Software Engineer driven by a passion for building intelligent, scalable systems that merge automation, creativity, and precision. I graduated from Abu Dhabi University with a BSc in Software Engineering, where I honed my skills in software architecture, data structures, ethical hacking, and cloud computing. Along the way, I earned certifications including AWS Certified Cloud Practitioner, AWS Solutions Architect Associate, and Cisco Cybersecurity Essentials, fueling my curiosity for how technology can be engineered to think smarter, not just work harder.</p>
