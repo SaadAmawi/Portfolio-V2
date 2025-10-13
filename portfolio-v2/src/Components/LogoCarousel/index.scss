@@ -21,8 +21,9 @@
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    padding: 20px 0;}
-
+    padding: 20px 0;
+// background: linear-gradient(90deg,rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0.14) 100%)
+}
 .logo_items {
   display: inline-flex;
   animation: slide 45s linear infinite;

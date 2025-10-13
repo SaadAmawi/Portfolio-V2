@@ -1,17 +1,17 @@
 import React from 'react'
 import './index.css'
-import image from '../Assets/Images/headshot.png'
+// import image from '../Assets/Images/headshot.png'
 import bg from '../Assets/Images/homeBg.jpg'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
-import {
-  // FaArrowDown,
-  FontAwesomeIcon
-} from '@fortawesome/react-fontawesome'
-import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
+// import {
+//   // FaArrowDown,
+//   FontAwesomeIcon
+// } from '@fortawesome/react-fontawesome'
+// import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 function Hero() {
     const introArr = ["H","e","l","l","o",","," ", "I"," ", "a"," m"]
     const nameArr = ["Saad"," ","Amawi",":"]
@@ -50,7 +50,7 @@ function Hero() {
         <div className='buttons'>
         <WhiteButton toLink={"/Contact"} buttonText={"Contact Me"} cName={"filled"}/>
         <WhiteButton toLink={resume} buttonText={"Resume"} cName={"outline"}/>
-        <a  rel="noreferrer" href={resume} target="_blank" />
+        {/* <a  rel="noreferrer" href={resume} target="_blank" /> */}
         </div>
         </div>
         </div>
