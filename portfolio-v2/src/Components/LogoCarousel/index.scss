@@ -27,6 +27,7 @@
 .logo_items {
   display: inline-flex;
   animation: slide 45s linear infinite;
+  
 }
 .logo_items_reverse {
   display: inline-flex;
@@ -39,6 +40,7 @@
 }
 .logos:hover .logo_items_reverse {
   animation-play-state: paused;
+  
 }
 
 .logo_items i {
