@@ -4,3 +4,10 @@ body{
   overflow-x: hidden;
   
 }
+html {
+  scroll-behavior: smooth;
+  will-change: transform;
+transform: translateZ(0);
+backface-visibility: hidden;
+
+}

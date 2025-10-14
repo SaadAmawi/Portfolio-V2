@@ -4,31 +4,94 @@ height: 70vh;
 display: flex;
 flex-direction: row;
 align-items:center;
-margin: 340px 0px 200px 0px;
+margin: 250px 0px 60px 0px;
 gap:80px;
 }
+
 .left-text{
 display: block;
 width:50%;
 margin-left: 80px;
+
+
 }
+
 .right-image{
     width:50%;
     display:flex;
     align-items: end;
-
 }
+
 .left-text h1 {
-color:white;
-font-family: 'lexend';
-font-size: 50px;
-font-weight: 600;
+    color:white;
+    font-family: 'lexend';
+    font-size: 50px;
+    opacity: 0;
+    font-weight: 600;
+    animation: 
+    slideIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%; 
 }
 .left-text p{
+    animation: slideInUp  linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%; 
     margin-left: 20px;
     margin-right: 20px;
     color:white;
+    // opacity: 0;
     font-family: 'lexend';
     font-size: 16;
     font-weight: 200;
+}
+
+@keyframes slideIn {
+    0%{
+        opacity: 0;
+        display: none;
+        transform: translateY(-140px)
+    }
+    80%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+    100%{
+        opacity:0;
+
+    }
+}
+
+@keyframes slideInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(100px)
+    }
+ 
+    60%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+    100%{
+        opacity: 0;
+       
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-me{        
+    }
+    .left-text{
+        width: 100%;
+        margin-right: 80px;
+    }
+    .right-image{
+        display: none;
+    }
+    .left-text h1 {
+    font-size: 30px;
+}
+    .left-text p {
+    font-size: 16px;
+}
 }

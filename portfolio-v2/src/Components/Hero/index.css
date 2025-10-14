@@ -38,7 +38,7 @@ p.color span{
     height: 100%;
     object-fit: cover; 
     filter: brightness(80%);
-    animation: ribbon 8s ease-in-out infinite;
+    animation: ribbon 3s ease-in-out infinite;
     opacity: 50%;
     position: absolute;
 }
@@ -48,7 +48,7 @@ p.color span{
     height: 100%;
     object-fit: cover; 
     filter: brightness(80%);
-    animation: ribbon-reverse 8s ease-in-out infinite;
+    animation: ribbon-reverse 7s ease-in-out infinite;
     opacity: 50%;
 }
 
