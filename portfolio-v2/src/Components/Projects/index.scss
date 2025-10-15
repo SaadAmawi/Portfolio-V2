@@ -1,13 +1,14 @@
 .projects{
+    width: 88%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    }
+.section_title{
     width: 100%;
-    min-height: 100vh;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    gap: 20px;
-    overflow: visible;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
 }

@@ -7,10 +7,9 @@ import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
-// import {
-//   // FaArrowDown,
-//   FontAwesomeIcon
-// } from '@fortawesome/react-fontawesome'
+import {
+  FontAwesomeIcon
+} from '@fortawesome/react-fontawesome'
 // import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 function Hero() {
     const introArr = ["H","e","l","l","o",","," ", "I"," ", "a"," m"]

@@ -4,16 +4,19 @@ height: 70vh;
 display: flex;
 flex-direction: row;
 align-items:center;
-margin: 250px 0px 60px 0px;
+margin: 250px 0px 150px 0px;
 gap:80px;
+}
+
+#about-me{
+    scroll-margin-top: 150px;
+    transition: all 10s ; 
 }
 
 .left-text{
 display: block;
 width:50%;
 margin-left: 80px;
-
-
 }
 
 .right-image{

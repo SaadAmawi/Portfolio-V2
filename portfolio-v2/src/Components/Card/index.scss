@@ -1,0 +1,61 @@
+.card{
+    background-color: rgb(16, 16, 16);
+    height: 200px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.153);
+    border-radius: 20px;
+    transition: all 0.9s ease  ;
+    &:hover{
+        scale: 1.02 ;
+        background-image: linear-gradient(162deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 129, 201, 0.09) 64%, rgba(60, 0, 255, 0.09) 100%);
+        border: 1px solid rgba(138, 190, 255, 0.74);
+  
+    }
+    &:after{
+        content:attr(data-content);
+        position: absolute;
+        font-family: "lexend";
+        font-weight: 700;
+        ;
+        font-size: 110px;
+        letter-spacing: 3px;
+        color: rgba(84, 84, 84, 0.308);
+        top: 50%;
+        left:50%;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+.title{
+    z-index: 1;
+    font-family: 'lexend';
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    padding: 10px 10px;
+    background-color: rgba(201, 201, 201, 0.12);
+    filter: blur(200);
+    border-radius:15px ;
+    color: white;
+}
+.project-description{
+   z-index: 1;
+    font-family: 'lexend';
+    font-size: 14px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    margin-top: 12px;
+}
