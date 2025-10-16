@@ -9,12 +9,61 @@
     padding: 32px;
     border: 1px solid rgba(255, 255, 255, 0.153);
     border-radius: 20px;
-    transition: all 0.9s ease  ;
+    transition: all 0.3s ease  ;
     &:hover{
+        box-shadow: 0 0px 30px 3px rgba(4, 129, 201, 0.341);
         scale: 1.02 ;
-        background-image: linear-gradient(162deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 129, 201, 0.09) 64%, rgba(60, 0, 255, 0.09) 100%);
-        border: 1px solid rgba(138, 190, 255, 0.74);
-  
+        background-image: linear-gradient(155deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 129, 201, 0.214) 64%, rgba(60, 0, 255, 0.09) 100%);
+        border: 1px solid rgba(138, 191, 255, 0.797);
+        .icon-bg{
+            background-color: rgba(4, 129, 201, 0.5);
+            box-shadow: 0 0 12px 1px rgba(4, 129, 201, 0.3);
+        }
+        .title{
+            color:rgba(4, 129, 201, 1)
+        }
+    }
+        &.purple:hover{
+            box-shadow: 0 0px 30px 3px rgba(212, 0, 255, 0.347);
+                scale: 1.02 ;
+                background-image: linear-gradient(155deg,rgba(26, 0, 36, 0.07) 0%, rgba(65, 3, 89, 0.09) 20%, rgba(182, 16, 223, 0.199) 64%, rgba(83, 2, 99, 0.09) 100%);
+                border: 1px solid rgba(212, 0, 255, 0.7);
+                .icon-bg{
+                    background-color: rgba(212, 0, 255, 0.237);
+                    box-shadow: 0 0 12px 1px rgba(212, 0, 255, 0.3);
+                }
+                .title{
+                    color:rgba(212, 0, 255, 0.7);
+                }
+    
+    }
+        &.yellow:hover{
+                box-shadow: 0 0 30px 3px rgba(255, 153, 0, 0.355);
+                scale: 1.02 ;
+                background-image: linear-gradient(155deg,rgba(36, 34, 0, 0.07) 0%, rgba(91, 78, 14, 0.09) 20%,rgba(223, 202, 16, 0.199) 64%, rgba(69, 42, 1, 0.09) 100%);
+                border: 1px solid rgba(255, 153, 0, 0.726);
+                .icon-bg{
+                    background-color: rgba(255, 153, 0, 0.219);
+                    box-shadow: 0 0 12px 1px rgba(255, 153, 0, 0.251);
+                }
+                .title{
+                    color:rgba(255, 153, 0, 0.663);
+                }
+    
+    }
+        &.pink:hover{
+                box-shadow: 0 0px 30px 3px rgba(255, 0, 200, 0.347);
+                scale: 1.02 ;
+                background-image: linear-gradient(155deg,rgba(36, 0, 28, 0.07) 0%, rgba(99, 2, 73, 0.09) 20%, rgba(246, 70, 187, 0.199) 64%, rgba(93, 1, 59, 0.09) 100%);
+                border: 1px solid rgba(255, 0, 195, 0.7);
+                .icon-bg{
+                    background-color: rgba(255, 0, 166, 0.237);
+                    box-shadow: 0 0 12px 1px rgba(255, 0, 162, 0.3);
+                }
+                .title{
+                    color:rgba(255, 0, 132, 0.7);
+                }
+    
     }
     &:after{
         content:attr(data-content);
@@ -31,10 +80,11 @@
            
     }
 }
+
 .title{
     z-index: 1;
     font-family: 'lexend';
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     color: white;
     margin-top: 10px;

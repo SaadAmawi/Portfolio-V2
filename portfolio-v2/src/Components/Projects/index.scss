@@ -12,3 +12,12 @@
     gap: 40px;
     margin-top: 40px;
 }
+
+
+@media screen and (max-width:1200px){
+    .section_title{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
