@@ -63,8 +63,8 @@ h1{
 
 .underwords{
     font-size: 15px;
-    font-family: 'playfair display',serif;
-    font-weight: 500;
+    font-family: 'lexend',serif;
+    font-weight: 200;
     animation: fadeIn 3s;
     animation-delay: 5s;
     animation-fill-mode: backwards;

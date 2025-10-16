@@ -6,7 +6,9 @@ import {
 function Card({bgText, projectTitle, projectDescription, icon}) {
   return (
     <div className='card' data-content={bgText}>
+        <div className='icon-bg'>
         <FontAwesomeIcon icon={icon} className='icon' />
+        </div>
         <h1 className='title'>{projectTitle}</h1>
         <p className='project-description'>{projectDescription}</p>
       

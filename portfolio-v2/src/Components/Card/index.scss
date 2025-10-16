@@ -21,18 +21,16 @@
         position: absolute;
         font-family: "lexend";
         font-weight: 700;
-        ;
         font-size: 110px;
         letter-spacing: 3px;
         color: rgba(84, 84, 84, 0.308);
         top: 50%;
         left:50%;
         z-index: 0;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scaleY(1.1);
+           
     }
-
 }
-
 .title{
     z-index: 1;
     font-family: 'lexend';
@@ -41,13 +39,19 @@
     color: white;
     margin-top: 10px;
 }
+.icon-bg{
+    background-color: rgba(255, 255, 255, 0.12);
+    width: fit-content;
+    backdrop-filter: blur(100px);
+    border-radius:15px ;
+}
 .icon{
     width: 25px;
     height: 25px;
     padding: 10px 10px;
-    background-color: rgba(201, 201, 201, 0.12);
-    filter: blur(200);
-    border-radius:15px ;
+    // background-color: rgba(201, 201, 201, 0.12);
+    
+    
     color: white;
 }
 .project-description{

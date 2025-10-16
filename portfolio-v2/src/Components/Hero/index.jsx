@@ -18,6 +18,7 @@ function Hero() {
     const [letterClass, setLetterClass] = useState('text-animate')
     const [letterClass2, setLetterClass2] = useState('text-animate-fly')
     const [arrowClass, setArrowClass] = useState('fade-arrow')
+    
     useEffect(()=>{
         setTimeout(()=>{
         return (setLetterClass('text-animate-hover'),
@@ -28,7 +29,7 @@ function Hero() {
 
   return (
     <div className='hero'>
-      <div class="hero-bg">
+      <div className="hero-bg">
         <img src={bg} alt="Background" />
         <img src={bg} alt="Background" className='reverse'/>
       </div>
