@@ -102,8 +102,11 @@ h1{
     font-size: 30px;
     position: absolute;
     bottom: 20px;
-    animation: bounce 2s infinite;
-    filter: drop-shadow(0 0 4px white);
+    /* animation: bounce 2s infinite;
+    filter: drop-shadow(0 0 4px white); */
+    animation: fadeOut linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 @keyframes ribbon {
     0%, 100% {
@@ -138,4 +141,13 @@ h1{
         opacity:0.25;
         z-index: 0;
   }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        }
 }
