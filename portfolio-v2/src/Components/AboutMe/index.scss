@@ -92,11 +92,18 @@ height: 50%;
 }
 
 @media screen and (max-width:1200px) {
-    .about-me{        
+    .about-me:after{
+        rotate:-270deg;
+        top:0;        
+        left: 50%;
+        width: 100%;
+        translate: 6% -40% ;
+        font-size: 100px;
+        opacity: 1;
     }
    .left-text h1 {
     top: 0;
-    rotate: -270deg;
+    // rotate: -270deg;
     font-size: 120px;
    }
     .right-image{
