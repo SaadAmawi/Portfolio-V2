@@ -1,12 +1,32 @@
+
 .about-me{
-width:100%;
+width:78%;
 height: fit-content;
 display: flex;
-flex-direction: row;
+flex-direction: column;
 align-items:center;
 justify-content: center;
-margin: 380px 0px 40px 0px;
-// gap:80px;
+margin: 300px auto 40px auto;
+position: relative;
+view-timeline: --rnge block;
+&:after{
+    z-index: -1;
+    content: "About Me";
+    color:rgba(255, 255, 255, 0.3);
+    font-family:"playfair";
+    width: fit-content;
+    font-size: 190px;
+    opacity: 1;
+    font-weight: 700;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    translate: -56% 50% ;
+    transform: rotate(270deg);
+    animation: slideIn linear both;
+    animation-timeline:--rnge ;
+    animation-range: entry 0% cover 100%;
+}
 
 }
 
@@ -16,40 +36,17 @@ margin: 380px 0px 40px 0px;
 }
 
 .left-text{
+    
 display: block;
-width:84%;
-// margin-left: 80px;
-position: relative;
+width:100%;
+height: 50%;
+// position: relative;
 }
 
-// .right-image{
-//     width:50%;
-//     display:flex;
-//     align-items: end;
-// }
-
-.left-text h1 {
-    color:rgba(255, 255, 255, 0.3);
-    font-family:"playfair";
-    width: fit-content;
-    font-size: 190px;
-    opacity: 1;
-    font-weight: 700;
-    position: absolute;
-    top: 70%;
-    left: -16%;
-    transform: rotate(270deg);
-    animation: 
-    slideIn linear both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 100%; 
-}
 .left-text p{
     animation: slideInUp  linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 70%; 
-    margin-left: 130px;
-    margin-right: 140px;
     color:white;
     // opacity: 0;
     font-family: 'lexend';
@@ -60,15 +57,21 @@ position: relative;
 @keyframes slideIn {
     0%{
         opacity: 0;
-        // display: none;
-        // transform: translateY(-140px) 
+        transform: rotate(270deg) translateY(-50%) translateX(-30%) 
     }
-    60%{
-        opacity: 1;
-        // transform: translateY(0)
+    40%{
+        transform: rotate(270deg) translateY(0%) translateX(-30%) ; 
+        opacity:1;
     }
-    100%{
+   
+    70%{
+        opacity:0.6;
+        transform: rotate(270deg) translateY(0%) translateX(-30%) ; 
+    }
+
+    80%{
         opacity:0;
+        transform: rotate(270deg) translateY(0%) translateX(-30%) ; 
     }
 }
 
@@ -91,10 +94,11 @@ position: relative;
 @media screen and (max-width:1200px) {
     .about-me{        
     }
-    .left-text{
-        width: 100%;
-        margin-right: 80px;
-    }
+   .left-text h1 {
+    top: 0;
+    rotate: -270deg;
+    font-size: 120px;
+   }
     .right-image{
         display: none;
     }
@@ -102,6 +106,6 @@ position: relative;
     font-size: 30px;
 }
     .left-text p {
-    font-size: 18px;
+    font-size: 15px;
 }
 }

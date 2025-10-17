@@ -11,7 +11,6 @@ import {
 function Skills() {
   return (
     <div className='skills' id="mySkills"> 
-    {/* <h1 style={{color:"white"}}> My Main Stack</h1> */}
     <div className='section_title'>
       <Card bgText={"Frontend"} projectTitle={"Front-End Technologies"} projectDescription={"bla bla bla"} icon={faDisplay}  hoverAccent={"purple"}/>
       <Card bgText={"Backend"} projectTitle={"Back-End Technologies"} projectDescription={"bla bla bla"} icon={faServer} hoverAccent={"yellow"}/>

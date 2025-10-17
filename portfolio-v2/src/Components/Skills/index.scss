@@ -1,8 +1,9 @@
 .skills{
-    width: 78%;
+    width: 100%;
     margin: auto;
     margin-top: 0px;
     margin-bottom: 100px;
+    // z-index: 1;
     }
 
 #mySkills{
@@ -12,9 +13,9 @@
 .section_title{
     width: 100%;
     display: grid;
-    place-items: center;
+    // place-items: center;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
     margin-top: 40px;
 }
 
