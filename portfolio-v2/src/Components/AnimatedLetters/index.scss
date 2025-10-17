@@ -1,14 +1,14 @@
 .text-animate{
     display: inline-block;
     opacity: 1;
-    animation: fadeIn 1s ;
+    animation: fadeIn 3s ;
     animation-fill-mode: backwards;
     min-width: 10px;
 }
 .text-animate-fly{
     display: inline-block;
     opacity: 1;
-    animation: fadeInDown 1s ;
+    animation: fadeInDown 3s ;
 
     animation-fill-mode: backwards;
     min-width: 10px;

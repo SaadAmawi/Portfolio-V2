@@ -9,7 +9,6 @@ function Header(){
    const element = document.getElementById(id); 
    if (element) { 
      element.scrollIntoView({ 
-       block: "start",
        behavior: "smooth", 
        block: "start", 
      }); 

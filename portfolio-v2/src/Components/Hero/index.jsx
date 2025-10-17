@@ -7,28 +7,34 @@ import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
-import {
-  FontAwesomeIcon
-} from '@fortawesome/react-fontawesome'
+// import {
+//   FontAwesomeIcon
+// } from '@fortawesome/react-fontawesome'
 // import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 function Hero() {
-    const introArr = ["H","e","l","l","o",","," ", "I"," ", "a"," m"]
+    const introArr = ["I","'","m"]
     const nameArr = ["Saad"," ","Amawi",":"]
     const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r','.']
     const [letterClass, setLetterClass] = useState('text-animate')
     const [letterClass2, setLetterClass2] = useState('text-animate-fly')
     const [arrowClass, setArrowClass] = useState('fade-arrow')
-    
+
     useEffect(()=>{
         setTimeout(()=>{
         return (setLetterClass('text-animate-hover'),
                 setLetterClass2('text-animate-hover'),
-                setArrowClass('down-arrow'))
+                setArrowClass('down-arrow')
+                )
         },7000)
+
     },[])
 
+  
+ 
+
+
   return (
-    <div className='hero'>
+    <div className='hero' id={"arrow"}>
       <div className="hero-bg">
         <img src={bg} alt="Background" />
         <img src={bg} alt="Background" className='reverse'/>
@@ -39,12 +45,12 @@ function Hero() {
           <div className="Intro">
         <h1>
         <p className='color'>
-        <AnimatedLetters letterClass={letterClass} strArray={introArr} idx={11} />
+        <AnimatedLetters letterClass={letterClass2} strArray={introArr} idx={11} />
         &nbsp;
-        <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={22} />
+        <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={14} />
         </p>
         <br/>
-        <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={25} />
+        <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={17} />
          <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>
         <div className='buttons'>
@@ -54,7 +60,7 @@ function Hero() {
         </div>
         </div>
         </div>
-        <img src={mouseBounce} alt="Mouse Bounce" className={arrowClass}/>
+        <img src={mouseBounce} alt="Mouse Bounce" className={arrowClass} id="arrow"/>
         {/* <FontAwesomeIcon icon={faChevronDown} className={arrowClass}/> */}
  
     </div>
