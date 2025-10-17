@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.css'
+import './index.scss'
 
 function WhiteButton({toLink,buttonText,cName}) {
   return(

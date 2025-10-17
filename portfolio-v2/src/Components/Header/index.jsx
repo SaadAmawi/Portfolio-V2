@@ -26,7 +26,8 @@ function Header(){
         </div>
         <div className="middle-btns">
         <HeaderButton  buttonText="About Me" handleClick={handleClick("about-me")}/>
-        <HeaderButton  buttonText="Projects" handleClick={handleClick("myProjects")}/>
+        <HeaderButton  buttonText="Skills" handleClick={handleClick("mySkills")}/>
+        <HeaderButton  buttonText="Projects" />
         <HeaderButton  buttonText="MyGPT"/>
         </div>
         <WhiteButton toLink="/mygpt" buttonText="Contact" cName="filled-header"/>

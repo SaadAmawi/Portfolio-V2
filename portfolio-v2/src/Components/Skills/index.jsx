@@ -8,10 +8,10 @@ import {
           faCloud
 } from '@fortawesome/free-solid-svg-icons'
 
-function Projects() {
+function Skills() {
   return (
-    <div className='projects' id="myProjects"> 
-    <h1 style={{color:"white"}}> My Main Stack</h1>
+    <div className='skills' id="mySkills"> 
+    {/* <h1 style={{color:"white"}}> My Main Stack</h1> */}
     <div className='section_title'>
       <Card bgText={"Frontend"} projectTitle={"Front-End Technologies"} projectDescription={"bla bla bla"} icon={faDisplay}  hoverAccent={"purple"}/>
       <Card bgText={"Backend"} projectTitle={"Back-End Technologies"} projectDescription={"bla bla bla"} icon={faServer} hoverAccent={"yellow"}/>
@@ -22,4 +22,4 @@ function Projects() {
   )
 }
 
-export default Projects
+export default Skills
