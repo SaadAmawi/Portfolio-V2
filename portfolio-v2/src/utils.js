@@ -1,4 +1,3 @@
-
 const splitLogoArrayBy3 = ((logos,index) => {
     let start = 0
     let end = 0
@@ -17,4 +16,5 @@ const splitLogoArrayBy3 = ((logos,index) => {
     }
 return logos.slice(start, end)
 })
+
 export default splitLogoArrayBy3

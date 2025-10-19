@@ -80,11 +80,9 @@ h1{
 }
 .buttons{
     display: flex;
-    width: 100%;
     flex-direction: row;
     justify-content: center;
     gap:30px;
-    margin-left: 10px;
 }
 .fade-arrow{
     color: white;
@@ -107,6 +105,15 @@ h1{
     animation: fadeOut linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 70%;
+}
+
+.socials{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    gap:15px;
+    
 }
 @keyframes ribbon {
     0%, 100% {
