@@ -3,7 +3,7 @@ import './index.scss'
 import {
   FontAwesomeIcon
 } from '@fortawesome/react-fontawesome'
-function Card({bgText, projectTitle, projectDescription, icon, hoverAccent, children}) {
+function Card({bgText, projectTitle, icon, hoverAccent, children}) {
   return (
     <div className={`card ${hoverAccent}`} data-content={bgText} >
         <div className='icon-bg'>
