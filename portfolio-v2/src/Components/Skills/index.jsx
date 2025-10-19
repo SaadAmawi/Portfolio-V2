@@ -29,7 +29,9 @@ function Skills() {
       <Card bgText={"Databases"} projectTitle={"Databases"} projectDescription={"bla bla bla"}icon={faDatabase} hoverAccent={"pink"}>
             <i className="devicon-postgresql-plain-wordmark"></i>
             <i className="devicon-supabase-plain colored"></i>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png"  alt="DynamoDB"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dynamodb/dynamodb-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                    
         </Card>
       <Card bgText={"Cloud"} projectTitle={"Cloud + Misc."} projectDescription={"bla bla bla"}icon={faCloud}>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg"  alt="Railway" style={{transform:"scale(0.8)"}}/>
