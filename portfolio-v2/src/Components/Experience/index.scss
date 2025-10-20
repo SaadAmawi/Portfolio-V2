@@ -2,7 +2,7 @@
 .experience-block{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    // height: 100vh;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -70,7 +70,7 @@
 
 .box {
 //   flex: 1;
-  width: fit-content;
+  // width: fit-content;
   max-height: 90%;
   height: fit-content;
   border: rgb(156, 156, 156) 1px solid;

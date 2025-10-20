@@ -7,7 +7,7 @@ function Experience() {
         toggledSection==="Experience"?setToggledSection("Work"):setToggledSection("Experience")
     }
   return (
-    <div className='experience-block'>
+    <div className='experience-block' id="experience">
     <div className='experience'>
         <div className='toggle'>
             <button className={toggledSection==="Work"?"toggleButtonOn work":"toggleButtonOff"} onClick={handleClick}>Work</button>

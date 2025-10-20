@@ -24,10 +24,11 @@ function Header(){
         <img src={image} alt="logo" className="logo-image"/>
         </div>
         <div className="middle-btns">
-        <HeaderButton  buttonText="About Me" handleClick={handleClick("about-me")}/>
-        <HeaderButton  buttonText="Skills" handleClick={handleClick("mySkills")}/>
-        <HeaderButton  buttonText="Projects" />
-        <HeaderButton  buttonText="MyGPT"/>
+        <HeaderButton  buttonText="Home" handleClick={handleClick("arrow")}/>
+        <HeaderButton  buttonText="About" handleClick={handleClick("about-me")}/>
+        <HeaderButton  buttonText="Experience" handleClick={handleClick("experience")}/>
+        <HeaderButton  buttonText="Projects" handleClick={handleClick("experience")} />
+        {/* <HeaderButton  buttonText="MyGPT"/> */}
         </div>
         <WhiteButton toLink="/mygpt" buttonText="Contact" cName="filled-header"/>
     </nav>
