@@ -51,7 +51,9 @@ p.color span{
     animation: ribbon-reverse 7s ease-in-out infinite;
     opacity: 50%;
 }
-
+p{
+    font-size: 120px;
+}
 
 h1{
     font-family: 'lexend',serif;

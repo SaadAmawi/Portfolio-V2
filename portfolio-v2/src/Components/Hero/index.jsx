@@ -13,8 +13,8 @@ import { SocialIcon } from 'react-social-icons'
 // } from '@fortawesome/react-fontawesome'
 // import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 function Hero() {
-    const introArr = ["I","'","m"]
-    const nameArr = ["Saad"," ","Amawi",":"]
+    // const introArr = ["I","'","m"]
+    const nameArr = ["Saad"," ","Amawi"]
     const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r','.']
     const [letterClass, setLetterClass] = useState('text-animate')
     const [letterClass2, setLetterClass2] = useState('text-animate-fly')
@@ -46,7 +46,7 @@ function Hero() {
           <div className="Intro">
         <h1>
         <p className='color'>
-        <AnimatedLetters letterClass={letterClass2} strArray={introArr} idx={11} />
+        {/* <AnimatedLetters letterClass={letterClass2} strArray={introArr} idx={11} /> */}
         &nbsp;
         <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={14} />
         </p>
