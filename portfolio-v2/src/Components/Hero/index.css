@@ -35,7 +35,7 @@ p.color span{
 .hero-bg img {
     overflow: visible;
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: cover; 
     filter: brightness(80%);
     animation: ribbon 3s ease-in-out infinite;
@@ -45,7 +45,7 @@ p.color span{
 .hero-bg .reverse {
     overflow: visible;
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: cover; 
     filter: brightness(80%);
     animation: ribbon-reverse 7s ease-in-out infinite;
