@@ -40,7 +40,7 @@
     {
       company: "Masdar",
       role: "Service Management (Intern)",
-      date: "Sept 2023 – Jube 2023",
+      date: "Sept 2023 – June 2023",
       bullets: [
         "Engineered an API endpoint to handle payment processing.",
         "Strengthened system resilience by performing extensive penetration tests and deploying advanced Web Application Firewalls (WAF).",
