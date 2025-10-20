@@ -5,6 +5,7 @@ import {
 } from '@fortawesome/react-fontawesome'
 function Card({bgText, projectTitle, icon, hoverAccent, children}) {
   return (
+    
     <div className={`card ${hoverAccent}`} data-content={bgText} >
         <div className='icon-bg'>
         <FontAwesomeIcon icon={icon} className='icon' />
