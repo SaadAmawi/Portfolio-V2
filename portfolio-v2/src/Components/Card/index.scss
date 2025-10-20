@@ -125,6 +125,7 @@
     justify-content: start;
     width: fit-content;
     transition: all 0.2s ease-in-out;
+    flex-wrap: wrap;
 }
 .items{
     background-color: rgb(255, 255, 255);
