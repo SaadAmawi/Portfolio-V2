@@ -1,6 +1,7 @@
 
 import './App.css';
 import AboutMe from './Components/AboutMe';
+import Experince from './Components/Experience';
 import Header from './Components/Header';
 import Hero from './Components/Hero';
 import LogoCarouselBundle from './Components/LogoCarousel/LogoCarouselBundle';
@@ -10,8 +11,9 @@ function App() {
     <div className="App">
       <Header/>
       <Hero/>
-      <AboutMe/>
+      <Experince/>
       <LogoCarouselBundle/>
+      <AboutMe/>
     </div>
   );
 }

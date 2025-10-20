@@ -17,7 +17,7 @@
 }
 
 .logos {
-    width: 90%;
+    width: 80%;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
@@ -26,12 +26,12 @@
 }
 .logo_items {
   display: inline-flex;
-  animation: slide 45s linear infinite;
+  animation: slide 35s linear infinite;
   
 }
 .logo_items_reverse {
   display: inline-flex;
-  animation: slide 45s linear infinite;
+  animation: slide 35s linear infinite;
  animation-direction: reverse;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .logo_items i {
-  font-size: 60px;
+  font-size: 50px;
   margin: 0 40px;
   color: rgba(255, 255, 255, 0.691);
   transition: transform 0.3s ease;

@@ -1,0 +1,67 @@
+
+.experience-block{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 340px auto 100px auto;
+}
+.experience{
+    background-color: black;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 35%;
+}
+
+.toggle{
+    width: 100%;
+    height: 5%;
+    background-color: rgb(118, 118, 118);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.toggleButtonOn{
+    width: 49%;
+    height: 80%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    animation: headShake 1s forwards;
+
+}
+.toggleButtonOff{
+    width: 49.8%;
+    height: 80%;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.box{
+    width: 100%;
+    height: 93%;
+    border: rgb(156, 156, 156) 1px solid;
+    border-radius: 20px;
+    position: relative;
+    &:after{
+        content: "";
+        height: 100%;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.553);
+        position: absolute;
+        left: 10%;
+        top:0
+
+    }
+}
