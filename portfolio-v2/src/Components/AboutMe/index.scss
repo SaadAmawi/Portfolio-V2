@@ -1,6 +1,6 @@
 
 .about-me{
-width:67%;
+width:45%;
 height: fit-content;
 display: flex;
 flex-direction: column;
@@ -9,9 +9,7 @@ justify-content: center;
 margin: 40px auto 100px auto;
 position: relative;
 view-timeline: --rnge block;
-  animation: fadeIn 3s backwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 90%;
+  
 &:after{
     display: none;
     z-index: -1;

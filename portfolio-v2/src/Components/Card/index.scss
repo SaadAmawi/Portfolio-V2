@@ -1,17 +1,20 @@
 
 .card{
     background-color: rgb(16, 16, 16);
-    height: 200px;
-    width: 90%;
+    height: 250px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     // justify-content: flex-start;
     align-items: space-around;
     position: relative;
-    padding: 32px;
+    padding: 22px;
     border: 1px solid rgba(255, 255, 255, 0.153);
     border-radius: 20px;
-    transition: all 0.2s ease  ;
+    transition: all 0.2s ease;
+    animation: fadeIn 3s backwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
     &:hover{
         .items{
             opacity: 0.8;
@@ -81,7 +84,7 @@
         position: absolute;
         font-family: "lexend";
         font-weight: 900;
-        font-size: 5vmax;
+        font-size: 4.5vmax;
         letter-spacing: 3px;
         color: rgba(84, 84, 84, 0.268);
         top: 50%;

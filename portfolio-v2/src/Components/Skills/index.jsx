@@ -14,11 +14,11 @@ function Skills() {
     <div className='section_title'>
       <Card bgText={"Frontend"} projectTitle={"Front-End Technologies"}  icon={faDisplay}  hoverAccent={"purple"}>
         <ul className='card-items'>
-          <li className="items">HTML</li>
-          <li className="items">CSS</li>
-          <li className="items">JS</li>
+          <li className="items">Javascript</li>
+          <li className="items">Typescript</li>
           <li className="items">React</li>
           <li className="items">Flutter</li>
+          <li className="items">Figma</li>
         </ul>
             {/* <i className="devicon-html5-plain-wordmark colored"></i>
             <i className="devicon-css3-plain-wordmark colored"></i>         
@@ -29,6 +29,8 @@ function Skills() {
         </Card>
       <Card bgText={"Backend"} projectTitle={"Back-End Technologies"} projectDescription={"bla bla bla"} icon={faServer} hoverAccent={"yellow"}>      
         <ul className='card-items'>
+          <li className="items">Python</li>
+          <li className="items">Java</li>
           <li className="items">Django</li>
           <li className="items">FastAPI</li>
           <li className="items">.NET Core</li>
