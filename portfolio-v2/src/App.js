@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Header/>
       <Hero/>
-      <AboutMe/>
       <Experince/>
+      <AboutMe/>
       <LogoCarouselBundle/>
     </div>
   );

@@ -1,26 +1,26 @@
 
-.experience-block{
-    display: flex;
-    flex-direction: column;
-    // height: 100vh;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0px 100px 0px;
-     animation: slideInUp 1s backwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 90%;
-}
+// .experience-block{
+//     display: flex;
+//     flex-direction: column;
+//     // height: 100vh;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+// }
 .experience{
-    background-color: black;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: start;
-    // align-items: start;
-    width: 66%;
-    gap:20px;
-    transition: all 0.8s ease-in-out;
+  background-color: black;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: start;
+  // align-items: start;
+  margin: 340px auto 100px auto;
+  width: 67%;
+  gap:20px;
+  // transition: all 0.8s ease-in-out;
+  animation: fadeIn 3s backwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 #experience{
