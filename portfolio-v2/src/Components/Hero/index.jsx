@@ -14,7 +14,7 @@ import { SocialIcon } from 'react-social-icons'
 // import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 function Hero() {
     // const introArr = ["I","'","m"]
-    const nameArr = ["Saad"," ","Amawi"]
+    const nameArr = ["S","a","a","d"," ","A","m","a","w","i"]
     const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r','.']
     const [letterClass, setLetterClass] = useState('text-animate')
     const [letterClass2, setLetterClass2] = useState('text-animate-fly')
@@ -22,11 +22,12 @@ function Hero() {
 
     useEffect(()=>{
         setTimeout(()=>{
-        return (setLetterClass('text-animate-hover'),
-                setLetterClass2('text-animate-hover'),
+        return (
+                setLetterClass('text-animate-hover'),
+                // setLetterClass2('text-animate-hover'),
                 setArrowClass('down-arrow')
                 )
-        },7000)
+        },5000)
 
     },[])
 
@@ -48,7 +49,7 @@ function Hero() {
         <p className='color'>
         {/* <AnimatedLetters letterClass={letterClass2} strArray={introArr} idx={11} /> */}
         &nbsp;
-        <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={14} />
+        <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
         </p>
         <br/>
         <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={17} />

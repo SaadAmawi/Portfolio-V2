@@ -1,15 +1,14 @@
 .text-animate{
     display: inline-block;
     opacity: 1;
-    animation: fadeIn 3s ;
+    animation: fadeInUp 2s ;
     animation-fill-mode: backwards;
     min-width: 10px;
 }
 .text-animate-fly{
     display: inline-block;
     opacity: 1;
-    animation: fadeInDown 3s ;
-
+    animation: fadeIn 3s ;
     animation-fill-mode: backwards;
     min-width: 10px;
 }
@@ -18,7 +17,7 @@
     display: inline-block;
     animation-fill-mode: both;
     &:hover{
-        animation: heartBeat 2s;
+        animation: heartBeat 1s infinite;
             
     }
 }
@@ -29,5 +28,12 @@
     }
     .text-animate-fly._#{$i} {
         animation-delay: #{calc($i/10)}s;
+    }
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
     }
 }
