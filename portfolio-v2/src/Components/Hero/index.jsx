@@ -8,6 +8,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
+import { width } from '@fortawesome/free-brands-svg-icons/fa11ty'
 // import {
 //   FontAwesomeIcon
 // } from '@fortawesome/react-fontawesome'
@@ -15,7 +16,7 @@ import { SocialIcon } from 'react-social-icons'
 function Hero() {
     // const introArr = ["I","'","m"]
     const nameArr = ["S","a","a","d"," ","A","m","a","w","i"]
-    const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r','.']
+    const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r']
     const [letterClass, setLetterClass] = useState('text-animate')
     const [letterClass2, setLetterClass2] = useState('text-animate-fly')
     const [arrowClass, setArrowClass] = useState('fade-arrow')
@@ -24,7 +25,7 @@ function Hero() {
         setTimeout(()=>{
         return (
                 setLetterClass('text-animate-hover'),
-                // setLetterClass2('text-animate-hover'),
+                setLetterClass2('text-animate-fly'),
                 setArrowClass('down-arrow')
                 )
         },5000)
@@ -56,8 +57,8 @@ function Hero() {
          <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>
         <div className='buttons'>
-        <WhiteButton toLink={"/Contact"} buttonText={"Contact Me"} cName={"filled"}/>
-        <WhiteButton toLink={resume} buttonText={"Resume"} cName={"outline"}/>
+        {/* <WhiteButton toLink={"/Contact"} buttonText={"Contact Me"} cName={"filled"}/> */}
+        <WhiteButton toLink={resume} buttonText={"Resume"} cName={"outline"} />
         {/* <a  rel="noreferrer" href={resume} target="_blank" /> */}
         </div>
         </div>
