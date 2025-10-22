@@ -17,6 +17,7 @@
   margin: 340px auto 100px auto;
   width: 55%;
   gap:20px;
+  height: 70vh;
   // transition: all 0.8s ease-in-out;
   animation: fadeIn 3s backwards;
   animation-timeline: view();
@@ -78,7 +79,7 @@ button{
   // width: fit-content;
   max-height: 90%;
   height: fit-content;
-  border: rgb(156, 156, 156) 1px solid;
+  // border: rgb(156, 156, 156) 1px solid;
   border-radius: 20px;
   position: relative;
   overflow-y: auto;
@@ -100,10 +101,10 @@ button{
     content: "";
     position: absolute;
     left: 20px;
-    top: -30px;
-    bottom: -30px; /* key difference */
-    width: 1.5px;
-    background-color: rgba(255, 255, 255, 0.25);
+    top: 0px;
+    bottom: 0px; /* key difference */
+    width: 3px;
+    background-image: linear-gradient(to bottom, #df23f82f,#8a10fd42,#0547fc18,#df23f818);
     z-index: -1;
     
   }
