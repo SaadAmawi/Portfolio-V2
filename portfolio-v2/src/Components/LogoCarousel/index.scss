@@ -59,23 +59,23 @@
 .logo_items i {
   font-size: 50px;
   margin: 0 40px;
-  color: rgba(255, 255, 255, 0.691);
+  color: var(--text-color);
   transition: transform 0.3s ease;
 }
 .logo_items_reverse i {
   font-size: 60px;
   margin: 0 40px;
-  color: rgba(255, 255, 255, 0.691);
+  color: var(--text-color);
   transition: transform 0.3s ease;
 }
 
 .logo_items i:hover {
   transform: scale(1.3);
-  color: white;
+  color: var(--text-color);
 }
 .logo_items_reverse i:hover {
   transform: scale(1.3);
-  color: white;
+  color: var(--text-color);
 }
 
  .tech{

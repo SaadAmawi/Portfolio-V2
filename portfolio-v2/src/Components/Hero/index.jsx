@@ -1,25 +1,22 @@
 import React from 'react'
 import './index.css'
-// import image from '../Assets/Images/headshot.png'
 import bg from '../Assets/Images/homeBg.jpg'
+import bgLight from '../Assets/Images/bglight.png'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
+import { useTheme } from '../../themeContext'
 
-// import {
-//   FontAwesomeIcon
-// } from '@fortawesome/react-fontawesome'
-// import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 function Hero() {
-    // const introArr = ["I","'","m"]
-    const nameArr = ["S","a","a","d"," ","A","m","a","w","i"]
-    const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r']
-    const [letterClass, setLetterClass] = useState('text-animate')
-    const [letterClass2, setLetterClass2] = useState('text-animate-fly')
-    const [arrowClass, setArrowClass] = useState('fade-arrow')
+    const {theme} = useTheme();
+    const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
+    const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r'];
+    const [letterClass, setLetterClass] = useState('text-animate');
+    const [letterClass2, setLetterClass2] = useState('text-animate-fly');
+    const [arrowClass, setArrowClass] = useState('fade-arrow');
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -38,16 +35,22 @@ function Hero() {
 
   return (
     <div className='hero' id={"arrow"}>
-      <div className="hero-bg">
+      {theme==="dark" ? 
+      (<div className="hero-bg">
         <img src={bg} alt="Background" />
         <img src={bg} alt="Background" className='reverse'/>
-      </div>
-  
+      </div>)
+      : 
+      (<div className="hero-bg">
+        <img src={bgLight} alt="Background" />
+        <img src={bgLight} alt="Background" className='reverse'/>
+      </div>)
+      }
 
         <div className='text'>
           <div className="Intro">
         <h1>
-        <p className='color'>
+        <p className={`color ${theme}`}>
         <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
         </p>
         <br/>

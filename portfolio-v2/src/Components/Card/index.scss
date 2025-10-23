@@ -1,6 +1,6 @@
 
 .card{
-    background-color: rgb(16, 16, 16);
+    background-color: var(--bg-color2);
     width: 100%;
     min-height: 250px;
     max-height: fit-content;
@@ -100,7 +100,7 @@
     font-family: 'lexend';
     font-size: 30px;
     font-weight: 600;
-    color: white;
+    color: var(--text-color-purpleDark);
     margin-top: 10px;
 }
 .icon-bg{
@@ -116,7 +116,7 @@
     // background-color: rgba(201, 201, 201, 0.12);
     
     
-    color: white;
+    color: var(--text-color);
 }
 .card-items{
     margin: 0px;

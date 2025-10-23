@@ -1,5 +1,5 @@
 .hero{
-    background-color: black;
+    /* background-color: black; */
     width: 100%;
     height: 100vh;
     display: flex;
@@ -16,9 +16,14 @@ p.color span{
     background-clip: text;
     color: transparent;
 }
+p.color.light span{
+    background: linear-gradient(to right,rgb(131, 182, 248),rgb(49, 6, 204) );;
+    background-clip: text;
+    color: transparent;
+}
 .text{
     width: 100%;
-    color: white;
+    color: var(--text-color-purple);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,15 +36,16 @@ p.color span{
     inset: 0;
     width: 100%;
     z-index: 0;
+    
 }
 .hero-bg img {
     overflow: visible;
     width: 100%;
     height: 80%;
     object-fit: cover; 
-    filter: brightness(80%);
+    filter: brightness(100%);
     animation: ribbon 3s ease-in-out infinite;
-    opacity: 50%;
+    opacity: var(--op);
     position: absolute;
 }
 .hero-bg .reverse {
@@ -47,9 +53,9 @@ p.color span{
     width: 100%;
     height: 80%;
     object-fit: cover; 
-    filter: brightness(80%);
+    filter: brightness(100%);
     animation: ribbon-reverse 7s ease-in-out infinite;
-    opacity: 50%;
+    opacity: var(--op);
 }
 p{
     font-size: 50px;
@@ -123,34 +129,34 @@ h1{
 @keyframes ribbon {
     0%, 100% {
      transform: scaleY(1.1) translateY(5px);
-     opacity:0.2;
+     opacity:var(--op2);
      z-index: 0;
     }
     25% {
         transform: scaleY(1.08) translateY(-5px);
-        opacity:0.2;
+        opacity:var(--op2);
         z-index: 0;
     }
     50% {
         transform: scaleY(1.12) translateY(-10px);
-        opacity:0.25;
+        opacity:var(--op2);
         z-index: 0;
     }
 }
 @keyframes ribbon-reverse {
     0%, 100% {
         transform: scaleY(1.1) translateY(5px);
-        opacity:0.2;
+        opacity:var(--op2);
         z-index: 0;
     }
     25% {
         transform: scaleY(1.05) translateY(0px);
-        opacity:0.2;
+        opacity:var(--op2);
         z-index: 0;
     }
     50% {
         transform: scaleY(1.18) translateY(0px);
-        opacity:0.25;
+        opacity:var(--op2);
         z-index: 0;
   }
 }

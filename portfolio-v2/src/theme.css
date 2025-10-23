@@ -1,0 +1,39 @@
+/* Default theme (light mode) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #d6adad;
+  --accent: #b87aff;
+  --card-bg: #f7f7f7;
+}
+
+/* Dark mode overrides */
+body.dark {
+  --bg-color: #000000;
+  --bg-color2: #0e0e0e;
+  --text-color: #f5f5f5;
+  --text-color-purple: white;
+  --text-color-purpleDark: white;
+  --accent: #ff6ae0;
+  --card-bg: #1a1a1a;
+  --boder: white;
+  --bg-color-2:rgba(243, 243, 243, 0.083);
+  --op: 80%;
+  --op2: 0.35;
+  --pink-200:white;
+}
+
+/* You can add more theme variants later easily */
+body.light {
+    --bg-colorظ: #f6f1ea;
+    --bg-color2:rgb(245, 245, 245);
+    --text-color: #000000;
+    --text-color-purple: #f363e0;
+    --text-color-purpleDark: #ad0897;
+    --accent: #d78c5c;
+    --card-bg: #f9f5f0;
+    --boder: black;
+    --bg-color-2:rgba(182, 134, 174, 0.278);
+    --op: 80%;
+    --op2: 0.85;
+    --pink-200:rgb(250, 40, 205);
+}

@@ -1,12 +1,36 @@
-// import React, { useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import './index.scss'
 import Item from './Item'
-import { useToggle } from '../../Context/toggleContext'
+import { useToggle } from '../../toggleContext'
+import { useTheme } from '../../themeContext'
+
+
 function Experience() {
-    const {toggledSection,setToggledSection} = useToggle();
+  const {theme} = useTheme()
+  const bodyRef = useRef(null)
+  const {toggledSection,setToggledSection} = useToggle();
+
+  useEffect(() => {
+    const el = bodyRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          el.classList.add("animate"); // trigger the CSS animation
+          obs.unobserve(el);           // ✅ stops observing so it only plays once
+        }
+      });
+    });
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+
   return (
-    <div className='experience-block' id="experience">
-    <div className='experience'>
+    <div className='experience-block' id="experience" >
+    <div className={`experience ${theme}`} ref={bodyRef}>
         <div className='toggle'>
             <button className={toggledSection==="Work"?"toggleButtonOn work":"toggleButtonOff" } onClick={()=>setToggledSection("Work")}>Work</button>
             <button className={toggledSection==="Experience"?"toggleButtonOn education":"toggleButtonOff"} onClick={()=>setToggledSection("Experience")}>Education</button>

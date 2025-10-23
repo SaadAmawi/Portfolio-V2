@@ -23,7 +23,11 @@
     justify-content: space-between;
     margin-top: 5px;
     z-index: 1;
-    
+    &.light{
+        background-color: rgba(192, 18, 255, 0.1);
+        border:1px solid rgba(252, 1, 235, 0.1);
+        
+    }
 }
 .Logo{
     height:100%;
@@ -37,6 +41,10 @@
     margin-left: 0px;
     border-radius: 50%;
     object-fit: cover;
+    -webkit-filter: drop-shadow(1px 1px 0 var(--text-color-purple))
+                  drop-shadow(-1px -1px 0 var(--text-color-purple));
+  filter: drop-shadow(1px 1px 0 var(--text-color-purple)) 
+          drop-shadow(-1px -1px 0 var(--text-color-purple));
     /* animation: zoomInDown 1.3s; */
 }
 .middle-btns{
@@ -44,4 +52,32 @@
     padding: 0px 10px;
     display: flex;
     flex-direction: row;
+}
+.toggleTheme{
+    background-color: none;
+    background: none;
+    border: none;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+
+}
+.right-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    height: 100%;
+    margin: 0;
+}
+
+.sun{
+    height: 18px;
+    width: 18px;
+    /* aspect-ratio: 1; */
+    margin-top: 1px;
+    -webkit-filter: drop-shadow(1px 1px 8px  yellow);
+
 }

@@ -1,9 +1,14 @@
 @import 'animate.css';
-body{
+body.dark{
   background-color: black;
   overflow-x: hidden;
-  
 }
+body.light{
+  color: black;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   will-change: transform;
@@ -19,4 +24,3 @@ scrollbar-width: none;
      box-sizing: border-box; 
 }
 
-  

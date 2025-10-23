@@ -3,7 +3,7 @@
     width: fit-content;
     padding: 0px 10px;
     cursor: pointer;
-    color: white;
+    color: var(--text-color-purple);
     text-decoration: none;
     border: solid transparent 2px;
     font-family: 'lexend', serif;
