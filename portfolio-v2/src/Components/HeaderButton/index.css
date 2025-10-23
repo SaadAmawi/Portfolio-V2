@@ -10,30 +10,11 @@
     position:relative;
     justify-content: center;
     display: flex;
-    /* transition: all ease-in-out 1s; */
-    /* &::after{ */
-        /* content:"";
-        position: absolute;
-        bottom:0;left:10%;
-        height: 2px;
-        border-radius: 50%;
-        background: linear-gradient(to right, #c084fc, #f472b6);
-        width: 0%;
-        transition:  ease-in 0.5s; */
-        
-    /* } */
-    
     &:hover{
         transform: scale(1.05);
         color: rgb(255, 255, 255);
         background: linear-gradient(to right, #c084fc, #f472b6);
         background-clip: text;
         color: transparent;
-        /* transition: all ease-in-out 1s; */
-        /* &::after{ */
-        /* width:80%;
-        border-radius: 50px;
-        box-shadow: 0 0 16px 1px #fd76ed; */
-        /* } */
     }
 }

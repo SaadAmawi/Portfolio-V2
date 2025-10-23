@@ -68,7 +68,7 @@ h1{
     font-family: 'lexend',serif;
     font-weight: 200;
     animation: fadeIn 3s;
-    animation-delay: 3.6s;
+    animation-delay: 3.8s;
     animation-fill-mode: backwards;
     letter-spacing: 1.5px;
 }
@@ -117,7 +117,7 @@ h1{
     gap:15px;
     /* padding: 20px 20px; */
     position: relative;
-    animation: fadeIn backwards 2s 5s;
+    animation: zoomInUp backwards 2s 4.5s;
 }
 
 @keyframes ribbon {

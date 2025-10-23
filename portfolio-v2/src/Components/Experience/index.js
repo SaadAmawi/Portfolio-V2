@@ -11,7 +11,7 @@ function Experience() {
             <button className={toggledSection==="Work"?"toggleButtonOn work":"toggleButtonOff" } onClick={()=>setToggledSection("Work")}>Work</button>
             <button className={toggledSection==="Experience"?"toggleButtonOn education":"toggleButtonOff"} onClick={()=>setToggledSection("Experience")}>Education</button>
         </div>
-            <div className='box'>
+            <div className="box" key={toggledSection}>
             <Item active={toggledSection}/>
             </div>
     </div>

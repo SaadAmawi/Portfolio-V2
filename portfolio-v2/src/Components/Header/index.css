@@ -37,7 +37,7 @@
     margin-left: 0px;
     border-radius: 50%;
     object-fit: cover;
-    animation: zoomInDown 1.3s;
+    /* animation: zoomInDown 1.3s; */
 }
 .middle-btns{
     width:fit-content;
@@ -45,33 +45,3 @@
     display: flex;
     flex-direction: row;
 }
-
-
-/* .big{
-    font-family: "Mea Culpa", cursive;
-    font-weight: 400;
-    font-size: 40px;
-    margin-left: 80px;
-    height: fit-content;
-    animation:zoomInDown 1.3s;
-    margin:0 0 0px 20px;
-    &:first-child{
-        margin: 0 0 0px 80px;
-        &::after{
-            animation:zoomInDown 2s;
-            animation-delay: 0.3s;
-            animation-fill-mode: backwards;
-            content: "aad";
-        }
-    }
-    &::after{
-        animation:zoomInDown 2s;
-        animation-delay: 0.3s;
-        animation-fill-mode: backwards;
-        content: "mawi";
-        font-family: "Monsieur La Doulaise", cursive;
-        font-weight: 200;
-        font-size: 30px;
-        height: fit-content;
-    }
-} */

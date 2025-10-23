@@ -33,7 +33,7 @@ function Skills() {
           <li className="items">Java</li>
           <li className="items">Django</li>
           <li className="items">FastAPI</li>
-          <li className="items">.NET Core</li>
+          {/* <li className="items">.NET Core</li> */}
           <li className="items">SpringBoot</li>
           <li className="items">Node</li>
         </ul>

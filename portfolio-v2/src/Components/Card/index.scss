@@ -1,8 +1,9 @@
 
 .card{
     background-color: rgb(16, 16, 16);
-    height: 250px;
     width: 100%;
+    min-height: 250px;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     // justify-content: flex-start;
@@ -23,7 +24,7 @@
             margin-top: 16px;
         }
         box-shadow: 0 0px 30px 3px rgba(4, 129, 201, 0.341);
-        scale: 1.02 ;
+        scale: 1.01 ;
         background-image: linear-gradient(155deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 129, 201, 0.214) 64%, rgba(60, 0, 255, 0.09) 100%);
         border: 1px solid rgba(138, 191, 255, 0.797);
         .icon-bg{
@@ -35,9 +36,8 @@
         }
     }
         &.purple:hover{
-            
             box-shadow: 0 0px 30px 3px rgba(4, 17, 201, 0.5);
-        scale: 1.02 ;
+        scale: 1.01 ;
         background-image: linear-gradient(155deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 17, 201, 0.214) 64%, rgba(60, 0, 255, 0.09) 100%);
         border: 1px solid rgba(4, 17, 201, 0.8);
         .icon-bg{
@@ -52,7 +52,7 @@
     }
     &.yellow:hover{
         box-shadow: 0 0px 30px 3px rgba(212, 0, 255, 0.347);
-            scale: 1.02 ;
+            scale: 1.01 ;
             // z-index: 1;
             background-image: linear-gradient(155deg,rgba(26, 0, 36, 0.07) 0%, rgba(65, 3, 89, 0.09) 20%, rgba(182, 16, 223, 0.167) 64%, rgba(83, 2, 99, 0.09) 100%);
             border: 1px solid rgba(212, 0, 255, 0.7);
@@ -67,7 +67,7 @@
     }
         &.pink:hover{
                 box-shadow: 0 0px 30px 3px rgba(255, 0, 200, 0.347);
-                scale: 1.02 ;
+                scale: 1.01 ;
                 background-image: linear-gradient(155deg,rgba(36, 0, 28, 0.07) 0%, rgba(99, 2, 73, 0.09) 20%, rgba(246, 70, 187, 0.199) 64%, rgba(93, 1, 59, 0.09) 100%);
                 border: 1px solid rgba(255, 0, 195, 0.7);
                 .icon-bg{

@@ -8,7 +8,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
-import { width } from '@fortawesome/free-brands-svg-icons/fa11ty'
+
 // import {
 //   FontAwesomeIcon
 // } from '@fortawesome/react-fontawesome'
@@ -48,8 +48,6 @@ function Hero() {
           <div className="Intro">
         <h1>
         <p className='color'>
-        {/* <AnimatedLetters letterClass={letterClass2} strArray={introArr} idx={11} /> */}
-        &nbsp;
         <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
         </p>
         <br/>

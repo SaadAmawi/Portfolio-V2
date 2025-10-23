@@ -3,6 +3,7 @@
       company: "Abu Dhabi University",
       role: "Software Developer",
       date: "Feb 2025 – Present",
+      Stack: "React, Typescript, Django, MySQL, N8N, Bubble.io",
       bullets: [
         "Built a faculty document management system with real-time employee data sync and automated SharePoint folder structure creation. Developed front-end application enabling document uploads with automatic database storage and SharePoint as a backup, reducing manual processing by 30% and establishing dual-storage backup system.",
         "Architected document ingestion pipeline from Google Drive through chunking/embeddings (OpenAI) to vector indexing (Pinecone), delivering RAG chatbot responses. Implemented robust handling of malformed inputs, significantly reducing instructor support burden.",
@@ -17,6 +18,7 @@
       company: "Knowledge Group",
       role: "Software Developer (Contract)",
       date: "Feb 2025 – Present",
+      Stack: "ASP.NET, AWS, DynamoDB, S3, Salesforce, Sitecore XM, Javascript, N8N",
       bullets: [
         "Designing and implementing custom software solutions tailored to meet organizational needs.",
         "Collaborating with cross-functional teams to Develop and optimize web and mobile applications leveraging rapid prototyping",
@@ -29,6 +31,7 @@
       company: "NASR Esports",
       role: "Software Engineer - AI Automation Engineer",
       date: "Oct 2024 – Jan 2025",
+      Stack: "Python, LangChain, LangGraph, Django, FastAPI, React",
       bullets: [
         "Spearheaded two concurrent projects, demonstrating multitasking and leadership abilities in a fast-paced environment",
         "Managed API endpoints, integrating AI/ML pipelines for automated decision-making.",
@@ -55,8 +58,9 @@
       institution: "Abu Dhabi University",
       degree: "BSc (Honors) in Software Engineering",
       date: "2020 – 2024",
+      cgpa: "CGPA: 3.4/4.0",
       details: [
-        "Graduated with Honours, Capstone: Memoreyez - A Smart and Secure System for Alzheimer's and Dementia Patients",
+        "Capstone: Memoreyez - A Smart and Secure System for Alzheimer's and Dementia Patients",
         "Relevant coursework: Software Engineering, Data Structures and Algorithms, Software Maintenance and Evolution, Software Testing and Quality, Database Management Systems, Software Requirements Specifications, Ethical Hacking, Operating Systems",
       ],
       logo: "https://images.seeklogo.com/logo-png/30/1/abu-dhabi-university-logo-png_seeklogo-309706.png",
