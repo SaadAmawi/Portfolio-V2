@@ -36,7 +36,7 @@ function Hero() {
     <div className='hero' id={"arrow"}>
     
       <div className="hero-bg">
-        <img src={bg} alt="Background" />
+        { <img src={bg} alt="Background" /> }
         {/* <img src={bg} alt="Background" className='reverse'/> */}
       </div>
       
