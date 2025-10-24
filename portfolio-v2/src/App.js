@@ -2,7 +2,7 @@
 import './App.css';
 import './theme.css';
 import AboutMe from './Components/AboutMe';
-import Experince from './Components/Experience';
+import Experience from './Components/Experience';
 import Header from './Components/Header';
 import { ToggleProvider } from './toggleContext';
 import Hero from './Components/Hero';
@@ -14,7 +14,7 @@ function App() {
       <ToggleProvider>
       <Header/>
       <Hero/>
-      <Experince/>
+      <Experience/>
       </ToggleProvider>
       <AboutMe/>
       <LogoCarouselBundle/>

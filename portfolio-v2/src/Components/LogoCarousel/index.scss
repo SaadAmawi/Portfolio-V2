@@ -10,7 +10,7 @@
 .logo-container{
   width:"100%";
   overflow:"hidden";
-  margin-top:"50px";
+  margin-top:10px;
   display:"flex";
   flex-direction:"column";
   justify-Content:"center";
@@ -33,8 +33,6 @@
     white-space: nowrap;
     position: relative;
     padding: 20px 0;
-    
-// background: linear-gradient(90deg,rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0.14) 100%)
 }
 .logo_items {
   display: inline-flex;
@@ -59,30 +57,33 @@
 .logo_items i {
   font-size: 50px;
   margin: 0 40px;
-  color: var(--text-color);
+  color: var(--text-color-purpleDark2);
   transition: transform 0.3s ease;
+  opacity: 0.9;
 }
 .logo_items_reverse i {
   font-size: 60px;
   margin: 0 40px;
-  color: var(--text-color);
+  opacity: 0.9;
+  color: var(--text-color-purpleDark2);
   transition: transform 0.3s ease;
 }
 
 .logo_items i:hover {
+  opacity: 1;
   transform: scale(1.3);
-  color: var(--text-color);
+  color: var(--text-color-purpleDark2);
 }
 .logo_items_reverse i:hover {
+  opacity: 1;
   transform: scale(1.3);
-  color: var(--text-color);
+  color: var(--text-color-purpleDark2);
 }
 
  .tech{
   text-align: center;
   width: 90%;
   font-size: 30px;;
-  // margin-left: 130px;
   color:white
 }
 @keyframes fadeIn {

@@ -9,31 +9,53 @@
 /* Dark mode overrides */
 body.dark {
   --bg-color: #000000;
+  --bg-color-inverse: white;
   --bg-color2: #0e0e0e;
   --text-color: #f5f5f5;
+  --text-color-inverse: rgb(17, 17, 17);
   --text-color-purple: white;
   --text-color-purpleDark: white;
+  --text-color-purpleDark2: white;
+  --text-color-purpleDark3: white;
   --accent: #ff6ae0;
+  --shadow:rgba(255, 255, 255, 0.12);
+  --card-inner: linear-gradient(155deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 17, 201, 0.214) 64%, rgba(60, 0, 255, 0.09) 100%);
   --card-bg: #1a1a1a;
+  --card-icon:rgba(4, 17, 201, 0.5);
+  --card-title:rgba(4, 129, 201, 1);
+  --card-after: rgba(84, 84, 84, 0.268);
+  --card-border:rgba(255, 255, 255, 0.153); 
   --boder: white;
+  --timeline: linear-gradient(to bottom, #df23f83b,#8a10fd2c,#0547fc25,#df23f825);
   --bg-color-2:rgba(243, 243, 243, 0.083);
   --op: 80%;
-  --op2: 0.35;
+  --op2: 1;
   --pink-200:white;
 }
 
 /* You can add more theme variants later easily */
 body.light {
-    --bg-colorظ: #f6f1ea;
+    --bg-color: #f6f1ea;
+    --bg-color-inverse: black;
     --bg-color2:rgb(245, 245, 245);
     --text-color: #000000;
-    --text-color-purple: #f363e0;
-    --text-color-purpleDark: #ad0897;
+    --text-color-inverse: white;
+    --text-color-purple: #404cf6;
+    --text-color-purpleDark: #28308bce;
+    --text-color-purpleDark2: #585e9af7;
+    --text-color-purpleDark3: #2f3f8efd;
     --accent: #d78c5c;
-    --card-bg: #f9f5f0;
+    --card-bg: #f7f0f9;
+    --card-border:#6379f3; 
+    --card-title:#35288bce;
+    --card-icon:rgba(92, 92, 180, 0.4);
+    --card-inner: transparent;
+    --card-after: rgba(79, 110, 153, 0.268);
+    --timeline: linear-gradient(to bottom, #3823f83b);
+    --shadow:rgba(185, 185, 185, 0.449);
     --boder: black;
-    --bg-color-2:rgba(182, 134, 174, 0.278);
+    --bg-color-2:rgba(136, 134, 182, 0.278);
     --op: 80%;
-    --op2: 0.85;
-    --pink-200:rgb(250, 40, 205);
+    --op2: 1;
+    --pink-200:rgb(64, 40, 250);
 }

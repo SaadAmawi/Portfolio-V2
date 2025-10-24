@@ -5,10 +5,12 @@ body.dark{
 }
 body.light{
   color: black;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(250, 250, 250);
   overflow-x: hidden;
 }
-
+body{
+  transition: all 0.3s ease-in-out;
+}
 html {
   scroll-behavior: smooth;
   will-change: transform;

@@ -24,8 +24,8 @@
     margin-top: 5px;
     z-index: 1;
     &.light{
-        background-color: rgba(192, 18, 255, 0.1);
-        border:1px solid rgba(252, 1, 235, 0.1);
+        background-color: rgba(77, 107, 227, 0.099);
+        border:1px solid rgba(77, 107, 227, 0.2);
         
     }
 }
@@ -41,11 +41,11 @@
     margin-left: 0px;
     border-radius: 50%;
     object-fit: cover;
+    &.light{
     -webkit-filter: drop-shadow(1px 1px 0 var(--text-color-purple))
-                  drop-shadow(-1px -1px 0 var(--text-color-purple));
-  filter: drop-shadow(1px 1px 0 var(--text-color-purple)) 
-          drop-shadow(-1px -1px 0 var(--text-color-purple));
-    /* animation: zoomInDown 1.3s; */
+                    drop-shadow(-1px -1px 0 var(--text-color-purple));
+    filter: drop-shadow(1px 1px 0 var(--text-color-purple)) 
+            drop-shadow(-1px -1px 0 var(--text-color-purple));}
 }
 .middle-btns{
     width:fit-content;
@@ -68,15 +68,16 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 20px;
+    gap: 15px;
     height: 100%;
     margin: 0;
 }
 
 .sun{
-    height: 18px;
-    width: 18px;
-    /* aspect-ratio: 1; */
+    animation: pulse 2s infinite;
+    transition: all 0.6s ease-in-out;
+    height: 13px;
+    width: 13px;
     margin-top: 1px;
     -webkit-filter: drop-shadow(1px 1px 8px  yellow);
 

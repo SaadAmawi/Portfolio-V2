@@ -7,6 +7,7 @@
     justify-content: center;
     position: relative;
     margin-top: -70px;
+    
 }
 .color{
     margin-bottom: -50px;
@@ -16,14 +17,15 @@ p.color span{
     background-clip: text;
     color: transparent;
 }
-p.color.light span{
-    background: linear-gradient(to right,rgb(131, 182, 248),rgb(49, 6, 204) );;
+/* p.color.light span{
+    background: rgb(117, 97, 251);
     background-clip: text;
     color: transparent;
-}
-.text{
+    } */
+    .text{
+    filter: drop-shadow(0px 0px 3px rgba(10, 0, 17, 0.8));
     width: 100%;
-    color: var(--text-color-purple);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,12 +43,13 @@ p.color.light span{
 .hero-bg img {
     overflow: visible;
     width: 100%;
-    height: 80%;
+    height:78%;
     object-fit: cover; 
     filter: brightness(100%);
     animation: ribbon 3s ease-in-out infinite;
     opacity: var(--op);
     position: absolute;
+    
 }
 .hero-bg .reverse {
     overflow: visible;
@@ -54,8 +57,9 @@ p.color.light span{
     height: 80%;
     object-fit: cover; 
     filter: brightness(100%);
+    filter: blur(8px);
     animation: ribbon-reverse 7s ease-in-out infinite;
-    opacity: var(--op);
+    opacity:0.3;
 }
 p{
     font-size: 50px;
@@ -93,7 +97,7 @@ h1{
     gap:30px;
 }
 .fade-arrow{
-    color: white;
+    color: var(--text-color-purple);
     font-size: 30px;
     position: absolute;
     /* display: none; */
@@ -104,15 +108,16 @@ h1{
 }
 .down-arrow{
     width: 40px;
-    color: white;
+    /* color: var(--text-color); */
+    filter: drop-shadow(2px 2px 8px var(--text-color-purpleDark3));
     font-size: 30px;
     position: absolute;
     bottom: 20px;
-    animation: bounce 2s infinite;
-    filter: drop-shadow(0 0 4px white);
+    /* animation: bounce 2s infinite; */
+     /* filter: drop-shadow(0 0 4px white); */
     animation: fadeOut linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 70%;
+    animation-range: entry 0% cover 70%; 
 }
 
 .socials{
@@ -146,17 +151,17 @@ h1{
 @keyframes ribbon-reverse {
     0%, 100% {
         transform: scaleY(1.1) translateY(5px);
-        opacity:var(--op2);
+        opacity:0.5;
         z-index: 0;
     }
     25% {
         transform: scaleY(1.05) translateY(0px);
-        opacity:var(--op2);
+        opacity:0.5;
         z-index: 0;
     }
     50% {
         transform: scaleY(1.18) translateY(0px);
-        opacity:var(--op2);
+        opacity:0.5;
         z-index: 0;
   }
 }

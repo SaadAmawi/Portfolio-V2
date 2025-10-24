@@ -1,7 +1,6 @@
 import React from 'react'
 import './index.css'
-import bg from '../Assets/Images/homeBg.jpg'
-import bgLight from '../Assets/Images/bglight.png'
+import bg from '../Assets/Images/background.png'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
@@ -35,17 +34,12 @@ function Hero() {
 
   return (
     <div className='hero' id={"arrow"}>
-      {theme==="dark" ? 
-      (<div className="hero-bg">
+    
+      <div className="hero-bg">
         <img src={bg} alt="Background" />
-        <img src={bg} alt="Background" className='reverse'/>
-      </div>)
-      : 
-      (<div className="hero-bg">
-        <img src={bgLight} alt="Background" />
-        <img src={bgLight} alt="Background" className='reverse'/>
-      </div>)
-      }
+        {/* <img src={bg} alt="Background" className='reverse'/> */}
+      </div>
+      
 
         <div className='text'>
           <div className="Intro">
@@ -58,9 +52,7 @@ function Hero() {
          <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>
         <div className='buttons'>
-        {/* <WhiteButton toLink={"/Contact"} buttonText={"Contact Me"} cName={"filled"}/> */}
         <WhiteButton toLink={resume} buttonText={"Resume"} cName={"outline"} />
-        {/* <a  rel="noreferrer" href={resume} target="_blank" /> */}
         </div>
         </div>
         <div className='socials'>
@@ -70,9 +62,7 @@ function Hero() {
 
         </div>
         </div>
-        <img src={mouseBounce} alt="Mouse Bounce" className={arrowClass} id="arrow"/>
-        {/* <FontAwesomeIcon icon={faChevronDown} className={arrowClass}/> */}
- 
+        <img src={mouseBounce} alt="Mouse Bounce" className={arrowClass} id="arrow"/> 
     </div>
   )
 }

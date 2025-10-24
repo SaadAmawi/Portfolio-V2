@@ -6,7 +6,7 @@ display: flex;
 flex-direction: column;
 align-items:center;
 justify-content: center;
-margin: 40px auto 100px auto;
+margin: 40px auto 30px auto;
 position: relative;
 view-timeline: --rnge block;
   
@@ -76,18 +76,11 @@ height: 50%;
 
 @keyframes slideInUp {
     0%{
-        // opacity: 0;
         transform: scale(0.93)
     }
- 
     60%{
-        // opacity: 1;
         transform:  scale(1)
     }
-    // 100%{
-    //     // opacity: 0;
-    //    transform:scale(0.9)
-    // }
 }
 
 @media screen and (max-width:1200px) {
@@ -127,7 +120,6 @@ height: 50%;
     }
    .left-text h1 {
     top: 0;
-    // rotate: -270deg;
     font-size: 120px;
    }
     .right-image{

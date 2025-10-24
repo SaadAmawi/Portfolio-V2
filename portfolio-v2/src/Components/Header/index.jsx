@@ -12,43 +12,39 @@ import sun from '../Assets/Images/sun.png'
 function Header(){
   const {setToggledSection} = useToggle();
   const {theme, setTheme} = useTheme();
-  const handleClick = (anchor) => () => { 
-   const id = `${anchor}`; 
-   const element = document.getElementById(id); 
-   if (element) { 
-     element.scrollIntoView({ 
-       behavior: "smooth", 
-       block: "start", 
-     }); 
-   } 
- }; 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }; 
     return(
         <div className="Head">
     <nav className={`Header ${theme}`}>
         <div className="Logo">
-        <img src={image} alt="logo" className="logo-image"/>
+        <img src={image} alt="logo" className={`logo-image ${theme}`}/>
         </div>
         <div className="middle-btns">
-        <HeaderButton  buttonText="Home" handleClick={handleClick("arrow")}/>
-        <HeaderButton  buttonText="Experience" handleClick={()=>{
-          handleClick("experience")();
+        <HeaderButton buttonText="Home" handleClick={() => scrollToSection("arrow")}/>
+        <HeaderButton buttonText="Experience" handleClick={() => {
+          scrollToSection("experience");
           setToggledSection("Work");
         }}/>
-        <HeaderButton  buttonText="Education" handleClick={()=>{
-          handleClick("experience")();
+        <HeaderButton buttonText="Education" handleClick={() => {
+          scrollToSection("experience");
           setToggledSection("Experience");
         }}/>
-        <HeaderButton  buttonText="Projects" handleClick={handleClick("experience")} />
-        <HeaderButton  buttonText="Theme" handleClick={()=>theme === "light"?setTheme("dark"):setTheme("light")} />
-        {/* <HeaderButton  buttonText="MyGPT"/> */}
+        {/* <HeaderButton buttonText="Projects" handleClick={() => scrollToSection("experience")} /> */}
         </div>
         <div className="right-buttons">
-        <button className="toggleTheme" onClick={()=>theme === "light"?setTheme("dark"):setTheme("light")}>
+        <button className="toggleTheme" onClick={()=> theme ==="light" ? setTheme("dark") : setTheme("light")}>
           {theme==="dark"?
-          //  ( <FontAwesomeIcon icon={faSun} color="yellow"></FontAwesomeIcon>
             ( <img src={sun} className="sun" alt="sun" />
            ):
-            (<FontAwesomeIcon icon={faMoon} color="darkblue" style={{WebkitFilter:"drop-shadow(1px 1px 4px blue)"}}></FontAwesomeIcon>)
+            (<FontAwesomeIcon icon={faMoon} color="var(--text-color-purpleDark2)" style={{WebkitFilter:"drop-shadow(1px 1px 4px var(--text-color-purpleDark2))"}}></FontAwesomeIcon>)
           }
         </button>
         <WhiteButton toLink="/mygpt" buttonText="Contact" cName="filled-header"/>

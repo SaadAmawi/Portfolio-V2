@@ -1,6 +1,5 @@
 import './index.css'
 import { NavLink } from 'react-router-dom';
-// import { useTheme } from '../../themeContext'
 
 function HeaderButton ({toLink,buttonText,handleClick}) {
 

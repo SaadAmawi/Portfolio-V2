@@ -1,7 +1,6 @@
 import React from 'react'
 import './index.scss'
 import Skills from '../Skills'
-// import image from '../Assets/Images/me1.png'
 function AboutMe() {
   return (
     <div className='about-me' id='about-me'>

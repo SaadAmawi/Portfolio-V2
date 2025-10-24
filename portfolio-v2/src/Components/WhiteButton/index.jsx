@@ -1,4 +1,3 @@
-// import React, { use } from 'react'
 import './index.scss'
 import { useTheme } from '../../themeContext'
 function WhiteButton({toLink,buttonText,cName}) {

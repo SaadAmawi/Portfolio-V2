@@ -3,7 +3,6 @@
     margin: auto;
     margin-top: 0px;
     margin-bottom: 100px;
-    // z-index: 1;
     animation: fadeIn 3s backwards;
     animation-timeline: view();
     animation-range: entry 0% cover 60%;
@@ -16,11 +15,8 @@
 .section_title{
     width: 100%;
     display: grid;
-    // flex-direction: column;
-    // place-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    // margin-top: 40px;
 }
 
 

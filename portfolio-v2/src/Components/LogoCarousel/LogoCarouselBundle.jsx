@@ -3,7 +3,7 @@ import LogoCarousel from './index';
 import './index.scss'
 function LogoCarouselBundle() {
   return (
-    <div className="logo-container"style={{}}>
+    <div className="logo-container">
       <LogoCarousel index={"start"} className={"logo_items"}/>
       <LogoCarousel index={"middle"} className={"logo_items_reverse"}/>
       <LogoCarousel index={"end"} className={"logo_items"}/>

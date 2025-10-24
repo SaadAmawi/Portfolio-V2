@@ -17,8 +17,8 @@ function Experience() {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          el.classList.add("animate"); // trigger the CSS animation
-          obs.unobserve(el);           // ✅ stops observing so it only plays once
+          el.classList.add("animate"); 
+          obs.unobserve(el);           
         }
       });
     });

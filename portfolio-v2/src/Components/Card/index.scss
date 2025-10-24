@@ -5,12 +5,11 @@
     min-height: 250px;
     max-height: fit-content;
     display: flex;
+    border: solid 1px var(--card-border);
     flex-direction: column;
-    // justify-content: flex-start;
     align-items: space-around;
     position: relative;
     padding: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.153);
     border-radius: 20px;
     transition: all 0.2s ease;
     animation: fadeIn 3s backwards;
@@ -38,14 +37,17 @@
         &.purple:hover{
             box-shadow: 0 0px 30px 3px rgba(4, 17, 201, 0.5);
         scale: 1.01 ;
-        background-image: linear-gradient(155deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 17, 201, 0.214) 64%, rgba(60, 0, 255, 0.09) 100%);
+        background-image: var(--card-inner);
         border: 1px solid rgba(4, 17, 201, 0.8);
         .icon-bg{
-        background-color: rgba(4, 17, 201, 0.5);
+        background-color: var(--card-icon);
         box-shadow: 0 0 12px 1px rgba(4, 17, 201, 0.3);
         }
+        .items{
+          background-color: var(--text-color-purpleDark);  
+        }
         .title{
-        color:rgba(4, 129, 201, 1)
+        color:var(--card-title)
         }
         
         
@@ -53,15 +55,14 @@
     &.yellow:hover{
         box-shadow: 0 0px 30px 3px rgba(212, 0, 255, 0.347);
             scale: 1.01 ;
-            // z-index: 1;
-            background-image: linear-gradient(155deg,rgba(26, 0, 36, 0.07) 0%, rgba(65, 3, 89, 0.09) 20%, rgba(182, 16, 223, 0.167) 64%, rgba(83, 2, 99, 0.09) 100%);
+            background-image:linear-gradient(155deg,rgba(26, 0, 36, 0.07) 0%, rgba(65, 3, 89, 0.09) 20%, rgba(182, 16, 223, 0.167) 64%, rgba(83, 2, 99, 0.09) 100%);
             border: 1px solid rgba(212, 0, 255, 0.7);
             .icon-bg{
                 background-color: rgba(212, 0, 255, 0.4);
                 box-shadow: 0 0 12px 1px rgba(212, 0, 255, 0.3);
             }
             .title{
-                color:rgba(212, 0, 255, 0.7);
+                color: rgba(212, 0, 255, 0.7);
             }
         
     }
@@ -86,7 +87,7 @@
         font-weight: 900;
         font-size: 4vmax;
         letter-spacing: 3px;
-        color: rgba(84, 84, 84, 0.268);
+        color: var(--card-after);
         top: 50%;
         left:50%;
         z-index: 0;
@@ -104,7 +105,7 @@
     margin-top: 10px;
 }
 .icon-bg{
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: var(--shadow);
     width: fit-content;
     backdrop-filter: blur(100px);
     border-radius:15px ;
@@ -113,10 +114,7 @@
     width: 25px;
     height: 25px;
     padding: 10px 10px;
-    // background-color: rgba(201, 201, 201, 0.12);
-    
-    
-    color: var(--text-color);
+    color: var(--text-color-purpleDark);
 }
 .card-items{
     margin: 0px;
@@ -131,10 +129,10 @@
     flex-wrap: wrap;
 }
 .items{
-    background-color: rgb(255, 255, 255);
+    background-color: var(--text-color-purpleDark);
     font-family: "lexend";
     font-weight: 400;
-    color: rgb(17, 17, 17);
+    color: var(--text-color-inverse);
     padding: 5px 15px;
     border-radius: 20px;
     z-index: 1;
@@ -151,7 +149,6 @@
     line-height: 1.5;
     width: 100%;
     justify-content: start;
-    // margin-top: 12px;
 }
 
 i{
