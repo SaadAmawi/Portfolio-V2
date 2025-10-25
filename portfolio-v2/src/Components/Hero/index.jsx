@@ -70,8 +70,9 @@ function Hero() {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: theme === 'dark' ? 0x8888ff : 0x7378dc,
-        backgroundColor: theme === 'dark' ? 0x000000 : 0xffffff,
+        color1: 0x7378dc,
+        color2: 0x8888ff,
+        backgroundColor: 0xffffff,
         separation: 71.00,
         alignment: 100.00,
         cohesion: 57.00
