@@ -69,7 +69,9 @@ if(!isMac){
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: theme === 'dark' ? 0x8888ff : 0x7378dc,
+        color1:  0x8888ff,
+        seperation:50,
+        color2: 0x7378dc,
         backgroundColor: theme === 'dark' ? 0x000000 : 0xffffff,
         spacing: 4.0,
         chaos: 4.5,})
