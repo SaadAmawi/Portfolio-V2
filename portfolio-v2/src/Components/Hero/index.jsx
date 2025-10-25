@@ -9,8 +9,8 @@ import {useEffect,useState, useRef} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
-// import BIRDS from 'vanta/src/vanta.birds'
-import TRUNK from 'vanta/src/vanta.trunk'
+import BIRDS from 'vanta/src/vanta.birds'
+import TRUNK from 'vanta/dist/vanta.trunk.min'
 function Hero() {
     const {theme} = useTheme();
     const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
@@ -18,7 +18,8 @@ function Hero() {
     const [letterClass, setLetterClass] = useState('text-animate');
     const [letterClass2, setLetterClass2] = useState('text-animate-fly');
     const [arrowClass, setArrowClass] = useState('fade-arrow');
-  const vantaRef = useRef(null)
+    const isMac = /Mac/.test(navigator.userAgent)
+    const vantaRef = useRef(null)
   const [vantaEffect, setVantaEffect] = useState(null)
     useEffect(()=>{
         setTimeout(()=>{
@@ -41,7 +42,7 @@ useEffect(() => {
 
   const timeout = setTimeout(() => {
     if (!vantaRef.current) return // 🧠 check again just in case
-
+if(!isMac){
     const effect = TRUNK({
       el: vantaRef.current,
       mouseControls: true,
@@ -57,6 +58,24 @@ useEffect(() => {
       chaos: 4.5,
     })
     setVantaEffect(effect)
+  }
+  else{
+      const effect = BIRDS({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: theme === 'dark' ? 0x8888ff : 0x7378dc,
+        backgroundColor: theme === 'dark' ? 0x000000 : 0xffffff,
+        spacing: 4.0,
+        chaos: 4.5,})
+
+        setVantaEffect(effect)
+    }
   }, 150)
 
   return () => {
