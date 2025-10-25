@@ -5,7 +5,7 @@ import bg from '../Assets/Images/background.png'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
-import {useEffect,useState} from "react"
+import {useEffect,useState, useRef} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
@@ -18,7 +18,8 @@ function Hero() {
     const [letterClass, setLetterClass] = useState('text-animate');
     const [letterClass2, setLetterClass2] = useState('text-animate-fly');
     const [arrowClass, setArrowClass] = useState('fade-arrow');
-
+  const vantaRef = useRef(null)
+  const [vantaEffect, setVantaEffect] = useState(null)
     useEffect(()=>{
         setTimeout(()=>{
         return (
@@ -30,39 +31,41 @@ function Hero() {
 
     },[])
 
-    useEffect(()=>{
-      // setTimeout(()=>{
-        // return (
-        TRUNK({
-          el:'#clouds',
-          touchControls: true,
-          mouseControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0x7378dc,
-          backgroundColor: 0xfffffff,
-          spacing: 4.0,
-          chaos: 4.50
-        })
-        // BIRDS({
-        //   el:'#clouds',
-        //   touchControls: true,
-        //   mouseControls: true,
-        //   gyroControls: false,
-        //   minHeight: 200.00,
-        //   minWidth: 200.00,
-        //   scale: 1.00,
-        //   scaleMobile: 1.00,
-        //   backgroundColor: 0xffffff,
-        //   color1: 0xff,
-        //   color2: 0xfa00ad,
-        //   separation: 82.00,
-        //   quantity: 4.00
-        // })
-    },[theme])
+useEffect(() => {
+  if (!vantaRef.current) return  // 🧠 wait until ref exists
+
+  if (vantaEffect) {
+    vantaEffect.destroy()
+    setVantaEffect(null)
+  }
+
+  const timeout = setTimeout(() => {
+    if (!vantaRef.current) return // 🧠 check again just in case
+
+    const effect = TRUNK({
+      el: vantaRef.current,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: theme === 'dark' ? 0x8888ff : 0x7378dc,
+      backgroundColor: theme === 'dark' ? 0x000000 : 0xffffff,
+      spacing: 4.0,
+      chaos: 4.5,
+    })
+    setVantaEffect(effect)
+  }, 150)
+
+  return () => {
+    clearTimeout(timeout)
+    if (vantaEffect) vantaEffect.destroy()
+  }
+}, [theme])
+
+
  
 
 
@@ -70,8 +73,10 @@ function Hero() {
     <div className={`hero ${theme}`} id={"arrow"}>
     
       <div className="hero-bg">
-        { theme === "dark" ? <img src={bg} alt="Background"  className='dark'/> : 
-        <div id='clouds' className='cloud' ></div>  }
+        { theme === "dark" ? 
+        <img src={bg} alt="Background"  className='dark'/>
+         : 
+        <div id='clouds'ref={vantaRef} className='cloud' /> }
         {/* <img src={bg} alt="Background" className='reverse'/> */}
       </div>
       
