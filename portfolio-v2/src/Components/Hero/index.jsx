@@ -31,6 +31,7 @@ function Hero() {
         },5000)
 
     },[])
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
       if (!vantaRef.current) return  // 🧠 wait until ref exists
@@ -69,9 +70,7 @@ function Hero() {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color1:  0x8888ff,
-        seperation:50,
-        color2: 0x7378dc,
+        color: theme === 'dark' ? 0x8888ff : 0x7378dc,
         backgroundColor: theme === 'dark' ? 0x000000 : 0xffffff,
         separation: 71.00,
         alignment: 100.00,
