@@ -12,7 +12,9 @@ function LogoCarousel({className, index}) {
         <div className='logo-carousel'>
             <div className='logos'>
                 <div className={className}>
-                    {repeatedLogos.map((logo) => logo)}
+                    {repeatedLogos.map((logo, index) => (
+                        <div key={index}>{logo}</div>
+                    ))}
                 </div>
             </div>
         </div>

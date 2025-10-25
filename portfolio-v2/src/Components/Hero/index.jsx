@@ -1,6 +1,7 @@
-import React from 'react'
+// import React from 'react'
 import './index.css'
 import bg from '../Assets/Images/background.png'
+// import bg2 from '../Assets/Images/bg012.png'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
@@ -8,7 +9,8 @@ import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
-
+// import BIRDS from 'vanta/src/vanta.birds'
+import TRUNK from 'vanta/src/vanta.trunk'
 function Hero() {
     const {theme} = useTheme();
     const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
@@ -28,20 +30,53 @@ function Hero() {
 
     },[])
 
-  
+    useEffect(()=>{
+      // setTimeout(()=>{
+        // return (
+        TRUNK({
+          el:'#clouds',
+          touchControls: true,
+          mouseControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x7378dc,
+          backgroundColor: 0xfffffff,
+          spacing: 4.0,
+          chaos: 4.50
+        })
+        // BIRDS({
+        //   el:'#clouds',
+        //   touchControls: true,
+        //   mouseControls: true,
+        //   gyroControls: false,
+        //   minHeight: 200.00,
+        //   minWidth: 200.00,
+        //   scale: 1.00,
+        //   scaleMobile: 1.00,
+        //   backgroundColor: 0xffffff,
+        //   color1: 0xff,
+        //   color2: 0xfa00ad,
+        //   separation: 82.00,
+        //   quantity: 4.00
+        // })
+    },[theme])
  
 
 
   return (
-    <div className='hero' id={"arrow"}>
+    <div className={`hero ${theme}`} id={"arrow"}>
     
       <div className="hero-bg">
-        { <img src={bg} alt="Background" /> }
+        { theme === "dark" ? <img src={bg} alt="Background"  className='dark'/> : 
+        <div id='clouds' className='cloud' ></div>  }
         {/* <img src={bg} alt="Background" className='reverse'/> */}
       </div>
       
 
-        <div className='text'>
+        <div className={`text ${theme}`}>
           <div className="Intro">
         <h1>
         <p className={`color ${theme}`}>

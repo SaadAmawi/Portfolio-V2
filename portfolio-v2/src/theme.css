@@ -17,6 +17,7 @@ body.dark {
   --text-color-purpleDark: white;
   --text-color-purpleDark2: white;
   --text-color-purpleDark3: white;
+  --text-color-purpleDark4: rgb(235, 169, 255);
   --accent: #ff6ae0;
   --shadow:rgba(255, 255, 255, 0.12);
   --card-inner: linear-gradient(155deg,rgba(2, 0, 36, 0.09) 0%, rgba(9, 9, 121, 0.09) 20%, rgba(4, 17, 201, 0.214) 64%, rgba(60, 0, 255, 0.09) 100%);
@@ -29,7 +30,7 @@ body.dark {
   --timeline: linear-gradient(to bottom, #df23f83b,#8a10fd2c,#0547fc25,#df23f825);
   --bg-color-2:rgba(243, 243, 243, 0.083);
   --op: 80%;
-  --op2: 1;
+  --op2: 0.45;
   --pink-200:white;
 }
 
@@ -44,6 +45,7 @@ body.light {
     --text-color-purpleDark: #28308bce;
     --text-color-purpleDark2: #585e9af7;
     --text-color-purpleDark3: #2f3f8efd;
+    --text-color-purpleDark4: #2f3f8efd;
     --accent: #d78c5c;
     --card-bg: #f7f0f9;
     --card-border:#6379f3; 

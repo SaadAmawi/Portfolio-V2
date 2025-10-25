@@ -71,10 +71,10 @@
     align-items: center;
     width:180px;
     background-color: none;
-    color: white;
+    color: var(--text-color-purpleDark3);
     font-family: "lexend";
     font-weight: 400;
-    border: solid 1px rgb(255, 255, 255);
+    border: solid 1px var(--text-color-purpleDark3);
     text-decoration: none;
     border-radius: 4.8px;
     animation: zoomInUp 1s;
@@ -84,7 +84,7 @@
     transition:ease-out 0.3s;
     
     &:hover{
-        box-shadow:0px 0px 8px 1px rgb(177, 1, 145);
+        box-shadow:0px 0px 8px 1px var(--text-color-purpleDark4);
         transition: all ease-in-out 0.6s;
         background-color: white;
         color: black;
