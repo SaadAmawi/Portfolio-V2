@@ -11,6 +11,7 @@ import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
 import BIRDS from 'vanta/src/vanta.birds'
 import TRUNK from 'vanta/dist/vanta.trunk.min'
+import TextPressure from '../TextPressure'
 const isMac = /Mac/.test(navigator.userAgent)
 
 function Hero() {
@@ -112,9 +113,23 @@ function Hero() {
         <h1>
         <p className={`color ${theme}`}>
         <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
+          <TextPressure
+    text="Software Engineer"
+    flex={true}
+    alpha={false}
+    stroke={false}
+    width={true}
+    weight={false}
+    italic={true}
+    textColor={theme==="dark"?"#ffffff":"#031685ff"}
+    strokeColor="#ff0000"
+    minFontSize={36}
+    // className="underwords"
+  />
+ 
         </p>
         <br/>
-        <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={17} />
+        {/* <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={17} /> */}
          <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>
         <div className='buttons'>
