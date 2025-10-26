@@ -64,7 +64,7 @@ function Hero() {
   else{
       const effect = BIRDS({
         el: vantaRef.current,
-        mouseControls: true,
+        mouseControls: false,
         touchControls: true,
         gyroControls: false,
         minHeight: 200.0,
