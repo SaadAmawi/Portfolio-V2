@@ -138,7 +138,6 @@ h1{
     color: var(--text-color-purple);
     font-size: 30px;
     position: absolute;
-    /* display: none; */
     width: 40px;
     bottom: 20px;
     animation: fadeIn backwards 3.5s 3s;
@@ -147,13 +146,10 @@ h1{
 
 .down-arrow{
     width: 40px;
-    /* color: var(--text-color); */
     filter: drop-shadow(2px 2px 8px var(--text-color-purpleDark3));
     font-size: 30px;
     position: absolute;
     bottom: 20px;
-    /* animation: bounce 2s infinite; */
-     /* filter: drop-shadow(0 0 4px white); */
     animation: fadeOut linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 70%; 
@@ -165,7 +161,6 @@ h1{
     margin-top: 30px;
     justify-content: center;
     gap:15px;
-    /* padding: 20px 20px; */
     position: relative;
     animation: zoomInUp backwards 2s 4.5s;
 }
@@ -187,8 +182,6 @@ h1{
         z-index: 0;
     }
 }
-
-
 
 @keyframes fadeOut{
     from{
