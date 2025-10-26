@@ -29,7 +29,6 @@ function Skills() {
           <li className="items">Django</li>
           <li className="items">FastAPI</li>
           <li className="items">SpringBoot</li>
-          <li className="items">Node</li>
         </ul>       
         </Card>
       <Card bgText={"Databases"} projectTitle={"Databases"} icon={faDatabase} hoverAccent={theme==="dark"?"pink":"purple"}>
@@ -42,9 +41,7 @@ function Skills() {
         </Card>
       <Card bgText={"Cloud"} projectTitle={"Cloud + Misc."} icon={faCloud} hoverAccent={theme==="dark"?"":"purple"}>
         <ul className='card-items'>
-          <li className="items">Amazon Web Services</li>
-          <li className="items">AWS S3</li>
-          <li className="items">AWS Bedrock</li>
+          <li className="items">AWS</li>
           <li className="items">Docker</li>
           <li className="items">N8N</li>
           <li className="items">Railway</li>

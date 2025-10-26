@@ -12,6 +12,7 @@ import { useTheme } from '../../themeContext'
 import BIRDS from 'vanta/src/vanta.birds'
 import TRUNK from 'vanta/dist/vanta.trunk.min'
 const isMac = /Mac/.test(navigator.userAgent)
+
 function Hero() {
     const {theme} = useTheme();
     const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
@@ -31,7 +32,6 @@ function Hero() {
         },5000)
 
     },[])
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
       if (!vantaRef.current) return  // 🧠 wait until ref exists
@@ -94,13 +94,16 @@ function Hero() {
 
   return (
     <div className={`hero ${theme}`} id={"arrow"}>
-    
       <div className="hero-bg">
+        
         { theme === "dark" ? 
         <img src={bg} alt="Background"  className='dark'/>
-         : 
-        <div id='clouds'ref={vantaRef} className='cloud' /> }
-        {/* <img src={bg} alt="Background" className='reverse'/> */}
+        : 
+        
+        <div id='clouds'ref={vantaRef} className='cloud' />
+      }
+           
+
       </div>
       
 

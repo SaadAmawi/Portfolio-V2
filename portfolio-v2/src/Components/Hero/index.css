@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: center;
     position: relative;
-    margin-top: -70px;
+    margin-top: -50px;
     overflow: visible;
     z-index: 0;
     &.light{
@@ -47,19 +47,24 @@ p.color.light span{
     align-items: center;
     position: relative;
     text-align: center;
+    &:after{
+        display: none;
+    }
     &.light{
         color: var(--text-color-purpleDark3);
         &::after{
             position: absolute;
-            width: 30%;
+            width: 20%;
             height: 50%;
+            display: block;
             content: "";
             top: 50;
             left: 50;
             filter: blur(10px);
             border-radius: 100%;
             z-index: -1;
-            background-image: radial-gradient(circle, rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0.033) 100%);
+            animation: fadeIn 0.5s  backwards;
+            background-image: radial-gradient(circle, rgb(255, 255, 255) 20%, rgba(255, 255, 255, 0.033) 100%);
         }
     }
 }
