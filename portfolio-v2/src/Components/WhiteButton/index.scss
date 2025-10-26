@@ -84,10 +84,10 @@
     transition:ease-out 0.3s;
     
     &:hover{
-        box-shadow:0px 0px 8px 1px var(--text-color-purpleDark4);
+        // box-shadow:0px 0px 8px 1px var(--text-color-purpleDark3);
         transition: all ease-in-out 0.6s;
-        background-color: white;
-        color: black;
+        background-color: var(--text-color-purpleDark3);
+        color: var(--text-color2);
         transform: scale(1.05);
     }
 }

@@ -12,6 +12,7 @@ body.dark {
   --bg-color-inverse: white;
   --bg-color2: #0e0e0e;
   --text-color: #f5f5f5;
+  --text-color2: #000000;
   --text-color-inverse: rgb(17, 17, 17);
   --text-color-purple: white;
   --text-color-purpleDark: white;
@@ -40,6 +41,7 @@ body.light {
     --bg-color-inverse: black;
     --bg-color2:rgb(245, 245, 245);
     --text-color: #000000;
+    --text-color2:white;
     --text-color-inverse: white;
     --text-color-purple: #404cf6;
     --text-color-purpleDark: #28308bce;
