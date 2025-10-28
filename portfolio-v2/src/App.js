@@ -15,10 +15,10 @@ function App() {
       <ToggleProvider>
       <Header/>
       <Hero/>
+      <AboutMe/>
       <Experience/>
       </ToggleProvider>
-      <AboutMe/>
-      <LogoCarouselBundle/>
+      {/* <LogoCarouselBundle/> */}
       <Projects/>
     </div>
   );
