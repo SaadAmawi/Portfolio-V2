@@ -6,28 +6,28 @@ display: flex;
 flex-direction: column;
 align-items:center;
 justify-content: center;
-margin: 40px auto 30px auto;
+margin: 200px auto 30px auto;
 position: relative;
 view-timeline: --rnge block;
   
 &:after{
-    display: none;
+    // display:xx/;
     z-index: -1;
     content: "About Me";
-    color:rgba(255, 255, 255, 0.3);
+    color:rgba(141, 147, 248, 0.3);
     font-family:"playfair";
     width: fit-content;
     font-size: 190px;
     opacity: 1;
     font-weight: 700;
     position: absolute;
-    top: 0%;
+    top: 10%;
     left: 0;
-    translate: -60% 20% ;
+    translate: -58% 100% ;
     transform: rotate(270deg);
     animation: slideIn linear both;
     animation-timeline:--rnge ;
-    animation-range: entry 0% cover 100%;
+    animation-range: entry 0% cover 50%;
 }
 
 }
@@ -47,7 +47,7 @@ height: 50%;
     animation: slideInUp  linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 70%; 
-    color:white;
+    color:var(--text-color-purpleDark3);
     font-family: 'lexend';
     font-size: 18px;
     font-weight: 200;
@@ -76,9 +76,11 @@ height: 50%;
 
 @keyframes slideInUp {
     0%{
+        opacity: 0;
         transform: scale(0.93)
     }
     60%{
+        opacity: 1;
         transform:  scale(1)
     }
 }
