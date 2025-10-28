@@ -120,6 +120,15 @@ h1{
     animation-fill-mode: backwards;
     letter-spacing: 1.5px;
 }
+.underwords2{
+    font-size: 15px;
+    font-family: 'lexend',serif;
+    font-weight: 200;
+    animation: fadeIn 3s;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
+    letter-spacing: 1.5px;
+}
 
 .intro{
     display: flex;

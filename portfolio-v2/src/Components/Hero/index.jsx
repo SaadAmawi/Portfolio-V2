@@ -122,6 +122,7 @@ function Hero() {
     textColor={theme==="dark"?"#ffffff":"#031685ff"}
     strokeColor="#ff0000"
     minFontSize={36}
+    className='underwords2'
   />
  
         </p>

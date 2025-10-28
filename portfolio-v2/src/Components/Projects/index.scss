@@ -20,7 +20,7 @@
     
     &::after{
     display:block;
-    z-index: 1;
+    z-index: -1;
     content: "PROJECTS";
     color:rgba(153, 152, 152, 0.48);
     font-family:"lexend";
@@ -32,7 +32,7 @@
     position: absolute;
     top: 50%;
     left: 0%;
-    translate: -60% -50% ;
+    translate: -55% -50% ;
     transform: rotate(270deg);
     animation: slideIn linear both;
     animation-timeline:view() ;
