@@ -1,0 +1,24 @@
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    z-index: -1;
+}
+
+.project-image{
+    width: 500px;
+    height: 500px;
+    animation: none;
+    z-index: -1;
+}
