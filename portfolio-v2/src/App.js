@@ -8,16 +8,18 @@ import { ToggleProvider } from './toggleContext';
 import Hero from './Components/Hero';
 import LogoCarouselBundle from './Components/LogoCarousel/LogoCarouselBundle';
 import './index.css'
+import Projects from './Components/Projects';
 function App() {
   return (
     <div className="App">
       <ToggleProvider>
       <Header/>
       <Hero/>
+      <AboutMe/>
       <Experience/>
       </ToggleProvider>
-      <AboutMe/>
-      <LogoCarouselBundle/>
+      {/* <LogoCarouselBundle/> */}
+      <Projects/>
     </div>
   );
 }

@@ -10,22 +10,6 @@ function Experience() {
   const bodyRef = useRef(null)
   const {toggledSection,setToggledSection} = useToggle();
 
-  useEffect(() => {
-    const el = bodyRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          el.classList.add("animate"); 
-          obs.unobserve(el);           
-        }
-      });
-    });
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
 
   return (

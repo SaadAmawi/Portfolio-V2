@@ -1,7 +1,5 @@
-// import React from 'react'
 import './index.css'
 import bg from '../Assets/Images/background.png'
-// import bg2 from '../Assets/Images/bg012.png'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
@@ -17,8 +15,8 @@ const isMac = /Mac/.test(navigator.userAgent)
 function Hero() {
     const {theme} = useTheme();
     const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
-    const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r'];
-    const [letterClass, setLetterClass] = useState('text-animate');
+    // const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r'];
+    // const [letterClass, setLetterClass] = useState('text-animate');
     const [letterClass2, setLetterClass2] = useState('text-animate-fly');
     const [arrowClass, setArrowClass] = useState('fade-arrow');
     const vantaRef = useRef(null)
@@ -26,16 +24,16 @@ function Hero() {
     useEffect(()=>{
         setTimeout(()=>{
         return (
-                setLetterClass('text-animate-hover'),
+                // setLetterClass('text-animate-hover'),
                 setLetterClass2('text-animate-fly'),
                 setArrowClass('down-arrow')
                 )
         },5000)
 
     },[])
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+// eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
-      if (!vantaRef.current) return  // 🧠 wait until ref exists
+      if (!vantaRef.current) return  
       
       if (vantaEffect) {
         vantaEffect.destroy()
@@ -43,7 +41,7 @@ function Hero() {
       }
       
       const timeout = setTimeout(() => {
-        if (!vantaRef.current) return // 🧠 check again just in case
+        if (!vantaRef.current) return 
         if(!isMac){
           const effect = TRUNK({
             el: vantaRef.current,
@@ -64,7 +62,7 @@ function Hero() {
   else{
       const effect = BIRDS({
         el: vantaRef.current,
-        mouseControls: false,
+        mouseControls: true,
         touchControls: true,
         gyroControls: false,
         minHeight: 200.0,
@@ -113,7 +111,7 @@ function Hero() {
         <h1>
         <p className={`color ${theme}`}>
         <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
-          <TextPressure
+    <TextPressure
     text="Software Engineer"
     flex={true}
     alpha={false}
@@ -124,12 +122,11 @@ function Hero() {
     textColor={theme==="dark"?"#ffffff":"#031685ff"}
     strokeColor="#ff0000"
     minFontSize={36}
-    // className="underwords"
+    className='underwords2'
   />
  
         </p>
         <br/>
-        {/* <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={17} /> */}
          <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>
         <div className='buttons'>
