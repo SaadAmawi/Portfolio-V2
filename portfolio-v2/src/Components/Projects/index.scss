@@ -9,8 +9,8 @@
 
 .projects{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
     width: fit-content;
     height: fit-content;
     z-index: -1;
