@@ -14,9 +14,9 @@ const ProjectCard = ({imgSrc, Title, Technologies,alt,Description,gitLink,siteLi
             <h2>{Title}</h2>
             <div className='links'>
             {gitLink && <a href={gitLink}>
-            <FontAwesomeIcon icon={faGithub} color='black' style={{fontSize:"35px"}}/>
+            <FontAwesomeIcon icon={faGithub} color='black' style={{fontSize:"25px"}}/>
             </a>}
-            {siteLink && <FontAwesomeIcon icon={faUpRightFromSquare} color='black' style={{fontSize:"30px"}}/>
+            {siteLink && <FontAwesomeIcon icon={faUpRightFromSquare} color='black' style={{fontSize:"20px"}}/>
             }
             </div>
             </div>

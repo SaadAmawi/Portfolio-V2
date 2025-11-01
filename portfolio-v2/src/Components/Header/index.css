@@ -24,7 +24,7 @@
     margin-top: 5px;
     z-index: 1;
     &.light{
-        background-color: rgba(77, 107, 227, 0.099);
+        background-color: rgba(115, 137, 225, 0.13);
         border:1px solid rgba(77, 107, 227, 0.2);
         
     }

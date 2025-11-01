@@ -9,13 +9,13 @@ import MemorEyez from '../Assets/Images/MemoreyezApp.png'
 import ProjectCard from '../ProjectCard'
 function Projects() {
   return (
-    <div className='projects-container'>
+    <div className='projects-container' id='projects'>
     <div className='projects'>
       <ProjectCard 
       imgSrc={NewPort} 
       alt={"NewPort"} 
       Title={"KGC Website"} 
-      Technologies={["React","Sass","EmailJS"]} 
+      Technologies={["React","SCSS","Django","AWS","S3","Route53"]} 
       Description={"A website for a local gym that features class schedules, trainer information, and membership sign-up."}
       gitLink={'https://github.com/saadamawi'}
       siteLink={'https://github.com/saadamawi'}

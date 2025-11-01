@@ -42,24 +42,8 @@ function Hero() {
       
       const timeout = setTimeout(() => {
         if (!vantaRef.current) return 
-        if(!isMac){
-          const effect = TRUNK({
-            el: vantaRef.current,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.0,
-            minWidth: 200.0,
-            scale: 1.0,
-      scaleMobile: 1.0,
-      color: theme === 'dark' ? 0x8888ff : 0x7378dc,
-      backgroundColor: theme === 'dark' ? 0x000000 : 0xffffff,
-      spacing: 4.0,
-      chaos: 3.5,
-    })
-    setVantaEffect(effect)
-  }
-  else{
+
+ 
       const effect = BIRDS({
         el: vantaRef.current,
         mouseControls: true,
@@ -78,7 +62,7 @@ function Hero() {
       })
 
         setVantaEffect(effect)
-    }
+    
   }, 150)
 
   return () => {
@@ -110,7 +94,7 @@ function Hero() {
           <div className="Intro">
         <h1>
         <p className={`color ${theme}`}>
-        <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
+          <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
     <TextPressure
     text="Software Engineer"
     flex={true}
@@ -124,8 +108,8 @@ function Hero() {
     minFontSize={36}
     className='underwords2'
   />
- 
         </p>
+ 
         <br/>
          <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>

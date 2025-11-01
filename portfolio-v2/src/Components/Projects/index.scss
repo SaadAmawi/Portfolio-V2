@@ -9,7 +9,10 @@
     position: relative;
     
 }
-
+#projects{
+    scroll-margin-top:120px;
+    transition: all 10s ;
+}
 .projects{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -22,7 +25,7 @@
     display:block;
     z-index: -1;
     content: "PROJECTS";
-    color:rgba(153, 152, 152, 0.48);
+    color:var(--side-text);
     font-family:"lexend";
     width: fit-content;
     font-size: 280px;

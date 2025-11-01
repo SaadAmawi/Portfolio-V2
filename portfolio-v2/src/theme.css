@@ -33,6 +33,7 @@ body.dark {
   --op: 80%;
   --op2: 0.45;
   --pink-200:white;
+  --side-text: rgba(153, 152, 152, 0.48);
 }
 
 /* You can add more theme variants later easily */
@@ -62,4 +63,5 @@ body.light {
     --op: 80%;
     --op2: 1;
     --pink-200:rgb(64, 40, 250);
+    --side-text: rgba(117, 112, 149, 0.48);
 }

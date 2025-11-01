@@ -29,6 +29,9 @@ function Header(){
         </div>
         <div className="middle-btns">
         <HeaderButton buttonText="Home" handleClick={() => scrollToSection("arrow")}/>
+        <HeaderButton buttonText="About" handleClick={() => {
+          scrollToSection("about-me");
+        }}/>
         <HeaderButton buttonText="Experience" handleClick={() => {
           scrollToSection("experience");
           setToggledSection("Work");
@@ -36,6 +39,9 @@ function Header(){
         <HeaderButton buttonText="Education" handleClick={() => {
           scrollToSection("experience");
           setToggledSection("Experience");
+        }}/>
+        <HeaderButton buttonText="Projects" handleClick={() => {
+          scrollToSection("projects");
         }}/>
         {/* <HeaderButton buttonText="Projects" handleClick={() => scrollToSection("experience")} /> */}
         </div>
