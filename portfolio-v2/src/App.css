@@ -12,9 +12,8 @@ body{
   transition: all 0.1s ease-in-out;
 }
 html {
-  scroll-behavior: smooth;
-  will-change: transform;
-transform: translateZ(0);
+  scroll-behavior: smooth; 
+   /* will-change: transform; */
 backface-visibility: hidden;
 scrollbar-width: none;
 
@@ -26,3 +25,12 @@ scrollbar-width: none;
      box-sizing: border-box; 
 }
 
+.gpt-button{
+position: fixed;
+bottom: 50px;
+right: 50px;
+width: 50px;
+height: 50px;
+background-color: blue;
+border-radius: 50%;
+}
