@@ -36,6 +36,11 @@
     text-decoration: none;
     border-radius: 50px;
     position: relative;
+    &.gpt{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
     &:after, &:before{
         z-index: -1;
         content:"";

@@ -28,7 +28,7 @@ body.dark {
   --card-after: rgba(84, 84, 84, 0.268);
   --card-border:rgba(255, 255, 255, 0.153); 
   --boder: white;
-  --timeline: linear-gradient(to bottom, #df23f83b,#8a10fd2c,#0547fc25,#df23f825);
+  --timeline: linear-gradient(to bottom, #df23f863,#8a10fd6b,#0547fc7a,#df23f86b);
   --bg-color-2:rgba(243, 243, 243, 0.083);
   --op: 80%;
   --op2: 0.45;
@@ -56,7 +56,7 @@ body.light {
     --card-icon:rgba(92, 92, 180, 0.4);
     --card-inner: transparent;
     --card-after: rgba(79, 110, 153, 0.268);
-    --timeline: linear-gradient(to bottom, #3823f83b);
+    --timeline: linear-gradient(to bottom, #df23f863,#3823f87e);
     --shadow:rgba(185, 185, 185, 0.449);
     --boder: black;
     --bg-color-2:rgba(136, 134, 182, 0.278);
