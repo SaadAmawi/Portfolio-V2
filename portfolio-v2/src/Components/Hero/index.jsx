@@ -7,69 +7,24 @@ import {useEffect,useState, useRef} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
-import BIRDS from 'vanta/src/vanta.birds'
-// import TRUNK from 'vanta/dist/vanta.trunk.min'
 import TextPressure from '../TextPressure'
-// const isMac = /Mac/.test(navigator.userAgent)
 
 function Hero() {
     const {theme} = useTheme();
     const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
-    // const jobArray = ['S','o','f','t','w','a','r','e',' ','E','n','g','i','n','e','e','r'];
-    // const [letterClass, setLetterClass] = useState('text-animate');
     const [letterClass2, setLetterClass2] = useState('text-animate-fly');
     const [arrowClass, setArrowClass] = useState('fade-arrow');
     const vantaRef = useRef(null)
-  const [vantaEffect, setVantaEffect] = useState(null)
     useEffect(()=>{
         setTimeout(()=>{
         return (
-                // setLetterClass('text-animate-hover'),
                 setLetterClass2('text-animate-fly'),
                 setArrowClass('down-arrow')
                 )
         },5000)
 
     },[])
-// eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
-      if (!vantaRef.current) return  
-      
-      if (vantaEffect) {
-        vantaEffect.destroy()
-        setVantaEffect(null)
-      }
-      
-      const timeout = setTimeout(() => {
-        if (!vantaRef.current) return 
 
- 
-      const effect = BIRDS({
-        el: vantaRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color1: 0x7378dc,
-        color2: 0x8888ff,
-        backgroundColor: 0xffffff,
-        separation: 71.00,
-        alignment: 100.00,
-        cohesion: 57.00
-      })
-
-        setVantaEffect(effect)
-    
-  }, 150)
-
-  return () => {
-    clearTimeout(timeout)
-    if (vantaEffect) vantaEffect.destroy()
-  }
-}, [theme])
 
 
  

@@ -52,7 +52,7 @@ function GPT() {
                 })
             const payload = {messages:msgs}
             console.log(payload)
-            axios.post('http://127.0.0.1:8000/gpt/', 
+            axios.post('https://saadamawi.up.railway.app/gpt/', 
                 payload, 
                 {headers: { "Content-Type": "application/json" }})
             .then(response=>{
@@ -94,24 +94,24 @@ function GPT() {
                 />
             <div className='text'>
                 <div className='head'>
-                <FontAwesomeIcon icon={faCircleDot} fontSize={"9px"} color='lightgreen'/>
+                <FontAwesomeIcon icon={faCircleDot}  fontSize={"9px"} color='lightgreen'/>
                 <h1 className='chatbox-header-text'>Saad Support</h1>
                 </div>
                  <button onClick={()=>{setState("closed")}} className='minimize'>
-                    <FontAwesomeIcon icon={faAngleDown} color='white' fontSize={"15px"}/>
+                    <FontAwesomeIcon icon={faAngleDown} className="icons" color='white' fontSize={"15px"}/>
                 </button>
                 <h1 className='msgCount'>Message Count: {msgCount}/10</h1>
                {chatStarted && <button onClick={()=>{
                     setCurrentChat([])
                     setChatStarted(false)
                 }} className='clear'>
-                    <FontAwesomeIcon icon={faTrash} color='white' fontSize={"15px"}/>
+                    <FontAwesomeIcon icon={faTrash} className="icons" fontSize={"15px"}/>
                 </button>}
                 
                 {chatStarted===false ? 
                 (
                 <div className='intro'>
-                   <FontAwesomeIcon icon={faRobot} fontSize={"22px"}/>
+                   <FontAwesomeIcon className="icons" icon={faRobot} fontSize={"22px"}/>
                    <h1 >Welcome to my Live Support</h1>
                    <p>Feel free to ask me about Saad, however kindly be aware that each user can ask up to 10 questions per hour</p>
                    <p style={{marginTop:"10px"}}>Try asking: </p>
@@ -167,15 +167,16 @@ function GPT() {
             </input>
             <button  className='Send' onClick={()=>{
                 const text = ref.current?.value.trim()
+                if(!text){return}
                 if(currentChat.length<1 && text){
                     setChatStarted(true)
                     sendMessage()
-                }else if (currentChat.length>=20){
+                }else if (msgCount>=10){
                     notify()
-                }else if(currentChat.length>1 && currentChat.length<20){
+                }else if(currentChat.length>1 && msgCount<10){
                 sendMessage()
                 }
-            }}> <FontAwesomeIcon icon={faPaperPlane} color='white'/> </button>
+            }}> <FontAwesomeIcon className="icons" icon={faPaperPlane} color='white'/> </button>
             
             </div>
         </div>

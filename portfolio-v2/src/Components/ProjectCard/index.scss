@@ -25,7 +25,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: fit-content;
+    max-height: 100%;
     display: flex;
     flex-direction: column; 
     align-items: start;
@@ -33,6 +33,7 @@
     background-color: rgb(255, 255, 255); 
     padding: 10px 20px 10px 30px;
     animation: fadeIn 0.6s backwards;
+    overflow-y: auto;
     }
 }
 }
@@ -61,9 +62,13 @@
 .project-card-back .tech-badge{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    text-wrap-mode: wrap;
+    text-wrap: wrap;
     gap: 5px;
     border-radius: 5px;
     font-size: 14px;
+    max-width: 100%;
 
 }
 .project-card-back h2{
@@ -89,7 +94,6 @@
   object-fit: cover;
   animation: none;
 }
-
 .tech{
   display: flex;
     flex-direction: row;
@@ -100,7 +104,7 @@
     border-radius: 20px;
     font-size: 16px;
     margin: 6px 0px 10px 0px;
-    text-wrap-mode: nowrap;
+    text-wrap-mode: wrap;
 }
 
 

@@ -9,9 +9,9 @@
     bottom: 50px;
     right: 50px;
     border: none;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(28, 3, 43, 0.918);
+    width: 70px;
+    height: 70px;
+    background-color: var(--gpt-button-bg);
     border-radius: 50%;
     // background: var(--bg-color);
     color:var(--text-color);
@@ -22,7 +22,7 @@
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
     &:hover{
-        background-color:rgba(28, 3, 43, 0.26) ;
+        background-color:var(--gpt-button-bg-hover) ;
     }
     
     &:after, &:before{
@@ -36,12 +36,13 @@
         left:50%;
         translate: -50% -50%;
         padding: 5px;
+        filter: blur(3px);
         background-image:conic-gradient(from var(--angle), #df23f8,#8a10fd,#0547fc,#df23f8); 
         animation: spinBorder 3s linear infinite;
     }
 }
 .chatBox{
-    background: rgb(0, 0, 0);
+    background: var(--gpt-bg);
     width: 400px;
     height: 600px;
     position: fixed;
@@ -51,11 +52,11 @@
     display: flex;
     flex-direction: column;
     animation: fadeIn 1s backwards;
-    border: 1px solid rgba(255, 255, 255, 0.411);
+    box-shadow: 0px 0px 6px 1px var(--gpt-border);
     padding: 10px;
     .text{
         height:85% ;
-        background-color: rgba(0, 0, 0);
+        background-color: var(--gpt-bg);
         position: relative;
         padding: 5px 0px 50px 0px;
         border-radius: 20px 20px 0px 0px;
@@ -82,11 +83,12 @@
         left: 15px;
         padding: 7px 6px;
         width: fit-content;
+        color: var(--text-color-purpleDark3);
         // border: none;
         border-radius: 30%;
     }
     .chatbox-header-text{
-        color: rgb(255, 255, 255);
+        color: var(--text-color-purpleDark3);
         width: fit-content;
         height: fit-content;
         margin: 0;
@@ -103,23 +105,28 @@
         align-content: center;
         padding: 0px 20px;
         h1{
+            color: var(--text-color-purpleDark3);
             font-size: 18px;
         }
         p{
+            color: var(--text-color-purpleDark3);
             font-size: 12px;
         }
         .promptBox{
             width: 80%;
             padding:8px;
             background-color: transparent;
-            color: white;
+            color: var(--text-color-purpleDark3);
             margin-bottom: 10px;
-            border: solid 1px rgba(255, 255, 255, 0.596);
+            border: solid 1px var(--prompt-border);
             border-radius: 10px;
             &:hover{
                 background-color: rgba(173, 173, 173, 0.219);
             }
         }
+    }
+    .icons{
+        color: var(--text-color-purpleDark3);
     }
     .messages{
         width: 100%;
@@ -139,7 +146,7 @@
             align-items: center;
             gap:10px;
             p{
-            color: white;
+            color: var(--text-color-purpleDark3);
             font-size: 14px;
             font-family: "lexend";
             font-weight: 300;
@@ -165,12 +172,12 @@
         width: 80%;
         height: 60%;
         border-radius: 15px 15px 15px 15px;
-        background-color: rgba(3, 3, 3, 0.219);
+        background-color: var(--input-bg);
         padding: 10px;
-        color: white;
-        border: 1px solid white;
+        color: var(--text-color-purpleDark3);
+        border: 1px solid var(--text-color-purpleDark3);
         &::placeholder{
-            color: rgba(255, 255, 255, 0.822);
+            color: var(--placeholder-text);
         }
 
     }
@@ -180,11 +187,11 @@
         border-radius: 20%;
         padding: 20px;
         border: none;
-        background-color: rgb(10, 10, 10);
+        background-color: var(--text-color-inverse);
         position: relative;
         transition: all 0.5s ease-in-out;
         &:hover{
-            background-color: rgb(19, 19, 19);
+            background-color: var(--text-color-inverse2);
             color: black;
         }
          &:after, &:before{
@@ -208,7 +215,7 @@
         position: absolute;
         top: 15px;
         background-color: transparent;
-        border: solid 1px rgba(255, 255, 255, 0.596);
+        border: solid 1px var(--text-color-purpleDark3);
         right: 15px;
         padding: 7px 6px;
         width: fit-content;
@@ -220,15 +227,16 @@
         position: absolute;
         top: 15px;
         background-color: transparent;
-        border: solid 1px white;
+        border: solid 1px var(--text-color-purpleDark3);
         left: 55%;
         padding: 7px 6px;
         width: fit-content;
         border: none;
         border-radius: 20%;
         transition: all 0.6s ease-in-out;
+        color: var(--text-color-purpleDark3);
         &:hover{
-            background-color: rgba(109, 2, 2, 0.822);
+            background-color: var(--delete);
             
         }
 
@@ -237,7 +245,6 @@
 .message-system ,
 .message-user
 {
-    color: black;
     font-size: 14px;
     border-radius: 20px;
     color: white;
