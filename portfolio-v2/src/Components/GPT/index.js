@@ -3,12 +3,20 @@ import './index.scss'
 import {faPaperPlane, faRobot, faAngleDown, faCircleDot, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faOpenai } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import axios from 'axios'
+import loadingGIF from '../Assets/Images/loading.gif'
+import { ToastContainer, toast } from 'react-toastify';
 
 function GPT() {
     const [state, setState] = useState("closed")
     const [chatStarted, setChatStarted] = useState(false)
     const [currentChat, setCurrentChat] = useState([])
+    const [loading,setLoading] = useState(false)
     const ref = useRef(null)
+    const messagesRef = useRef(null)
+    const notify = () =>{
+        toast("You have ran out of message!")
+    }
     
     function injectPrompt(text){
         if(ref.current){
@@ -16,19 +24,34 @@ function GPT() {
             ref.current.focus();
         }
     }
-    function sendMessage(){
+    async function sendMessage(){
         console.log(currentChat.length)
         const text = ref.current?.value.trim();
         if (!text) return; 
         setCurrentChat(prev=>[...prev,{sender:"user",text:text}])
         ref.current.value = "";
-
+        var formData = new FormData();
         setTimeout(() => {
-            setCurrentChat(prev => [
+                if (messagesRef.current) {
+                    messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
+                }
+            }, 0);
+        setLoading(true)
+        formData.append("message", text);
+        axios.post('http://127.0.0.1:8000/gpt/', formData)
+        .then(response=>{
+            setCurrentChat(prev=>[
                 ...prev,
-                { sender: "system", text: "This is a placeholder reply." }
-            ]);
-        }, 1000);
+                {sender:"system", text: response.data.response}
+                
+            ]);setLoading(false);}).catch(error=>{
+            console.error("Error fetching GPT response:", error.message);
+            setCurrentChat(prev=>[
+                ...prev,
+                {sender:"system", text: "Sorry, it seems I have ran into an error, or ran out of tokens.\nPlease Try Again later, sorry for the inconvinience."}
+            ])
+        })
+
     }
 
     return (
@@ -39,6 +62,19 @@ function GPT() {
         </div>
     ):(
         <div className='chatBox'>
+            <ToastContainer 
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                className="toast"
+                />
             <div className='text'>
                 <div className='head'>
                 <FontAwesomeIcon icon={faCircleDot} fontSize={"9px"} color='lightgreen'/>
@@ -71,7 +107,7 @@ function GPT() {
                 )
                 :
                 (
-                    <div className='messages'>
+                    <div className='messages' ref={messagesRef}>
                         {currentChat.map((msg, i) => (
                             <p 
                                 key={i} 
@@ -80,6 +116,11 @@ function GPT() {
                                 {msg.text}
                             </p>
                         ))}
+                        {loading && 
+                        <div className='loading'>
+                        <img src={loadingGIF} alt='loading' className='loading-gif'/>
+                            <p>Im thinking</p>
+                        </div>}
                     </div>
                 )}
                 
@@ -87,13 +128,35 @@ function GPT() {
             </div>
             <div className='bottom'>
                 
-            <input type='text' className='input' placeholder='Type here' ref={ref}></input>
+            <input 
+            type='text' 
+            className='input' 
+            placeholder='Type here' 
+            onKeyDown={(e) => {
+                if(e.key === "Enter"){
+                    const text = ref.current?.value.trim()
+                    if(currentChat.length<1 && text){
+                    setChatStarted(true)
+                    sendMessage()
+                }else if (currentChat.length>20){
+                    notify()
+                }else if(currentChat.length>1 && currentChat.length<10){
+                sendMessage()
+                }
+                    }}}  
+                    ref={ref}
+                    >
+            </input>
             <button  className='Send' onClick={()=>{
                 const text = ref.current?.value.trim()
                 if(currentChat.length<1 && text){
                     setChatStarted(true)
-                }
+                    sendMessage()
+                }else if (currentChat.length>20){
+                    notify()
+                }else if(currentChat.length>1 && currentChat.length<10){
                 sendMessage()
+                }
             }}> <FontAwesomeIcon icon={faPaperPlane} color='white'/> </button>
             
             </div>

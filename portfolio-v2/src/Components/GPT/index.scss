@@ -121,6 +121,25 @@
         margin-top: 20px;
         padding: 6px 20px;
         scrollbar-width: none;
+        .loading{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            gap:10px;
+            p{
+            color: white;
+            font-size: 14px;
+            font-family: "lexend";
+            font-weight: 300;
+            margin: 0px;
+            }
+            .loading-gif{
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
     .bottom{
         display: flex;
@@ -189,10 +208,10 @@
     }
     .clear{
         position: absolute;
-        bottom: 15px;
+        top: 15px;
         background-color: transparent;
         border: solid 1px white;
-        left: 50%;
+        left: 55%;
         padding: 7px 6px;
         width: fit-content;
         border: none;
@@ -210,7 +229,6 @@
 {
     color: black;
     font-size: 14px;
-    padding: 5px 20px;
     border-radius: 20px;
     color: white;
     font-weight: 300;
@@ -218,16 +236,20 @@
     
 }
 .message-system{
-
+    
+    padding: 5px 10px 5px 10px;
     background-color: rgb(67, 85, 245);
     align-self: start;
-  
+    text-align: left;
+    
     
 }
 .message-user{
-
+    padding: 5px 10px 5px 10px;
     background-color: rgb(162, 0, 255);
     align-self: end;
+    text-align: right;
  
     
 }
+
