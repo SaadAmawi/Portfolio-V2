@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9wx+zk9ru8cl3i!$k5wmr8m^kyvqs^i(#9t0mrk)8kiz@#xk%)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-v2-production-f8bf.up.railway.app','127.0.0.1','localhost:3000']
+ALLOWED_HOSTS = ['saadamawi.up.railway.app','127.0.0.1','localhost:3000']
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Application definition
