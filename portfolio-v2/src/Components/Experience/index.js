@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef } from 'react'
 import './index.scss'
 import Item from './Item'
 import { useToggle } from '../../toggleContext'

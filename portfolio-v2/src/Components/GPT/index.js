@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './index.scss'
 import {faPaperPlane, faRobot, faAngleDown, faCircleDot, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faOpenai } from '@fortawesome/free-brands-svg-icons'
@@ -12,8 +12,16 @@ function GPT() {
     const [chatStarted, setChatStarted] = useState(false)
     const [currentChat, setCurrentChat] = useState([])
     const [loading,setLoading] = useState(false)
+    const [msgCount, setMsgCount] = useState(0)
     const ref = useRef(null)
     const messagesRef = useRef(null)
+
+    useEffect(() => {
+    if (state === "opened" && ref.current) {
+        ref.current.focus();
+    }
+}, [state]);
+
     const notify = () =>{
         toast("You have ran out of message!")
     }
@@ -25,33 +33,42 @@ function GPT() {
         }
     }
     async function sendMessage(){
+        setMsgCount(prev=>prev+1)
         console.log(currentChat.length)
         const text = ref.current?.value.trim();
         if (!text) return; 
-        setCurrentChat(prev=>[...prev,{sender:"user",text:text}])
+        setCurrentChat(prev=>[...prev,{"role":"user","content":text}])
         ref.current.value = "";
-        var formData = new FormData();
+        setLoading(true)
         setTimeout(() => {
                 if (messagesRef.current) {
                     messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
                 }
             }, 0);
-        setLoading(true)
-        formData.append("message", text);
-        axios.post('http://127.0.0.1:8000/gpt/', formData)
-        .then(response=>{
-            setCurrentChat(prev=>[
-                ...prev,
-                {sender:"system", text: response.data.response}
-                
-            ]);setLoading(false);}).catch(error=>{
-            console.error("Error fetching GPT response:", error.message);
-            setCurrentChat(prev=>[
-                ...prev,
-                {sender:"system", text: "Sorry, it seems I have ran into an error, or ran out of tokens.\nPlease Try Again later, sorry for the inconvinience."}
-            ])
-        })
-
+            const conversationHistory = [...currentChat, { role: "user", content: text }];
+            // formData.append({message:conversationHistory});
+            const msgs = conversationHistory.map(message=>{
+                    return message
+                })
+            const payload = {messages:msgs}
+            console.log(payload)
+            axios.post('http://127.0.0.1:8000/gpt/', 
+                payload, 
+                {headers: { "Content-Type": "application/json" }})
+            .then(response=>{
+                setCurrentChat(prev=>[
+                    ...prev,
+                    {"role":"assistant","content":response.data.response}
+                    
+                ]);setLoading(false);}).catch(error=>{
+                    console.error("Error fetching GPT response:", error.message);
+                    console.log(error)
+                    setCurrentChat(prev=>[
+                        ...prev,
+                        {"role":"assistant", "content": `Sorry, \n${error.response.data.detail}`}
+                    ]);
+                    setLoading(false)
+                })
     }
 
     return (
@@ -83,6 +100,7 @@ function GPT() {
                  <button onClick={()=>{setState("closed")}} className='minimize'>
                     <FontAwesomeIcon icon={faAngleDown} color='white' fontSize={"15px"}/>
                 </button>
+                <h1 className='msgCount'>Message Count: {msgCount}/10</h1>
                {chatStarted && <button onClick={()=>{
                     setCurrentChat([])
                     setChatStarted(false)
@@ -95,7 +113,7 @@ function GPT() {
                 <div className='intro'>
                    <FontAwesomeIcon icon={faRobot} fontSize={"22px"}/>
                    <h1 >Welcome to my Live Support</h1>
-                   <p>Feel free to ask me about Saad, however kindly be aware that each user can ask up to 10 questions</p>
+                   <p>Feel free to ask me about Saad, however kindly be aware that each user can ask up to 10 questions per hour</p>
                    <p style={{marginTop:"10px"}}>Try asking: </p>
                    <div className='prompts'>
                     <button className='promptBox' onClick={()=>injectPrompt("What Technologies does Saad use?")}>What Technologies does Saad use?</button>
@@ -111,9 +129,9 @@ function GPT() {
                         {currentChat.map((msg, i) => (
                             <p 
                                 key={i} 
-                                className={msg.sender === "user" ? "message-user" : "message-system"}
+                                className={msg.role === "user" ? "message-user" : "message-system"}
                                 >
-                                {msg.text}
+                                {msg.content}
                             </p>
                         ))}
                         {loading && 
@@ -138,9 +156,9 @@ function GPT() {
                     if(currentChat.length<1 && text){
                     setChatStarted(true)
                     sendMessage()
-                }else if (currentChat.length>20){
+                }else if (currentChat.length>=20){
                     notify()
-                }else if(currentChat.length>1 && currentChat.length<10){
+                }else if(currentChat.length>1 && currentChat.length<20){
                 sendMessage()
                 }
                     }}}  
@@ -152,9 +170,9 @@ function GPT() {
                 if(currentChat.length<1 && text){
                     setChatStarted(true)
                     sendMessage()
-                }else if (currentChat.length>20){
+                }else if (currentChat.length>=20){
                     notify()
-                }else if(currentChat.length>1 && currentChat.length<10){
+                }else if(currentChat.length>1 && currentChat.length<20){
                 sendMessage()
                 }
             }}> <FontAwesomeIcon icon={faPaperPlane} color='white'/> </button>

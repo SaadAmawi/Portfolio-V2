@@ -8,9 +8,9 @@ import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
 import BIRDS from 'vanta/src/vanta.birds'
-import TRUNK from 'vanta/dist/vanta.trunk.min'
+// import TRUNK from 'vanta/dist/vanta.trunk.min'
 import TextPressure from '../TextPressure'
-const isMac = /Mac/.test(navigator.userAgent)
+// const isMac = /Mac/.test(navigator.userAgent)
 
 function Hero() {
     const {theme} = useTheme();
