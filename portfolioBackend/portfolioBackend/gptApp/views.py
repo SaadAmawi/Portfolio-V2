@@ -15,8 +15,6 @@ def test(request):
 
 class GenerateResponseView(APIView):
     throttle_classes = [GPTThrottle] 
-    #test
-    @csrf_exempt
     def post(self, request):
         user_messages = request.data.get('messages')
         openai.api_key = settings.OPENAI_API_KEY
