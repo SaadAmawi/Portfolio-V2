@@ -29,7 +29,15 @@ position: relative;
 // }
 
 }
+b{
+    background: linear-gradient(to right,#e258f4,#a051e9,#7e9ff7,#747fff);
+    clip-path: text;
+    background-clip: text;
+    color: transparent;
+    // animation: heartBeat 1s infinite;
 
+
+}
 #about-me{
     scroll-margin-top: 150px;
     transition: all 10s ; 
@@ -47,7 +55,7 @@ height: 50%;
     animation-range: entry 0% cover 70%; 
     color:var(--text-color-purpleDark3);
     font-family: 'lexend';
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 200;
 }
 

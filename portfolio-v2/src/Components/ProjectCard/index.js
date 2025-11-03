@@ -1,7 +1,7 @@
 // import {react} from 'react'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub  } from '@fortawesome/free-brands-svg-icons'
+import { faGithubSquare  } from '@fortawesome/free-brands-svg-icons'
 import {faUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
 const ProjectCard = ({imgSrc, Title, Technologies,alt,Description,gitLink,siteLink}) => {
   return (
@@ -13,11 +13,11 @@ const ProjectCard = ({imgSrc, Title, Technologies,alt,Description,gitLink,siteLi
           <div className='title'>
             <h2>{Title}</h2>
             <div className='links'>
-            {gitLink && <a href={gitLink}>
-            <FontAwesomeIcon icon={faGithub} color='black' style={{fontSize:"25px"}}/>
+            {gitLink && <a href={gitLink} target='_blank'>
+            <FontAwesomeIcon icon={faGithubSquare} color='black' style={{fontSize:"35px"}}/>
             </a>}
-            {siteLink && <FontAwesomeIcon icon={faUpRightFromSquare} color='black' style={{fontSize:"20px"}}/>
-            }
+            {/* {siteLink && <FontAwesomeIcon icon={faUpRightFromSquare} color='black' style={{fontSize:"20px"}}/>
+            } */}
             </div>
             </div>
             <p>{Description}</p>
