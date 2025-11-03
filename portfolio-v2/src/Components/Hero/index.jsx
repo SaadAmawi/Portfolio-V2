@@ -38,6 +38,7 @@ function Hero() {
         <img src={bg} alt="Background"  className='dark'/>
         : 
         
+        // <img src={wbg} alt="Background"  className='light'/>
         <div id='clouds'ref={vantaRef} className='cloud' />
       }
            

@@ -2,7 +2,6 @@
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare  } from '@fortawesome/free-brands-svg-icons'
-import {faUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
 const ProjectCard = ({imgSrc, Title, Technologies,alt,Description,gitLink,siteLink}) => {
   return (
     <div className="project-card-container">
@@ -13,7 +12,7 @@ const ProjectCard = ({imgSrc, Title, Technologies,alt,Description,gitLink,siteLi
           <div className='title'>
             <h2>{Title}</h2>
             <div className='links'>
-            {gitLink && <a href={gitLink} target='_blank'>
+            {gitLink && <a href={gitLink} rel="noreferrer"target='_blank'>
             <FontAwesomeIcon icon={faGithubSquare} color='black' style={{fontSize:"35px"}}/>
             </a>}
             {/* {siteLink && <FontAwesomeIcon icon={faUpRightFromSquare} color='black' style={{fontSize:"20px"}}/>

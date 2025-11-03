@@ -74,7 +74,12 @@ p.color.light span{
     inset: 0;
     width: 100%;
     z-index: 0;
-    
+    .light{
+        width: 20%;
+        height: 50%;
+        top: 30%;
+        left: 40%;
+    }
 }
 
 .cloud{
