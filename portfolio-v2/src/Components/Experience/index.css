@@ -16,11 +16,11 @@
   width: 55%;
   gap:20px;
   opacity: 1;
-  animation-name: fadeIn;
+  animation-name: slideInUp;
   animation-duration: 0.7s;
   animation-fill-mode: backwards;
   animation-timeline: view();
-  animation-range: entry 0% cover 60%;
+  animation-range: entry 0% cover 90%;
   /* overflow: visible; */
   
 }
@@ -195,7 +195,16 @@ button{
     transform: translateY(0);
   }
 }
-
+@keyframes slideInUp {
+    0%{
+        opacity: 0;
+        transform: scale(0.8)
+    }
+    60%{
+        opacity: 1;
+        transform:  scale(1)
+    }
+}
 @keyframes slideLeft {
     0%{
         font-size: 0px;

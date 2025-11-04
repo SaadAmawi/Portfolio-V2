@@ -144,6 +144,7 @@ h1{
     bottom: 20px;
     animation: fadeIn backwards 3.5s 3s;
     filter: drop-shadow(0 0 4px white);
+    margin-bottom: 20px;
 }
 
 .down-arrow{
@@ -152,11 +153,8 @@ h1{
     font-size: 30px;
     position: absolute;
     bottom: 20px;
-    animation-name: fadeOut;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 70%; 
+    animation: bounce 3s infinite;
+    margin-bottom: 20px;
 }
 
 .socials{

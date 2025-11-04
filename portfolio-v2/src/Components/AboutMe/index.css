@@ -53,7 +53,7 @@ height: 50%;
     animation-timing-function: linear;
     animation-fill-mode: both;
     animation-timeline: view();
-    animation-range: entry 0% cover 70%; 
+    animation-range: entry 0% cover 100%; 
     color:var(--text-color-purpleDark3);
     font-family: 'lexend';
     font-size: 19px;
@@ -76,7 +76,7 @@ height: 50%;
 @keyframes slideInUp {
     0%{
         opacity: 0;
-        transform: scale(0.93)
+        transform: scale(0.8)
     }
     60%{
         opacity: 1;
