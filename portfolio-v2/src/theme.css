@@ -74,8 +74,8 @@ body.light {
   --op2: 1;
   --pink-200:rgb(64, 40, 250);
   --side-text: rgba(117, 112, 149, 0.48);
-  --gpt-button-bg:rgba(198, 208, 249, 0.918);
-  --gpt-button-bg-hover:rgba(127, 151, 247, 0.918);
+  --gpt-button-bg:rgba(126, 151, 251, 0.918);
+  --gpt-button-bg-hover:rgba(82, 115, 249, 0.918);
   --gpt-bg: rgb(254, 254, 254);
   --gpt-border: rgba(9, 44, 245, 0.216);
   --prompt-border: rgba(106, 113, 255, 0.596);
