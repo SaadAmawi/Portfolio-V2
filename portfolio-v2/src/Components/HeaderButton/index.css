@@ -11,11 +11,11 @@
     position:relative;
     justify-content: center;
     display: flex;
-    &:hover{
-        transform: scale(1.05);
-        color: rgb(255, 255, 255);
-        background: linear-gradient(to right, #c084fc, #f472b6);
-        background-clip: text;
-        color: transparent;
-    }
+}
+.headerButton:hover{
+    transform: scale(1.05);
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #c084fc, #f472b6);
+    background-clip: text;
+    color: transparent;
 }

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import './index.scss'
+import './index.css'
 import Item from './Item'
 import { useToggle } from '../../toggleContext'
 import { useTheme } from '../../themeContext'

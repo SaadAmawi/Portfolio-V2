@@ -1,0 +1,277 @@
+
+.but{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.gpt-button{
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+    border: none;
+    width: 60px;
+    height: 60px;
+    /* border: rgba(255, 255, 255, 0.514) 1px solid; */
+    background-color: var(--gpt-button-bg);
+    border-radius: 50%;
+    /* background: var(--bg-color); */
+    color:var(--text-color);
+    font-family: "lexend",serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+.gpt-button:hover{
+    background-color:var(--gpt-button-bg-hover) ;
+}
+
+.gpt-button:after, .gpt-button:before{
+    z-index: -1;
+    content:"";
+    position: absolute;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left:50%;
+    translate: -50% -50%;
+    padding: 5px;
+    filter: blur(2px);
+    background-image:conic-gradient(from var(--angle),#7200dc, #8a10fd,#eb8cf7,#05dffc,#00d9f1,#eb8cf7,#8a10fd,#7200dc); 
+    animation: spinBorder 3s linear infinite;
+}
+.chatBox{
+    background: var(--gpt-bg);
+    width: 400px;
+    height: 600px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s backwards;
+    box-shadow: 0px 0px 6px 1px var(--gpt-border);
+    padding: 10px;
+}
+.chatBox .text{
+    height:85% ;
+    background-color: var(--gpt-bg);
+    position: relative;
+    padding: 5px 0px 50px 0px;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    justify-content: start;
+    align-items: start;
+}
+.chatBox .head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.chatBox .msgCount{
+    position: absolute;
+    font-size: 12px;
+    bottom: 5px;
+    background-color: transparent;
+    left: 15px;
+    padding: 7px 6px;
+    width: fit-content;
+    color: var(--text-color-purpleDark3);
+    /* border: none; */
+    border-radius: 30%;
+}
+.chatBox .chatbox-header-text{
+    color: var(--text-color-purpleDark3);
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    font-size: 24px;
+    font-family: "lexend";
+    font-weight: 200;
+}
+.chatBox .intro{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0px 20px;
+}
+.chatBox .intro h1{
+    color: var(--text-color-purpleDark3);
+    font-size: 18px;
+}
+.chatBox .intro p{
+    color: var(--text-color-purpleDark3);
+    font-size: 12px;
+}
+.chatBox .intro .promptBox{
+    width: 80%;
+    padding:8px;
+    background-color: transparent;
+    color: var(--text-color-purpleDark3);
+    margin-bottom: 10px;
+    border: solid 1px var(--prompt-border);
+    border-radius: 10px;
+}
+.chatBox .intro .promptBox:hover{
+    background-color: rgba(173, 173, 173, 0.219);
+}
+.chatBox .messages{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    justify-content: start;
+    height: 100%;
+    margin-top: 20px;
+    padding: 6px 20px;
+    scrollbar-width: none;
+}
+.chatBox .messages .loading{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap:10px;
+}
+.chatBox .messages .loading p{
+    color: var(--text-color-purpleDark3);
+    font-size: 14px;
+    font-family: "lexend";
+    font-weight: 300;
+    margin: 0px;
+}
+.chatBox .messages .loading .loading-gif{
+    width: 20px;
+    height: 20px;
+    filter: drop-shadow(0px 0px 2px black);
+}
+.chatBox .bottom{
+    display: flex;
+    height: 15%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    /* padding: 20px; */
+}
+.chatBox .input{
+    width: 80%;
+    height: 60%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: var(--input-bg);
+    padding: 10px;
+    color: var(--text-color-purpleDark3);
+    border: 1px solid var(--text-color-purpleDark3);
+}
+.chatBox .input::placeholder{
+    color: var(--placeholder-text);
+}
+
+.chatBox .Send{
+    width: fit-content;
+    height: 60%;
+    border-radius: 20%;
+    padding: 20px;
+    border: none;
+    background-color: var(--text-color-inverse);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.chatBox .Send:hover{
+    background-color: var(--text-color-inverse2);
+    color: black;
+}
+.chatBox .Send:after, .chatBox .Send:before{
+    z-index: -1;
+    content:"";
+    position: absolute;
+    border-radius: 20%;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left:50%;
+    translate: -50% -50%;
+    padding: 2px;
+    filter: blur(2px);
+    background-image:conic-gradient(from var(--angle), #8a10fd,#df23f8,#05dffc,#d0faff,#05dffc,#df23f8,#8a10fd); 
+    animation: spinBorder 3.5s linear infinite;
+}
+
+.chatBox .minimize{
+    position: absolute;
+    top: 15px;
+    background-color: transparent;
+    border: solid 1px var(--text-color-purpleDark3);
+    right: 15px;
+    padding: 7px 6px;
+    width: fit-content;
+    /* border: none; */
+    border-radius: 30%;
+
+}
+.chatBox .clear{
+    position: absolute;
+    top: 15px;
+    background-color: transparent;
+    border: solid 1px var(--text-color-purpleDark3);
+    left: 55%;
+    padding: 7px 6px;
+    width: fit-content;
+    border: none;
+    border-radius: 20%;
+    transition: all 0.6s ease-in-out;
+    color: var(--text-color-purpleDark3);
+}
+.chatBox .clear:hover{
+    background-color: var(--delete);
+    
+}
+
+.message-system ,
+.message-user
+{
+    font-size: 14px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 300;
+    font-family: "lexend";
+    
+}
+.message-system{
+    
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(67, 85, 245);
+    align-self: start;
+    text-align: left;
+    
+    
+}
+.message-user{
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(162, 0, 255);
+    align-self: end;
+    text-align: right;
+}
+
+ .icons{
+    color: var(--text-color-purpleDark3);
+}
+
+.pulse{
+    animation: heartBeat 6s infinite;
+}
+

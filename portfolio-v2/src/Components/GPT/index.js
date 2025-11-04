@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import './index.scss'
+import './index.css'
 import {faPaperPlane, faAngleDown, faCircleDot, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faOpenai } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

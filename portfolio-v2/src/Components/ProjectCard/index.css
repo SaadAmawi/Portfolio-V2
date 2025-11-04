@@ -15,12 +15,12 @@
 .project-card{
   height: 100%;
   position: relative;
-  // display: flex;
-  // flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   justify-content: end;
   align-items: end;
-  &:hover {
-    .project-card-back {
+}
+.project-card:hover .project-card-back {
     position: absolute;  /* not fixed */
     bottom: 0;
     left: 0;
@@ -34,8 +34,6 @@
     padding: 10px 20px 10px 30px;
     animation: fadeIn 0.6s backwards;
     overflow-y: auto;
-    }
-}
 }
 .links{
   display: flex;
@@ -50,9 +48,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  h2{
+}
+.title h2{
     color: black;
-  }
 }
 
 
@@ -106,5 +104,6 @@
     margin: 6px 0px 10px 0px;
     text-wrap-mode: wrap;
 }
+
 
 

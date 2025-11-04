@@ -1,4 +1,4 @@
-import './index.scss'
+import './index.css'
 import { useTheme } from '../../themeContext'
 function WhiteButton({toLink,buttonText,cName}) {
   const {theme} = useTheme()

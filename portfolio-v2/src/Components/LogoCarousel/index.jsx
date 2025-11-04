@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.scss'
+import './index.css'
 import logos from './LogosArray'
 import splitLogoArrayBy3 from '../../utils'
 

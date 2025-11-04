@@ -1,5 +1,5 @@
 // import {react} from 'react'
-import './index.scss'
+import './index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare  } from '@fortawesome/free-brands-svg-icons'
 const ProjectCard = ({imgSrc, Title, Technologies,alt,Description,gitLink,siteLink}) => {

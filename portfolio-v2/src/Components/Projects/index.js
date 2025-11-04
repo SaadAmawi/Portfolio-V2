@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.scss'
+import './index.css'
 import IMS from '../Assets/Images/IMS.png'
 import MemoreyezLanding from '../Assets/Images/MemoreyezLanding.png'
 import KGC from '../Assets/Images/KGC.png'

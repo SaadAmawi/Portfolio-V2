@@ -15,9 +15,9 @@
     animation-delay: 4.2s;
     animation-fill-mode: backwards;
     transition: ease-in 0.3s;
-    &:hover{
-        transform: scale(1.05);
-    }
+}
+.filled:hover{
+    transform: scale(1.05);
 }
 
 .filled-header{
@@ -36,31 +36,31 @@
     text-decoration: none;
     border-radius: 50px;
     position: relative;
-    &.gpt{
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-    }
-    &:after, &:before{
-        z-index: -1;
-        content:"";
-        position: absolute;
-        border-radius: 50px;
-        width: 100%;
-        height: 100%;
-        top: 50%;
-        left:50%;
-        translate: -50% -50%;
-        padding: 2px;
-        background-image:conic-gradient(from var(--angle), #8a10fd,#df23f8,#05dffc,#d0faff,#05dffc,#df23f8,#8a10fd); 
-        animation: spinBorder 3.5s linear infinite;
-    }
-    &::before{
-        filter: blur(9px);
-    }
-    &::after{
-        filter: blur(2px);
-    }
+}
+.filled-header.gpt{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.filled-header:after, .filled-header:before{
+    z-index: -1;
+    content:"";
+    position: absolute;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left:50%;
+    translate: -50% -50%;
+    padding: 2px;
+    background-image:conic-gradient(from var(--angle), #8a10fd,#df23f8,#05dffc,#d0faff,#05dffc,#df23f8,#8a10fd); 
+    animation: spinBorder 3.5s linear infinite;
+}
+.filled-header::before{
+    filter: blur(9px);
+}
+.filled-header::after{
+    filter: blur(2px);
 }
 
 
@@ -88,13 +88,13 @@
     position: relative;
     transition:ease-out 0.3s;
     
-    &:hover{
-        // box-shadow:0px 0px 8px 1px var(--text-color-purpleDark3);
-        transition: all ease-in-out 0.6s;
-        background-color: var(--text-color-purpleDark3);
-        color: var(--text-color2);
-        transform: scale(1.05);
-    }
+}
+.outline:hover{
+    /* box-shadow:0px 0px 8px 1px var(--text-color-purpleDark3); */
+    transition: all ease-in-out 0.6s;
+    background-color: var(--text-color-purpleDark3);
+    color: var(--text-color2);
+    transform: scale(1.05);
 }
 @keyframes spinBorder{
     from{
@@ -104,3 +104,4 @@
         --angle:360deg;
     }
 }
+

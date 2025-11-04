@@ -1,6 +1,6 @@
 import React from 'react'
 import LogoCarousel from './index';
-import './index.scss'
+import './index.css'
 function LogoCarouselBundle() {
   return (
     <div className="logo-container">
