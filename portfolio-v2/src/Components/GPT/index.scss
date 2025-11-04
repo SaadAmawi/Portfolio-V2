@@ -271,3 +271,7 @@
  .icons{
         color: var(--text-color-purpleDark3);
     }
+
+    .pulse{
+        animation: heartBeat 6s infinite;
+    }

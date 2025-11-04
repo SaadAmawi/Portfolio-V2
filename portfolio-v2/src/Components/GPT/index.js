@@ -109,7 +109,7 @@ async function sendMessage() {
                 />
             <div className='text'>
                 <div className='head'>
-                <FontAwesomeIcon icon={faCircleDot}  fontSize={"9px"} color='lightgreen'/>
+                <FontAwesomeIcon icon={faCircleDot} className='pulse' fontSize={"9px"} color='lightgreen'/>
                 <h1 className='chatbox-header-text'>Saad Support</h1>
                 </div>
                  <button onClick={()=>{setState("closed")}} className='minimize'>
@@ -126,7 +126,7 @@ async function sendMessage() {
                 {chatStarted===false ? 
                 (
                 <div className='intro'>
-                   <FontAwesomeIcon className="icons" icon={faRobot} fontSize={"22px"}/>
+                   <FontAwesomeIcon className="icons" icon={faOpenai} fontSize={"22px"}/>
                    <h1 >Welcome to my Live Support</h1>
                    <p>Feel free to ask me about Saad, however kindly be aware that each user can ask up to 10 questions per hour</p>
                    <p style={{marginTop:"10px"}}>Try asking: </p>

@@ -1,23 +1,15 @@
 @import 'animate.css';
 body.dark{
   background-color: black;
-  /* overflow-x: hidden; */
 }
 body.light{
   color: black;
   background-color: rgb(255, 255, 255);
-  /* overflow-x: hidden; */
 }
 body{
   transition: all 0.1s ease-in-out;
 }
-html {
-  scroll-behavior: smooth; 
-   /* will-change: transform; */
-backface-visibility: hidden;
-scrollbar-width: none;
 
-}
 
 * { 
     -moz-box-sizing: border-box; 
@@ -25,12 +17,3 @@ scrollbar-width: none;
      box-sizing: border-box; 
 }
 
-.gpt-button{
-position: fixed;
-bottom: 50px;
-right: 50px;
-width: 50px;
-height: 50px;
-background-color: blue;
-border-radius: 50%;
-}
