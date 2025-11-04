@@ -52,7 +52,7 @@
         left:50%;
         translate: -50% -50%;
         padding: 2px;
-        background-image:conic-gradient(from var(--angle), #df23f8,#8a10fd,#0547fc,#df23f8); 
+        background-image:conic-gradient(from var(--angle), #df23f8,#8a10fd,#05dffc,#df23f8); 
         animation: spinBorder 3s linear infinite;
     }
     &::before{

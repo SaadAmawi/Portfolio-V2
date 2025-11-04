@@ -8,6 +8,7 @@ import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
 import TextPressure from '../TextPressure'
+import Orb from '../Orb/Orb'
 
 function Hero() {
     const {theme} = useTheme();
@@ -25,11 +26,6 @@ function Hero() {
 
     },[])
 
-
-
- 
-
-
   return (
     <div className={`hero ${theme}`} id={"arrow"}>
       <div className="hero-bg">
@@ -37,9 +33,13 @@ function Hero() {
         { theme === "dark" ? 
         <img src={bg} alt="Background"  className='dark'/>
         : 
-        
-        // <img src={wbg} alt="Background"  className='light'/>
-        <div id='clouds'ref={vantaRef} className='cloud' />
+  <Orb
+    hoverIntensity={0.2}
+    rotateOnHover={true}
+    hue={0}
+    forceHoverState={false}
+  />
+  
       }
            
 

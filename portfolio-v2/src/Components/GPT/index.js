@@ -32,50 +32,65 @@ function GPT() {
             ref.current.focus();
         }
     }
-    async function sendMessage(){
-        setMsgCount(prev=>prev+1)
-        console.log(currentChat.length)
+async function sendMessage() {
+    try {
+        setMsgCount(prev => prev + 1);
+        console.log(currentChat.length);
+
         const text = ref.current?.value.trim();
-        if (!text) return; 
-        setCurrentChat(prev=>[...prev,{"role":"user","content":text}])
+        if (!text) return;
+
+        setCurrentChat(prev => [...prev, { "role": "user", "content": text }]);
         ref.current.value = "";
-        setLoading(true)
+        setLoading(true);
+
         setTimeout(() => {
-                if (messagesRef.current) {
-                    messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
-                }
-            }, 0);
-            const conversationHistory = [...currentChat, { role: "user", content: text }];
-            // formData.append({message:conversationHistory});
-            const msgs = conversationHistory.map(message=>{
-                    return message
-                })
-            const payload = {messages:msgs}
-            console.log(payload)
-            axios.post('https://saadamawi.up.railway.app/gpt/', 
-                payload, 
-                {headers: { "Content-Type": "application/json" }})
-            .then(response=>{
-                setCurrentChat(prev=>[
-                    ...prev,
-                    {"role":"assistant","content":response.data.response}
-                    
-                ]);setLoading(false);}).catch(error=>{
-                    console.error("Error fetching GPT response:", error.message);
-                    console.log(error)
-                    setCurrentChat(prev=>[
-                        ...prev,
-                        {"role":"assistant", "content": `Sorry, \n${error.response.data.detail}`}
-                    ]);
-                    setLoading(false)
-                })
+            if (messagesRef.current) {
+                messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
+            }
+        }, 0);
+
+        const conversationHistory = [...currentChat, { role: "user", content: text }];
+        const payload = { messages: conversationHistory };
+
+        console.log(payload);
+
+        const response = await axios.post(
+            "https://saadamawi.up.railway.app/gpt/",
+            payload,
+            { headers: { "Content-Type": "application/json" } }
+        );
+
+        // ✅ Check if the response has valid data before setting it
+        if (response && response.data && response.data.response) {
+            setCurrentChat(prev => [
+                ...prev,
+                { "role": "assistant", "content": response.data.response }
+            ]);
+        } else {
+            setCurrentChat(prev => [
+                ...prev,
+                { "role": "assistant", "content": "Sorry, no response data received." }
+            ]);
+        }
+
+    } catch (error) {
+        console.error("Error fetching GPT response:", error);
+        const errorMessage = error.response?.data?.detail || error.message || "An unknown error occurred.";
+        setCurrentChat(prev => [
+            ...prev,
+            { "role": "assistant", "content": `Sorry,\n${errorMessage}` }
+        ]);
+    } finally {
+        setLoading(false);
     }
+}
 
     return (
 
     state ==="closed"?(
         <div className='but'>
-        <button onClick={()=>{setState("opened")}} className='gpt-button'><FontAwesomeIcon icon={faOpenai} color='white' fontSize={"20px"}/></button>
+        <button onClick={()=>{setState("opened")}} className='gpt-button'><FontAwesomeIcon  className="icons" icon={faOpenai} color='white' fontSize={"20px"}/></button>
         </div>
     ):(
         <div className='chatBox'>
