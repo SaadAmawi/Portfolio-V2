@@ -59,9 +59,9 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle',
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '10/h',  # 10 requests per minute for anonymous users
-        'user': '10/hour',  # 30 requests per minute for authenticated users
-        'custom_gpt': '10/h',  # Custom class we’ll define below
+        'anon': '10/h',  
+        'user': '10/hour',  
+        'custom_gpt': '10/h',  
     }
 }
 
