@@ -53,7 +53,7 @@ function Header(){
             (<FontAwesomeIcon icon={faMoon} color="var(--text-color-purpleDark2)" style={{WebkitFilter:"drop-shadow(1px 1px 4px var(--text-color-purpleDark2))"}}></FontAwesomeIcon>)
           }
         </button>
-        <WhiteButton toLink="mailto:saadamawi22@gmail.com" buttonText="Contact" cName="filled-header"/>
+        <WhiteButton target={""} toLink="mailto:saadamawi22@gmail.com" buttonText="Contact" cName="filled-header"/>
     </div>
     </nav>
     </div>)

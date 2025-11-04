@@ -75,7 +75,7 @@ function Hero() {
          <p className='underwords'>Java | Python | ReactJS | Node | Django | AWS | N8N</p>
         </h1>
         <div className='buttons'>
-        <WhiteButton toLink={resume} buttonText={"Resume"} cName={"outline"} />
+        <WhiteButton target={"_blank"} toLink={resume} buttonText={"Resume"} cName={"outline"} />
         </div>
         </div>
         <div className='socials'>
