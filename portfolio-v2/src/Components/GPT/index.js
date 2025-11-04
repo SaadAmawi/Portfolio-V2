@@ -156,9 +156,9 @@ function GPT() {
                     if(currentChat.length<1 && text){
                     setChatStarted(true)
                     sendMessage()
-                }else if (currentChat.length>=20){
+                }else if (msgCount>=10){
                     notify()
-                }else if(currentChat.length>1 && currentChat.length<20){
+                }else if(currentChat.length>1 && msgCount<10){
                 sendMessage()
                 }
                     }}}  
