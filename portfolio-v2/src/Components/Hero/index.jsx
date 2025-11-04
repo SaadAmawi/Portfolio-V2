@@ -3,7 +3,7 @@ import bg from '../Assets/Images/background.png'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
 import AnimatedLetters from '../AnimatedLetters'
-import {useEffect,useState, useRef} from "react"
+import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
@@ -15,7 +15,6 @@ function Hero() {
     const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
     const [letterClass2, setLetterClass2] = useState('text-animate-fly');
     const [arrowClass, setArrowClass] = useState('fade-arrow');
-    const vantaRef = useRef(null)
     useEffect(()=>{
         setTimeout(()=>{
         return (
@@ -31,6 +30,12 @@ function Hero() {
       <div className="hero-bg">
         
         { theme === "dark" ? 
+        // <Orb
+        //   hoverIntensity={0.2}
+        //   rotateOnHover={true}
+        //   hue={0}
+        //   forceHoverState={false}
+        // />
         <img src={bg} alt="Background"  className='dark'/>
         : 
   <Orb
