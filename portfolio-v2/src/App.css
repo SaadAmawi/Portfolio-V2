@@ -10,7 +10,9 @@ body{
   transition: all 0.1s ease-in-out;
 }
 
-
+html{
+  overflow: visible;
+}
 * { 
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 

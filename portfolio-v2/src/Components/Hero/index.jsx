@@ -39,8 +39,8 @@ function Hero() {
         <img src={bg} alt="Background"  className='dark'/>
         : 
   <Orb
-    hoverIntensity={0.2}
-    rotateOnHover={true}
+    hoverIntensity={0.0}
+    rotateOnHover={false}
     hue={0}
     forceHoverState={false}
   />
