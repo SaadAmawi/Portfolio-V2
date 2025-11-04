@@ -67,6 +67,8 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS=[
     'http://localhost:3000',
+    'https://www.saadamawi.com',
+    'https://saadamawi.com'
 ]
 
 ROOT_URLCONF = 'portfolioBackend.urls'
