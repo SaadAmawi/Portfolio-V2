@@ -12,7 +12,9 @@
     padding: 22px;
     border-radius: 20px;
     transition: all 0.2s ease;
-    animation: fadeIn 3s backwards;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
     animation-timeline: view();
     animation-range: entry 0% cover 50%;
 }

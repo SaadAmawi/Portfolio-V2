@@ -16,7 +16,9 @@
   width: 55%;
   gap:20px;
   opacity: 1;
-  animation: fadeIn 0.7s backwards;
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+  animation-fill-mode: backwards;
   animation-timeline: view();
   animation-range: entry 0% cover 60%;
   /* overflow: visible; */

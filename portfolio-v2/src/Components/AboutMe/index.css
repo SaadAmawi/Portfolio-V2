@@ -23,8 +23,10 @@ position: relative;
     left: 0;
     translate: -58% 100% ;
     transform: rotate(270deg);
-    animation: slideIn 1s backwards;
-    animation-timeline:view();
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-timeline: view();
     animation-range: entry 0% cover 50% exit 100%;
 } */
 
@@ -47,7 +49,9 @@ height: 50%;
 }
 
 .left-text p{
-    animation: slideInUp  linear both;
+    animation-name: slideInUp;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
     animation-timeline: view();
     animation-range: entry 0% cover 70%; 
     color:var(--text-color-purpleDark3);

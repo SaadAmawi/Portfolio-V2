@@ -14,7 +14,9 @@
   flex-direction:"column";
   justify-Content:"center";
   align-Items:"center";
-  animation: fadeIn 3s backwards;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
   animation-timeline: view();
   animation-range: entry 0% cover 90%;
 }
