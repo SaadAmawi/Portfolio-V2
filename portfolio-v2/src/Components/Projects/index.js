@@ -7,11 +7,9 @@ import OldPort from '../Assets/Images/OldPort.png'
 import NewPort from '../Assets/Images/NewPort.png'
 import MemorEyez from '../Assets/Images/MemoreyezApp.png'
 import ProjectCard from '../ProjectCard'
-import Skills from '../Skills'
 function Projects() {
   return (
     <div className='projects-container' id='projects'>
-    <Skills/>
     <div className='projects'>
       <ProjectCard 
       imgSrc={NewPort} 

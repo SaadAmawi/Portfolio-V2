@@ -10,6 +10,7 @@ import Hero from './Components/Hero';
 import './index.css'
 import Projects from './Components/Projects';
 import GPT from './Components/GPT';
+import Skills from './Components/Skills';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <AboutMe/>
       <Experience/>
       </ToggleProvider>
+      <Skills/>
       {/* <LogoCarouselBundle/> */}
       <Projects/>
       <GPT/>

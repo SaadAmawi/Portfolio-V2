@@ -1,6 +1,6 @@
 
     .about-me{
-    width:55%;
+    width:60%;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -9,27 +9,6 @@
     margin: 100px auto 30px auto;
     position: relative;
     gap: 30px;
-    /* &:after{
-        z-index: -1;
-        content: "About Me";
-        color:rgba(153, 152, 152, 0.48);
-        font-family:"lexend";
-        width: fit-content;
-        font-size: 190px;
-        opacity: 0;
-        font-weight: 700;
-        position: absolute;
-        top: 10%;
-        left: 0;
-        translate: -58% 100% ;
-        transform: rotate(270deg);
-        animation-name: slideIn;
-        animation-duration: 1s;
-        animation-fill-mode: backwards;
-        animation-timeline: view();
-        animation-range: entry 0% cover 50% exit 100%;
-    } */
-
     }
     b{
         background: linear-gradient(to right,#e258f4,#a051e9,#7e9ff7,#747fff);
@@ -94,20 +73,16 @@
 
     @media screen and (max-width:1200px) {
         .about-me{
-            width: 50%;
+            width: 90%;
+            flex-direction: column;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+        .left-text{
+            width: 100%;
+            text-align: center;
         }
 
-        .about-me:after{
-            color: rgb(255, 255, 255);
-            rotate:-270deg;
-            top:0;        
-            left: 50%;
-            width: 100%;
-            translate: 6% -40% ;
-            font-size: 100px;
-            opacity: 1;
-            animation-range: entry 0% cover 60%;
-        }
     .left-text h1 {
         top: 0;
         font-size: 120px;

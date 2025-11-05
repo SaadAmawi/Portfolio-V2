@@ -79,12 +79,9 @@ button{
   
   .box {
     max-height: 90%;
-    /* border: rgba(251, 5, 255, 0.259) 1px solid; */
     border-radius: 20px;
-    /* background-color: black; */
     overflow-y: auto;
     padding: 30px 20px;
-    /* animation: fadeIn 2s both; */
     scrollbar-width: none;
     scrollbar-color:rgba(101, 52, 151, 0.897)  rgba(175, 188, 254, 0.795);
     position: relative;      
@@ -118,8 +115,6 @@ button{
   align-items: flex-start;
   gap: 30px;
   position: relative;
-  
-
 }
 .timeline-item .logo img {
     width: 45px;
@@ -232,3 +227,20 @@ button{
     }   
 }
 
+
+@media screen and (max-width:1200px) {
+  .experience{
+    width: 90%;
+    margin-top: 30px;
+    height: fit-content;
+  }
+  .timeline-item .details{
+    font-size: 12px;
+  }
+  .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+}
+}

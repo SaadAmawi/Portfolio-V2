@@ -1,5 +1,5 @@
 .skills{
-    width: 100%;
+    width: 80%;
     margin: auto;
     margin-top: 0px;
     margin-bottom: 100px;
@@ -26,6 +26,7 @@
     .section_title{
         display: flex;
         flex-direction: column;
+        width: 100%;
         
     }
 }

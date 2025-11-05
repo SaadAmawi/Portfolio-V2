@@ -191,3 +191,16 @@ img{
     
 }
 
+@media  screen and (max-width:1600px) {
+    .card{
+        width: 100%;
+    }
+    .title{
+    z-index: 1;
+    font-family: 'lexend';
+    font-size: 2vh;
+    font-weight: 600;
+    color: var(--text-color-purpleDark);
+    margin-top: 10px;
+}
+}

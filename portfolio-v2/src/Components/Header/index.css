@@ -82,3 +82,11 @@
     -webkit-filter: drop-shadow(1px 1px 8px  yellow);
 
 }
+
+@media screen and (max-width:1200px) {
+
+    .Header{
+        display: none;
+    }
+    
+}

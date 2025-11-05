@@ -225,10 +225,10 @@
 }
 .chatBox .clear{
     position: absolute;
-    top: 15px;
+    bottom: 15px;
     background-color: transparent;
     border: solid 1px var(--text-color-purpleDark3);
-    left: 55%;
+    right: 5%;
     padding: 7px 6px;
     width: fit-content;
     border: none;
@@ -275,3 +275,33 @@
     animation: heartBeat 6s infinite;
 }
 
+@media screen and (max-width:1200px) {
+    
+.but{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+.gpt-button{
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    border: none
+}
+.chatBox{
+    background: var(--gpt-bg);
+    width: 300px;
+    height: 600px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s backwards;
+    box-shadow: 0px 0px 6px 1px var(--gpt-border);
+    padding: 10px;
+}
+
+
+}

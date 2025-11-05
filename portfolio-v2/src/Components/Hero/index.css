@@ -54,15 +54,7 @@
     }
 }
 
-.cloud{
-    overflow: visible;
-    width: 100%;
-    height:100vh;
-    object-fit: cover; 
-    filter: brightness(100%);
-    opacity: var(--op);
-    position: absolute;
-}
+
 
 .hero-bg img{
 overflow: visible;
@@ -180,4 +172,22 @@ h1{
     to{
         opacity: 0;
         }
+}
+
+@media screen and (max-width:1200px) {
+    .text{
+        font-size: 12px;
+    }
+    .underwords2{
+        font-size: 12px;
+    }
+    .underwords{
+        font-size: 10px;
+    }
+    .NameText{
+        font-size: 50px;
+    }
+    .hero{
+        overflow: hidden;
+    }
 }

@@ -68,3 +68,15 @@
     }
 }
 
+@media screen and (max-width:1200px){
+    .projects-container{
+        width: 90%;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+    .projects::after{
+        display: none;
+    }
+}
