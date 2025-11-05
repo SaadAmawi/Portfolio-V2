@@ -10,7 +10,9 @@
   animation-fill-mode: backwards;
 
 }
-
+span{
+  cursor: default;
+}
 .text-content {
   display: inline-block;
   position: relative;

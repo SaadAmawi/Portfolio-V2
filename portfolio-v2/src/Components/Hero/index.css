@@ -151,6 +151,9 @@ h1{
     animation: zoomInUp backwards 2s;
     animation-delay: 1.9s;
 }
+.ic{
+    cursor:pointer;
+}
 
 @keyframes ribbon {
     0%, 100% {
