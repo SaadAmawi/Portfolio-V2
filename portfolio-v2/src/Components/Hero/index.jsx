@@ -2,23 +2,20 @@ import './index.css'
 import bg from '../Assets/Images/background.png'
 import mouseBounce from '../Assets/Images/mouseAnimate.png'
 import resume from '../Assets/Documents/Resume.pdf'
-import AnimatedLetters from '../AnimatedLetters'
 import {useEffect,useState} from "react"
 import WhiteButton from '../WhiteButton'
 import { SocialIcon } from 'react-social-icons'
 import { useTheme } from '../../themeContext'
 import TextPressure from '../TextPressure'
 import Orb from '../Orb/Orb'
+import GradientText from '../GradientText/GradientText'
 
 function Hero() {
     const {theme} = useTheme();
-    const nameArr = ["S","a","a","d"," ","A","m","a","w","i"];
-    const [letterClass2, setLetterClass2] = useState('text-animate-fly');
     const [arrowClass, setArrowClass] = useState('fade-arrow');
     useEffect(()=>{
         setTimeout(()=>{
         return (
-                setLetterClass2('text-animate-fly'),
                 setArrowClass('down-arrow')
                 )
         },5000)
@@ -28,34 +25,26 @@ function Hero() {
   return (
     <div className={`hero ${theme}`} id={"arrow"}>
       <div className="hero-bg">
-        
         { theme === "dark" ? 
-        // <Orb
-        //   hoverIntensity={0.2}
-        //   rotateOnHover={true}
-        //   hue={0}
-        //   forceHoverState={false}
-        // />
         <img src={bg} alt="Background"  className='dark'/>
         : 
-  <Orb
-    hoverIntensity={0.0}
-    rotateOnHover={false}
-    hue={0}
-    forceHoverState={false}
-  />
-  
-      }
-           
-
+        <Orb
+          hoverIntensity={0.0}
+          rotateOnHover={false}
+          hue={0}
+          forceHoverState={false}
+        />
+      } 
       </div>
-      
-
         <div className={`text ${theme}`}>
           <div className="Intro">
         <h1>
         <p className={`color ${theme}`}>
-          <AnimatedLetters letterClass={letterClass2} strArray={nameArr} idx={11} />
+          <GradientText
+          className='NameText'
+          animationSpeed={3}
+          showBorder={false}>Saad Amawi</GradientText>
+   
     <TextPressure
     text="Software Engineer"
     flex={true}

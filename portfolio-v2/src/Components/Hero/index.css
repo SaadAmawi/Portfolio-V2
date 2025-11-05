@@ -23,7 +23,17 @@ p.color.light span{
     color: transparent;
 }
 
-
+.NameText{
+    display: inline-block;
+    opacity: 1;
+    animation: fadeIn 2.5s ;
+    animation-fill-mode: backwards;
+    min-width: 10px;
+    font-family: "lexend";
+    font-weight: 100;
+    font-size: 80px;
+    background-color: none  ;
+}
     .text{
     z-index: 1;
     /* filter: drop-shadow(0px 0px 1px rgba(37, 2, 119, 0.8)); */
@@ -109,7 +119,7 @@ h1{
     font-family: 'lexend',serif;
     font-weight: 200;
     animation: fadeIn 3s;
-    animation-delay: 3.8s;
+    animation-delay: 0.8s;
     animation-fill-mode: backwards;
     letter-spacing: 1.5px;
 }
@@ -118,7 +128,7 @@ h1{
     font-family: 'lexend',serif;
     font-weight: 200;
     animation: fadeIn 3s;
-    animation-delay: 3s;
+    animation-delay: 0.5s;
     animation-fill-mode: backwards;
     letter-spacing: 1.5px;
 }
@@ -164,7 +174,8 @@ h1{
     justify-content: center;
     gap:15px;
     position: relative;
-    animation: zoomInUp backwards 2s 4.5s;
+    animation: zoomInUp backwards 2s;
+    animation-delay: 1.9s;
 }
 
 @keyframes ribbon {
