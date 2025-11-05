@@ -37,7 +37,7 @@
     top: 50%;
     left:50%;
     translate: -50% -50%;
-    padding: 5px;
+    padding: 2px;
     filter: blur(2px);
     background-image:conic-gradient(from var(--angle),#7200dc, #8a10fd,#eb8cf7,#05dffc,#00d9f1,#eb8cf7,#8a10fd,#7200dc); 
     animation: spinBorder 3s linear infinite;
