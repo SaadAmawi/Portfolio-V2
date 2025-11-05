@@ -12,27 +12,15 @@
 .color{
     margin-bottom: -50px;
 }
-p.color span{
-    background: linear-gradient(to right,rgb(106, 109, 255), #c084fc, #f472b6);;
-    background-clip: text;
-    color: transparent;
-}
-p.color.light span{
-    background: linear-gradient(to right,rgb(41, 44, 185), #712db4, #a02765);;
-    background-clip: text;
-    color: transparent;
-}
+
 
 .NameText{
     display: inline-block;
     opacity: 1;
-    animation: fadeIn 2.5s ;
-    animation-fill-mode: backwards;
     min-width: 10px;
     font-family: "lexend";
-    font-weight: 100;
+    font-weight: 200;
     font-size: 80px;
-    background-color: none  ;
 }
     .text{
     z-index: 1;

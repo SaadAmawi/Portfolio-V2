@@ -45,19 +45,19 @@ function Hero() {
           animationSpeed={3}
           showBorder={false}>Saad Amawi</GradientText>
    
-    <TextPressure
-    text="Software Engineer"
-    flex={true}
-    alpha={false}
-    stroke={false}
-    width={true}
-    weight={false}
-    italic={true}
-    textColor={theme==="dark"?"#ffffff":"#031685ff"}
-    strokeColor="#ff0000"
-    minFontSize={36}
-    className='underwords2'
-  />
+          <TextPressure
+          text="Software Engineer"
+          flex={true}
+          alpha={false}
+          stroke={false}
+          width={true}
+          weight={false}
+          italic={true}
+          textColor={theme==="dark"?"#ffffff":"#031685ff"}
+          strokeColor="#ff0000"
+          minFontSize={36}
+          className='underwords2'
+        />
         </p>
  
         <br/>
