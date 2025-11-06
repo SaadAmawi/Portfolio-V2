@@ -1,12 +1,4 @@
 
-/* .experience-block{
-    display: flex;
-    flex-direction: column;
-    // height: 100vh;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-} */
 .experience{
   display: flex;
   height: fit-content;
@@ -232,7 +224,14 @@ button{
   .experience{
     width: 90%;
     margin-top: 30px;
+    height: 90vh;
+    margin-bottom: 40px;
+  }
+  .box{
+    padding: 0;
     height: fit-content;
+    border-radius: 30px;
+    /* border: rgb(150, 107, 250) 1px solid; */
   }
   .timeline-item .details{
     font-size: 12px;
@@ -242,5 +241,56 @@ button{
   align-items: flex-start;
   gap: 4px;
   position: relative;
+  padding: 0;
 }
+.timeline-item .logo img {
+  }
+
+.timeline-item .details {
+    color: var(--text-color-purpleDark3);
+    font-size: 14px;
+    font-family: "Lexend", sans-serif;
+    animation: fadeIn 0.6s ease-in-out;
+
+    
+}
+.timeline-item .details .date {
+      font-size: 0.85rem;
+      color: var(--text-color-purpleDark3);
+      margin-bottom: 0px;
+    }
+.timeline-item .details .stack{
+      font-family: "lexend";
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+.timeline-item .details h3 {
+      font-size: 1.1rem;
+      color: var(--text-color-purpleDark3);
+      margin-bottom: 2px;
+    }
+
+.timeline-item .details .company {
+      font-size: 0.95rem;
+      color: var(--text-color-purpleDark3);
+      margin-bottom: 6px;
+    }
+.timeline-item .details .degree {
+      font-size: 0.95rem;
+      color: var(--text-color-purpleDark3);
+      margin-bottom: 6px;
+    }
+
+.timeline-item .details ul {
+      list-style-type: disc;
+      padding-left: 0px;
+
+
+    }
+.timeline-item .details ul li {
+        color: var(--text-color-purpleDark3);
+        line-height: 1;
+        margin-bottom: 10px;
+      }
 }
