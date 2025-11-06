@@ -107,7 +107,13 @@
 
 
 @media screen and (max-width:1200px) {
-
+    .filled-header::before,
+.filled-header::after {
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
     .outline{
         width:180px;
         height: 40px;

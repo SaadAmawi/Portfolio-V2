@@ -175,6 +175,9 @@ h1{
 }
 
 @media screen and (max-width:1200px) {
+    .hero{
+        height: 80vh;
+    }
     .text{
         font-size: 12px;
     }
