@@ -134,7 +134,7 @@ h1{
 }
 
 .socials{
-    width: 100%;
+    width: fit-content;
     display: flex;
     margin-top: 30px;
     justify-content: center;
@@ -142,10 +142,10 @@ h1{
     position: relative;
     animation: zoomInUp backwards 2s;
     animation-delay: 1.9s;
+    background-color: #fff;
 }
-.ic{
-    cursor:pointer;
-}
+
+
 
 @keyframes ribbon {
     0%, 100% {

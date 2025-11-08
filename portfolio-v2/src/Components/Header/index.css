@@ -41,6 +41,9 @@
     margin-left: 0px;
     border-radius: 50%;
     object-fit: cover;
+    &:hover{
+        cursor: pointer;
+    }
     &.light{
     -webkit-filter: drop-shadow(1px 1px 0 var(--text-color-purple))
                     drop-shadow(-1px -1px 0 var(--text-color-purple));

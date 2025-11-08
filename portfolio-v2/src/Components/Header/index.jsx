@@ -25,7 +25,7 @@ function Header(){
         <div className="Head">
     <nav className={`Header ${theme}`}>
         <div className="Logo">
-        <img src={image} alt="logo" className={`logo-image ${theme}`}/>
+        <img src={image} onClick={() => scrollToSection("arrow")} alt="logo" className={`logo-image ${theme}`}/>
         </div>
         <div className="middle-btns">
         <HeaderButton buttonText="Home" handleClick={() => scrollToSection("arrow")}/>
