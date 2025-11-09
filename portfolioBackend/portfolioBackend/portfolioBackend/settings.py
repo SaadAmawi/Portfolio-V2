@@ -21,10 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9wx+zk9ru8cl3i!$k5wmr8m^kyvqs^i(#9t0mrk)8kiz@#xk%)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['saadamawi.up.railway.app','127.0.0.1','localhost:3000']
 load_dotenv()
