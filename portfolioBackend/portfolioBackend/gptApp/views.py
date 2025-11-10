@@ -10,9 +10,6 @@ from .throttle import GPTThrottle
 from .prompt import prompt
 
 
-def test(request):
-    return HttpResponse(f"GPT App is working!")
-
 class GenerateResponseView(APIView):
     throttle_classes = [GPTThrottle] 
     def post(self, request):
@@ -24,7 +21,6 @@ class GenerateResponseView(APIView):
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": prompt},
-                    # user_messages,
                 ]+ user_messages
             )
             ai_response = response.choices[0].message.content
