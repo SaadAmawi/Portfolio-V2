@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['saadamawi.up.railway.app','127.0.0.1','localhost:3000']
+ALLOWED_HOSTS = ['saadamawi.up.railway.app','127.0.0.1','localhost:3000','https://www.saadamawi.com']
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Application definition
@@ -67,7 +67,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS=[
     'http://localhost:3000',
     'https://www.saadamawi.com',
-    'https://saadamawi.com'
+    'https://saadamawi.com',
+    '*'
 ]
 
 ROOT_URLCONF = 'portfolioBackend.urls'
