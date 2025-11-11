@@ -44,6 +44,7 @@
 }
 .chatBox{
     background: var(--gpt-bg);
+    backdrop-filter: blur(12px);
     width: 400px;
     height: 600px;
     position: fixed;
@@ -58,7 +59,7 @@
 }
 .chatBox .text{
     height:85% ;
-    background-color: var(--gpt-bg);
+    
     position: relative;
     padding: 5px 0px 50px 0px;
     border-radius: 20px 20px 0px 0px;
