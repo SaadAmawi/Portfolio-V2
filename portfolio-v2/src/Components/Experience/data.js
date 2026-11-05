@@ -38,7 +38,7 @@
         "Developed automation workflows that optimized and automated business requirements including the bulk of the content creation ideation and brief development process.",
         "Managed API endpoints, integrating AI/ML pipelines for automated decision-making.",
       ],
-      logo: "https://nasresports.com/wp-content/uploads/2022/06/NASR-Game-Logo-Content-Creators-300x300.png",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM4U4Ub-AqBbREEXbAvYzbowz2sKxsvv9pl-d5dcGNNA&s=10",
     },
     {
       company: "Masdar",

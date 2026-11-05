@@ -15,9 +15,8 @@ function Skills() {
     <div className='section_title'>
       <Card bgText={"Frontend"} projectTitle={"Front-End Technologies"}  icon={faDisplay}  hoverAccent={theme==="dark"?"purple":"purple"}>
         <ul className='card-items'>
-          <li className="items">Javascript</li>
-          <li className="items">Typescript</li>
           <li className="items">React</li>
+          <li className="items">Vue</li>
           <li className="items">Flutter</li>
           <li className="items">Figma</li>
         </ul>
@@ -26,6 +25,7 @@ function Skills() {
         <ul className='card-items'>
           <li className="items">Python</li>
           <li className="items">Java</li>
+          <li className="items">TypeScript</li>
           <li className="items">Django</li>
           <li className="items">FastAPI</li>
           <li className="items">SpringBoot</li>
@@ -37,6 +37,7 @@ function Skills() {
           <li className="items">Supabase</li>
           <li className="items">DynamoDB</li>
           <li className="items">MySQL</li>
+          <li className="items">Pinecone</li>
         </ul>   
         </Card>
       <Card bgText={"Cloud"} projectTitle={"Cloud + Misc."} icon={faCloud} hoverAccent={theme==="dark"?"":"purple"}>
@@ -45,7 +46,8 @@ function Skills() {
           <li className="items">Docker</li>
           <li className="items">N8N</li>
           <li className="items">Railway</li>
-          <li className="items">Bubble.io</li>
+          <li className="items">Langchain</li>
+          <li className="items">Langgraph</li>
         </ul>
         </Card>
       </div>
