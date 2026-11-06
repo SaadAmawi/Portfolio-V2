@@ -19,6 +19,8 @@ function Skills() {
           <li className="items">Vue</li>
           <li className="items">Flutter</li>
           <li className="items">Figma</li>
+          <li className="items">Tailwind CSS</li>
+          <li className="items">Next</li>
         </ul>
         </Card>
       <Card bgText={"Backend"} projectTitle={"Back-End Technologies"} icon={faServer} hoverAccent={theme==="dark"?"yellow":"purple"}>      
